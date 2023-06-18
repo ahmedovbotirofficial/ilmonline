@@ -1,0 +1,80 @@
+
+.pagination
+  display: flex
+  gap: 12px
+  align-items: center
+  font-weight: bold
+
+  @include xxxs
+    width: 100%
+.pagination li
+  list-style: none !important
+.pagination li::after
+  display: none
+  margin: 0
+  padding: 0
+
+.pagination_el:hover
+  color: var(--color-head-title)
+  transition-delay: 0
+
+.pagination_el.active
+  color: #818E93
+
+.prev_arrow
+  margin-right: 24px
+  @include xxxs
+    margin-right: auto
+
+.next_arrow
+  margin-left: 24px
+  @include xs
+    margin-right: 16px
+  @include xxxs
+    margin-left: auto
+
+.prev_arrow a,
+.next_arrow a
+  cursor: pointer
+  transition: none
+  display: block
+  background-image: url(/images/arrow_prev_page.svg)
+  height: 35px
+  width: 37px
+
+.next_arrow a
+  background-image: url(/images/arrow_next_page.svg)
+
+.school-courses
+  .prev_arrow a:hover
+    background-image: url(/images/arrow_prev_page_hover_school.svg)
+
+  .prev_arrow a:active
+    background-image: url(/images/arrow_prev_page_active_school.svg)
+
+  .next_arrow a:hover
+    background-image: url(/images/arrow_next_page_hover_school.svg)
+
+  .next_arrow a:active
+    background-image: url(/images/arrow_next_page_active_school.svg)
+
+.pro-courses
+  .prev_arrow a:hover
+    background-image: url(/images/arrow_prev_page_hover_pro.svg)
+
+  .prev_arrow a:active
+    background-image: url(/images/arrow_prev_page_active_pro.svg)
+
+  .next_arrow a:hover
+    background-image: url(/images/arrow_next_page_hover_pro.svg)
+
+  .next_arrow a:active
+    background-image: url(/images/arrow_next_page_active_pro.svg)
+
+.school-courses,
+.pro-courses
+  .prev_arrow.disabled a
+    background-image: url(/images/arrow_prev_page_disabled.svg)
+
+  .next_arrow.disabled a
+    background-image: url(/images/arrow_next_page_disabled.svg)

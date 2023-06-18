@@ -1,0 +1,64 @@
+$xl: 1440px
+$ll: 1360px
+$l: 1250px
+$m: 1024px
+$s: 767px
+$xs: 540px
+$xxs: 400px
+$xxxs: 320px
+
+@mixin xxxs
+    @media only screen  and (max-width: #{$xxs})
+        @content
+
+@mixin xxs
+    @media only screen  and (max-width: #{$xs})
+        @content
+
+@mixin xs
+    @media only screen and (max-width: #{$s})
+        @content
+
+@mixin s
+    @media only screen and (max-width: #{$m})
+        @content
+
+@mixin m
+    @media only screen and (max-width: #{$l})
+        @content
+
+@mixin l
+    @media only screen and (max-width: #{$ll})
+        @content
+
+@mixin ll
+    @media only screen and (max-width: #{$xl})
+        @content
+
+@mixin xl
+    @media only screen and (min-width: #{$xl + 1px})
+        @content
+
+
+// Text adaptive mixins
+
+$desktopWidth: 1920
+$tabletWidth: 768
+$mobileWidth: 320
+
+@function calcAdaptiveSize($maxSize, $minSize, $maxWidth, $minWidth)
+  $addSize: $maxSize - $minSize
+  $limitWidth: $maxWidth - $minWidth
+  @return calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth}px) / #{$limitWidth}))
+
+@mixin adaptive-font-size($desktopSize, $tabletSize, $mobileSize)
+  font-size: calcAdaptiveSize($desktopSize, $tabletSize, $desktopWidth, $tabletWidth)
+
+  @include xs
+    font-size: calcAdaptiveSize($tabletSize, $mobileSize, $tabletWidth, $mobileWidth)
+
+@mixin adaptive-line-height($desktopSize, $tabletSize, $mobileSize)
+  line-height: calcAdaptiveSize($desktopSize, $tabletSize, $desktopWidth, $tabletWidth)
+
+  @include xs
+    line-height: calcAdaptiveSize($tabletSize, $mobileSize, $tabletWidth, $mobileWidth)

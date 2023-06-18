@@ -1,0 +1,189 @@
+*,
+:after,
+:before
+  box-sizing: border-box
+
+*:hover
+  // transition: var(--transition-speed)
+
+html, body
+  height: 100%
+
+html
+  font-size: 16px
+  // color: var(--primary-color-dark-blue)
+
+body
+  font-family: var(--primary-font)
+  color: var(--primary-font-color)
+  scroll-behavior: smooth
+
+.hidden
+  overflow: hidden
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+li
+  position: relative !important
+  margin-bottom: 12px
+  margin-left: 16px
+  line-height: 26px
+  list-style: none
+
+li::after
+  position: absolute !important
+  content: '' !important
+  background-color: var(--color-main)
+  height: 5px !important
+  width: 5px !important
+  left: -16px !important
+  top: 12px !important
+  border-radius: 50% !important
+  box-shadow: 0px 2px 4px var(--box-shadow-color) !important
+
+a
+  text-decoration: none
+
+p
+  margin: 0
+  padding: 0
+  font-size: 18px
+  line-height: 26px
+  font-weight: 400
+  @include s
+    font-size: 16px
+    line-height: 22px
+  @include xxs
+    font-size: 14px
+    line-height: 18px
+
+img
+  max-width: 100%
+  height: auto
+
+button,
+input
+  outline: none
+  -webkit-appearance: none
+
+.container
+  width: 100% !important
+  max-width: 1440px !important
+  padding-right: 80px !important
+  padding-left: 80px !important
+  padding-top: 0 !important
+  padding-bottom: 0 !important
+  margin-right: auto !important
+  margin-left: auto !important
+  @include m
+    padding-right: 40px !important
+    padding-left: 40px !important
+  @include xs
+    padding-right: 16px !important
+    padding-left: 16px !important
+
+
+.scroll_arrow_down
+  display: flex
+  justify-content: center
+
+.scroll_arrow_down svg
+  cursor: pointer
+  max-width: 50px
+  max-height: 50px
+
+.scroll_arrow_down.first_page
+  margin-bottom: 130px
+
+.scroll_arrow_down.vacancy__scroll svg
+  max-width: 35px
+  max-height: 35px
+
+.scroll_arrow_down.vacancy__scroll
+  padding-bottom: 30px
+
+.overflow_hidden
+  overflow: hidden
+
+.head_filtration
+  display: grid
+  grid-template-columns: 29.5% 1fr
+  column-gap: 6%
+  margin-bottom: 16px
+  @include s
+    grid-template-columns: 1fr 1fr
+    margin-bottom: 24px
+  @include xs
+    grid-template-columns: 1fr
+    gap: 20px
+
+.head_filtration__left
+  display: flex
+  justify-content: space-between
+  align-items: center
+  @include xs
+    flex-wrap: wrap
+
+.head_filtration__left .head_filtration__row:first-child
+  display: flex
+  align-items: center
+  gap: 7px
+  font-size: 18px
+  font-weight: 600
+  height: 44px
+  @include xs
+    width: 100%
+    background-color: var(--color-main)
+    justify-content: center
+    display: flex
+    align-items: center
+    color: white
+
+.button_wrapper
+  background: none !important
+  -webkit-appearance: none
+
+.head_filtration__left .button_wrapper.primary-btn--transparent
+  background: transparent
+  border: none
+  @include s
+    background: var(--primary-font-color)
+
+.button_wrapper.head_filtration__row:hover .primary-btn--transparent
+  transform: translate(0, 0)
+  background: transparent !important
+  color: var(--primary-font-color)
+
+.head_filtration__left .button_wrapper:hover .primary-btn
+  cursor: default
+  transform: translate(0, 0)
+  @include s
+    cursor: pointer
+    transform: translate(4px, -4px)
+
+.head_filtration__row:last-child
+  cursor: pointer
+  font-size: 16px
+  color: var(--color-font-light-dark)
+  transition: none
+  line-height: 36px
+  white-space: nowrap
+
+.head_filtration__row:last-child svg
+  fill: var(--color-font-light-dark)
+  position: relative
+  top: 6px
+  max-width: 8px
+
+.head_filtration__row:last-child:hover,
+.head_filtration__row:last-child:hover svg
+  fill: var(--color-font-medium-dark)
+  color: var(--color-font-medium-dark)
+
+.head_filtration__right
+  justify-self: end
+  @include xs
+    justify-self: unset

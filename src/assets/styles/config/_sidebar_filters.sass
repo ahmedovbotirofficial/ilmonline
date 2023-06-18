@@ -1,0 +1,157 @@
+.level__select
+  display: flex
+  gap: 12px
+  align-items: center
+  margin-bottom: 16px
+  cursor: pointer
+  font-size: 15px
+  @media screen and (max-width: 1150px)
+    font-size: 14px
+
+.level__checkbox
+  height: 16px
+  width: 16px
+  border: 1px solid var(--primary-font-color)
+
+.level__select.hover .level__checkbox
+  border: 1px solid var(--color-main)
+
+.level__checkbox.selected
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 16px
+  width: 16px
+  border: 1px solid var(--color-main)
+  background-color: var(--color-white)
+
+.level__checkbox--center
+  height: 8px
+  width: 8px
+  background-color: var(--color-main)
+
+.filter_main_levels__child_wrapper
+  display: flex
+  gap: 16px
+  margin-bottom: 24px
+
+.filter_main_levels__child
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 40px
+  width: 40px
+  border: 1px solid var(--primary-font-color)
+
+.filter_main_levels__child:hover
+  border: 1px solid var(--color-main)
+
+.filter_main_levels__child.selected
+  color: var(--color-main)
+  border: 1px solid var(--color-main)
+
+.list_title
+  cursor: pointer
+  display: flex
+  align-items: center
+  gap: 10px
+  font-size: 20px
+  font-weight: bold
+  margin-bottom: 25px
+  @media screen and (max-width: 1150px)
+    font-size: 18px
+    margin-bottom: 14px
+
+.list_title svg
+  position: relative
+  top: 2px
+  width: 8px
+
+.filter_sidebar_text__small
+  display: flex
+  align-items: center
+  gap: 8px
+  margin-bottom: 40px
+
+.filter_sidebar__list
+  display: flex
+  flex-direction: column
+  @include s
+    position: relative
+    padding-bottom: 35px
+
+.filter_sidebar_text__small:after
+  @include s
+    position: absolute
+    content: ''
+    bottom: 0
+    left: -20px
+    width: 344px
+    height: 1px
+    background: #12323E
+    opacity: 0.2
+  @include xxs
+    width: 100%
+    left: 0
+
+.filter_sidebar__list:after
+  @include xxs
+    width: 100%
+    left: 0
+    position: absolute
+    content: ''
+    bottom: 0
+    height: 1px
+    background: #12323E
+    opacity: 0.2
+
+.filter_sidebar_text__small:after
+  top: 72px
+  width: 364px
+  @include xxs
+    width: 100%
+    left: 0
+
+.filter_sidebar__list > div + div
+  margin-top: 16px
+
+.filters_sidebar__btns
+  display: none
+  align-items: center
+  margin: 30px 0 0
+  // justify-content: space-between
+  padding: 0
+  position: relative
+  @include s
+    display: flex
+  @include xs
+    &::after
+      position: absolute
+      content: ''
+      left: 50%
+      width: 1px
+      height: 25px
+      background-color: #12323E
+      opacity: 0.2
+
+.head_filtration__clear_btn
+  display: flex
+  align-items: center
+  gap: 10px
+  font-size: 16px
+  color: rgba(150, 150, 150, 1)
+
+.head_filtration__clear_btn svg
+  fill: var(--color-font-light-dark)
+  position: relative
+  top: 1px
+  max-width: 8px
+
+.close_btn
+  font-size: 20px
+  font-weight: 600
+  color: var(--color-main)
+
+.rotate
+  transform: rotate(180deg)

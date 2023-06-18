@@ -1,0 +1,15 @@
+[
+  {
+    "relation":[
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target":{
+      "namespace":"android_app",
+      "package_name":"com.bazu.ilm",
+      "sha256_cert_fingerprints":[
+        "58:24:B4:69:CB:1F:92:FC:DB:7E:1B:6C:87:AE:76:79:36:D8:47:A3:91:CC:7C:ED:E3:21:AD:5E:2C:0C:1C:A8",
+        "3F:32:5A:08:8F:00:F6:F0:2C:C8:69:BA:37:4C:E5:27:0E:D7:53:4B:88:6A:AE:A8:71:7B:EB:40:30:95:0A:A5"
+      ]
+    }
+  }
+]

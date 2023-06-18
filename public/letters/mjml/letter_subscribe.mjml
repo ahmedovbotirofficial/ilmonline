@@ -1,0 +1,218 @@
+<mjml>
+  <mj-head>
+    <mj-title>
+      Смарт подписка оформлена
+    </mj-title>
+    <mj-preview>
+      Смарт подписка оформлена
+    </mj-preview>
+    <mj-style>
+      .header-inner > table > tbody > tr > td,
+      .content > table > tbody > tr > td {
+      padding: 0 !important;
+      }
+
+      .content > table > tbody > tr > td {
+      padding: 32px 40px 0 40px !important;
+      }
+
+      .header-title {
+      padding: 30px 0 0 0 !important
+      }
+      .header-title--br {
+      padding: 10px 0 0 !important
+      }
+      .opacity_08 {
+      opacity: 0.8
+      }
+      .footer-inner > table > tbody > tr > td {
+      padding: 40px !important;
+      }
+      .link_smart {
+      color: #015DFF;
+      text-decoration: none;
+      font-weight: bold;
+      }
+    </mj-style>
+    <mj-style>
+      @media only screen and (max-width: 600px) {
+      .body {
+      width: 100%;
+      }
+
+      .content > table > tbody > tr > td,
+      .header > table > tbody > tr > td {
+      padding: 40px 40px 0 40px !important;
+      }
+
+      .header-left > table > tbody > tr > td {
+      padding: 50px 0 30px 0 !important;
+      }
+
+      .header-left {
+      width: 60% !important;
+      }
+
+      .header-right {
+      width: 40% !important;
+      }
+
+      .header-image {
+      padding: 20px 10px 0px !important;
+      }
+
+      .content > table > tbody > tr > td {
+      padding: 0px 40px 0 40px !important;
+      }
+
+      .header-title--br > div,
+      .header-title > div {
+      padding: 0 0 !important;
+      font-size: 28px !important;
+      line-height: 32px !important;
+      }
+
+      .content-text > div {
+      font-size: 14px !important;
+      padding: 0 !important
+      }
+
+    </mj-style>
+    <mj-style>
+      @media only screen and (max-width: 450px) {
+      .content > table > tbody > tr > td,
+      .header > table > tbody > tr > td {
+      padding: 24px 24px 0 24px !important;
+      }
+
+      .header-left > table > tbody > tr > td {
+      padding: 24px 0 0px 0 !important;
+      }
+
+      .content-btn > table > tbody > tr > td {
+      font-size: 14px !important;
+      padding: 10px 30px !important;
+      }
+
+      .content-col > table > tbody > tr > td {
+      padding: 24px !important;
+      }
+
+      .header-logo > table > tbody > tr > td {
+      width: 70px !important;
+      }
+
+      .header-title--br > div,
+      .header-title > div {
+      padding: 0 !important;
+      font-size: 18px !important;
+      line-height: 20px !important;
+      }
+      .opacity_08 > div {
+      font-size: 12px !important;
+      }
+      .footer-inner > table > tbody > tr > td {
+      padding: 24px 24px 0 !important;
+      }
+
+      .footer-col-right > table> tbody > tr > td {
+      align: center;
+      }
+      .footer-col-right,
+      .footer-col-left {
+      width: 100% !important
+      }
+      }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="640px" background-color="#FAF2EE" css-class="body">
+    <!--Header-->
+    <mj-wrapper padding="50px 0px 0 0px" css-class="header">
+      <mj-section background-color="#FAF2EE" css-class="header-inner">
+        <mj-group width="100%" css-class="">
+          <mj-column padding="50px 0px 0px 40px" css-class="header-left" width="65%">
+            <mj-image align="left" padding="0" width="116px" src="./images/logo.png" css-class="header-logo"></mj-image>
+            <mj-text align="left" css-class="header-title" color="#12323E" font-family="Roboto" font-weight="600" font-size="48px" line-height="60px">
+              Вы оформили
+              </br>
+            </mj-text>
+            <mj-text align="left" css-class="header-title--br" color="#EC5239" font-family="Roboto" font-weight="600" font-size="48px" line-height="60px">
+              Смарт подписку
+            </mj-text>
+          </mj-column>
+          <mj-column padding="40px 0px 0px 0px" css-class="header-right" width="35%">
+            <mj-image align="center" src="./images/subscribe_img.png" css-class="header-image"></mj-image>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+
+    <!--Main-->
+    <mj-wrapper padding="0px" css-class="content">
+      <mj-section padding="0" background-color="#FAF2EE">
+        <mj-group background-color="#FFF" width="100%" css-class="">
+          <mj-column padding="32px 40px" css-class="content-col" width="100%">
+            <mj-text align="left" padding="0" css-class="content-text" color="#12323E" font-family="Roboto" font-size="20px" line-height="150%">
+              <strong>Здравствуйте, {{$full_name}}!</strong> </br></br>
+              Теперь у вас есть
+              <a href="#" class="link_smart">
+                Смарт-подписка
+              </a>
+              . Начиная с сегодняшнего дня, Вы получите полный доступ ко всем урокам по выбранными вами направлениям.</br></br>
+              Теперь у вас есть
+              Вы стали на шаг ближе к своей цели — наконец-то Вы можете приступить к обучению!
+            </mj-text>
+          </mj-column>
+        </mj-group>
+        <mj-group background-color="#FFF" width="100%" css-class="">
+          <mj-column padding-bottom="20px" css-class="header-col" width="100%">
+            <mj-button href="#" align="center" background-color="#EC5239" border-radius="0" inner-padding="14px 66px" css-class="content-btn" color="#fff" font-family="Roboto" font-size="16px" line-height="150%">
+              ПЕРЕЙТИ В КАБИНЕТ
+            </mj-button>
+          </mj-column>
+        </mj-group>
+        <mj-group background-color="#FFF" width="100%">
+          <mj-column padding-bottom="24px" css-class="" width="100%">
+            <mj-divider border-width="1px" border-style="solid" border-color="#D8D8D8" />
+          </mj-column>
+        </mj-group>
+        <mj-group background-color="#FFF" width="100%" css-class="">
+          <mj-column padding="0px 0px 32px" css-class="ingore_block" width="100%">
+            <mj-text align="left" padding="0 30px" css-class="opacity_08" color="#12323E" font-family="Roboto" font-size="14px" line-height="19px">
+              С уважением, команда ILM
+            </mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+    <!--Footer-->
+    <mj-wrapper padding="0" css-class="footer">
+      <mj-section background-color="#FAF2EE" padding="0 40px 60px" css-class="footer-inner">
+        <mj-group width="100%">
+          <mj-column padding="0" css-class="footer-col-left" width="70%">
+            <mj-text align="left" padding="0" css-class="" color="#12323E" font-family="Roboto" font-size="12px" line-height="20px">
+              Если у Вас остались какие-либо вопросы, пожалуйста, свяжитесь с нами:
+            </mj-text>
+          </mj-column>
+          <mj-column padding="0" css-class="footer-col-right" width="30%">
+            <mj-button css-class="footer-btn" href="tel:+998787775777" inner-padding="0px" padding="0" background-color="transparent" color="#EC5239" font-family="Roboto" font-size="12px" line-height="26px">
+              +998 78-777-5-777
+              </br>
+            </mj-button>
+          </mj-column>
+          <mj-column css-class="footer-col-left" width="70%">
+            <mj-text align="left" padding="0" css-class="" color="#12323E" font-family="Roboto" font-size="12px" line-height="26px">
+              Или используйте форму для обратной связи на сайте
+            </mj-text>
+          </mj-column>
+          <mj-column css-class="footer-col-right" width="30%">
+            <mj-button css-class="footer-btn" href="#" inner-padding="0" padding="0" background-color="transparent" color="#EC5239" font-family="Roboto" font-size="12px" line-height="26px">
+              support@ilmonline.uz
+            </mj-button>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

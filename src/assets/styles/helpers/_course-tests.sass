@@ -1,0 +1,100 @@
+.current_test_main_wrapper .container
+  @include xs
+    padding-left: 0 !important
+    padding-right: 0 !important
+
+.current_test_main
+  display: grid
+  grid-template-columns: 29.5% 1fr
+  gap: 6%
+  margin-bottom: 100px
+
+  @include s
+    grid-template-columns: 1fr
+
+.current_test_questions
+  padding: 24px
+  @include s
+    grid-row: 2/3
+
+.current_test_questions__wrapper
+  padding: 24px
+  margin: -24px
+  background-color: var(--color-white)
+
+.current_test_questions .title--5
+  padding-bottom: 20px
+  border-bottom: 1px solid var(--color-border-bottom-stars)
+
+.current_test_choose
+  background-color: var(--color-white)
+  padding: 40px
+  @include s
+    padding: 24px
+
+.current_test_questions__steps
+  display: grid
+  grid-template-columns: repeat(auto-fill, 41px)
+  gap: 16px
+  margin-top: 24px
+
+.current_test_questions__step
+  cursor: pointer
+  width: 41px
+  height: 41px
+  border: 1px solid var(--color-main)
+  display: flex
+  align-items: center
+  justify-content: center
+  // background-color: var(--color-main)
+  // color: var(--color-white)
+
+.test_block
+  cursor: pointer
+  display: flex
+  gap: 12px
+  align-items: center
+  padding: 16px
+  border: 1px solid #d8d8d8
+  margin-bottom: 16px
+  max-width: 680px
+  @include s
+    max-width: 100%
+  @include xxs
+    padding: 14px 16px
+    font-size: 14px
+
+.level__select
+  display: flex
+  gap: 12px
+  align-items: center
+  margin-bottom: 16px
+  cursor: pointer
+
+.test_block__checkbox
+  position: relative
+  top: 4.5px
+  align-self: flex-start
+  height: 16px
+  min-width: 16px
+  border-radius: 50%
+  border: 1px solid var(--primary-font-color)
+
+.current_test_choose__btns
+  display: flex
+  justify-content: space-between
+  margin-top: 36px
+
+  @media only screen and (max-width: 640px)
+    flex-direction: column
+    gap: 16px
+
+  // @include xxs
+  //   flex-direction: column
+  //   gap: 16px
+
+.test_block__link
+  line-height: 24px
+
+.next_btn
+  justify-content: flex-end

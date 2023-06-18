@@ -1,0 +1,15 @@
+{
+	"applinks": {
+		"apps": [],
+		"details": [
+			{
+				"appID": "56ABUT9UD8.com.ilmonline",
+				"paths": [
+				    "/sign-in",
+				    "/auth/success",
+				    "/reset-password/*"
+				]
+			}
+		]
+	}
+}

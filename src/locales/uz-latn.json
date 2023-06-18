@@ -1,0 +1,904 @@
+{
+  "header": {
+    "directions": {
+      "school": "Yo'nalishlar",
+      "pro": "Yo'nalishlar"
+    },
+    "conditions": {
+      "school": "Shartlar",
+      "pro": "Shartlar"
+    },
+    "cities": {
+      "school": "Shahar",
+      "pro": "Shahar"
+    },
+    "levels": {
+      "school": "Daraja",
+      "pro": "Daraja"
+    },
+    "prices": {
+      "school": "Narxi",
+      "pro": "Narxi"
+    },
+    "ratings": {
+      "school": "Reyting",
+      "pro": "Reyting"
+    },
+    "languages": {
+      "school": "Tillar",
+      "pro": "Tillar"
+    },
+    "lessons": {
+      "school": "Darslar",
+      "pro": "Kurslar"
+    },
+    "level": {
+      "school": "Daraja",
+      "pro": "Format"
+    },
+    "courses": {
+      "school": "Darslar",
+      "school": {
+        "school": "Darslar"
+      },
+      "pro": "Mutaxassislardan kurslar",
+      "pro": {
+        "pro": "Mutaxassislardan kurslar"
+      }
+    },
+    "categories": {
+      "school": "Yo'nalish",
+      "pro": "Yo'nalish"
+    },
+    "price": {
+      "school": "Narxi",
+      "pro": "Narxi"
+    },
+    "language": {
+      "school": "Tillar",
+      "pro": "Tillar"
+    },
+    "start_classes": {
+      "school": "Boshlangʻich daraja",
+      "pro": "Oflayn"
+    },
+    "middle_classes": {
+      "school": "O'rta daraja",
+      "pro": "Onlayn"
+    },
+    "old_classes": {
+      "school": "Yuqori daraja",
+      "pro": "Video kurslar"
+    },
+    "price_free": {
+      "school": "Bepul",
+      "pro": "Bepul"
+    },
+    "price_premium": {
+      "school": "Pullik",
+      "pro": "Pullik"
+    },
+    "russian": {
+      "school": "Rus",
+      "pro": "Rus"
+    },
+    "uzbekistanian": {
+      "school": "O'zbek",
+      "pro": "O'zbek"
+    },
+    "policy": {
+      "school": "Maxfiylik siyosati",
+      "pro": "Maxfiylik siyosati"
+    },
+    "condition": {
+      "school": "Shartnoma taklifi",
+      "pro": "Shartnoma taklifi"
+    },
+    "callback": {
+      "school": "Qayta aloqa",
+      "pro": "Qayta aloqa"
+    },
+    "ilm": {
+      "school": "ILM",
+      "pro": "ILM"
+    },
+    "navigation": {
+      "school": "Navigatsiya",
+      "pro": "Navigatsiya"
+    },
+    "first_page": {
+      "school": "Uy",
+      "pro": "Uy"
+    },
+    "about": {
+      "school": "Biz haqimizda",
+      "pro": "Biz haqimizda"
+    },
+    "vacancy": {
+      "school": "Bo'sh ish o'rinlari",
+      "pro": "Bo'sh ish o'rinlari"
+    },
+    "news": {
+      "school": "Yangiliklar",
+      "pro": "Yangiliklar"
+    },
+    "trial_tests": {
+      "school": "Testlar",
+      "pro": "Testlar"
+    },
+    "education": {
+      "school": "Ta'lim",
+      "pro": "Ta'lim"
+    },
+    "trial_tests_title_footer": {
+      "school": "Testlar",
+      "pro": "Testlar"
+    },
+    "private_cabinet_footer": {
+      "school": "Shaxsiy kabinet",
+      "pro": "Shaxsiy kabinet"
+    },
+    "lessons_for_students": {
+      "school": "Foydalanuvchi maqomi",
+      "pro": "Format"
+    },
+    "my_lessons": {
+      "school": "Mening darslarim",
+      "pro": "Mening kursalarim"
+    },
+    "chat_with_teacher": {
+      "school": "O'qituvchilar bilan suhbat",
+      "pro": "Ekspertlar bilan suhbat"
+    },
+    "all_lessons": "Hamma darslar",
+    "comfort": "Shartlar",
+    "city": "Shahar",
+    "natural_tchechnic_science": "Tabiiy va texnik fanlar",
+    "humanitarim_science": "Gumanitar fanlar",
+    "language_study": "Tillarni o'rganish",
+    "languagess": "Tillar",
+    "bussiness": "Biznes",
+    "mathematic_logic": "Matematika va mantiq",
+    "computer_science": "Kompyuter savodxonligi",
+    "students": "Talabalar",
+    "chat_with_students": "Talabalar bilan suhbat",
+    "login": "Kirish",
+    "my_tests": "Mening testlarim",
+    "payments": "To'lov tafsilotlari",
+    "smart_subscribe": "Smart obuna",
+    "referal": "Referal tizimi",
+    "parent_control": "Ota-ona nazorati",
+    "logout": "Сhiqish",
+    "trial_tests_title": "Sinov testlarning sarlavhasi",
+    "profile": "Profil",
+    "private_cabinet": "Shaxsiy kabinet"
+  },
+  "cards": {
+    "title": "Darslar",
+    "write_off": "<span style=\"color: #015dff; font-weight: bold\">{price} UZS</span> to'lov balansingizdan yechib olinadi"
+  },
+  "vacancy": {
+    "empty_mess": "Afsuski, natijasiz",
+    "skills": "Kerakli ko'nikmalar",
+    "will_be_plus": "Foydali bo'ladi",
+    "duties": "Vazifalar",
+    "salary_negotiable": "Ish haqi suhbat asosida belgilanadi",
+    "we_offer": "Biz taklif qilamiz",
+    "send_us_vacancy_1": "O'zingiz haqingizdagi ma'lumotlarni bizning <a href=\"mailto:info@ilmonline.uz\">{vacancy}</a> manzilimizga yuboring va siz, albatta, eng faol jamoa a'zosiga aylanasiz!",
+    "about_company": "Kompaniya haqida"
+  },
+  "titles": {
+    "send_email_again": "Siz ko‘rsatgan E-mail ga  <b>xat qayta</b> yuborildi. Ro‘yxatdan o‘tishni yakunlash uchun xatdagi havolani bosing!",
+    "individual_task": "Shaxsiy vazifa",
+    "similar_courses_subtitle": "Hoziroq boshlang va maqsadingizga yana bir qadam yaqinlashing!",
+    "similar_courses_title": "Biz siz uchun sizni qiziqtirishi mumkin bo'lgan darslarni tayyorlab qo'ydik.",
+    "need_timer": "Taymerni yoqmoqchimisiz?",
+    "empty_mess": "Afsuski, natijasiz",
+    "vacancy": "Bo'sh ish o'rinlari",
+    "join_us": "Biz ta'limni zamonaviylashtirish yo'lidamiz, <span style=\"color: {spanColor}\">bizga qoʻshiling!</span>",
+    "join_us_gen": "Biz taʼlim olishni hamma uchun qulay qilmoqchimiz",
+    "main_info": "Asosiy ma'lumotlar",
+    "test_number": "Savol raqami",
+    "card_detail": "Plastik Karta tafsilotlari",
+    "similar_news": "Tegishli yangiliklar",
+    "education": "Bilimlar bazasi",
+    "card_main": "Asosiy plastik karta",
+    "we_will_cry": "Biz sizni juda sog'inamiz :(",
+    "photo": "Surat",
+    "try_again": "Qayta urinib ko'ring",
+    "all_courses_title": {
+      "school": "Barcha yo‘nalishlar mavjud <br /> <span style=\"color: {spanColor}\">o‘zingiznikini toping.</span>",
+      "pro": "Barcha yo‘nalishlar mavjud <br /> <span style=\"color: {spanColor}\">o‘zingiznikini toping.</span>"
+    },
+    "social": "Ijtimoiy tarmoqlar",
+    "withdrawal": "Olib tashlash",
+    "invite_friends_info": "Do'stlaringizni ILM platformasiga taklif qiling! Uning birinchi xaridi <b> to‘lov miqdoridan hisobingizga 10% pul tushadi!</b>",
+    "about": "Biz haqimizda",
+    "news": "Yangiliklar",
+    "news_main_title": {
+      "school": "Barcha yangiliklar <br /><span style=\"color: {spanColor}\"> va voqealardan xabardor bo‘ling.</span>",
+      "pro": "Barcha yangiliklar <br /><span style=\"color: {spanColor}\"> va voqealardan xabardor bo‘ling.</span>"
+    },
+    "courses": "Darslar",
+    "last_news": "Eng so'nggi yangiliklar",
+    "want_share": "Natijangizni baham ko'rmoqchimisiz?",
+    "how_get_referal": "Kodni qanday olish mumkin?",
+    "main": "Uyga",
+    "send_copied_link": "Do'stlaringizga yuqoridagi havolani yuboring va ILM platformasi qanchalik ajoyib ekanligini aytib bering",
+    "your_friend_can_buy": "Doʻstingiz havolaga oʻtib, oʻziga kerakli darsni sotib olishi mumkin",
+    "your_discount": "Havolangiz orqali darsni sotib olganingizdan so'ng, chegirma <b>30 kun</b> ichida platforma hisobingizga o‘tkaziladi",
+    "new_customer": "Yangi xaridor - <b>10%</b>",
+    "copy_link": "Havolani do'stlaringiz bilan baham ko'ring!",
+    "copied_link": "Havola nusxalandi",
+    "invited_users": "Jalb qilingan foydalanuvchilar",
+    "earned": "Ishlab topilgan",
+    "are_you_sure": "Smart obunangizni bekor qilmoqchiligingizga aminmisiz?",
+    "tests": "Testlar",
+    "students": "O'quvchilar",
+    "watching": "Tomosha qilish",
+    "current_tests": "Joriy testlar",
+    "policy": "Maxfiylik siyosati",
+    "condition": "Shartnoma taklifi",
+    "callback": "Qayta aloqa",
+    "profile": "Profil",
+    "payment_wrong": "To'lovda xato bor",
+    "my_lessons": "Mening darslarim",
+    "my_tests": "Mening testlarim",
+    "get_password": "Parolni tiklash",
+    "payments": "To'lov tafsilotlari",
+    "balance_up": "Balansni to'ldirish",
+    "empty_transactions": "Tranzaksiyalar tarixi bo'sh",
+    "another_pay_methods": "Qulay to'lov usulini tanlang",
+    "chat": "Chat",
+    "almost_target": "Va nihoyat! Deyarli tugatdik.<br />Tanlagan yo'nalishlarni yana bir bor tekshiring",
+    "or": "Yoki",
+    "subscribe": "Obuna",
+    "registration": "Ro'yxatdan o'tish",
+    "auth": "Ruxsat",
+    "course_info": "Dars haqida ma'lumot",
+    "reset_password": "Parolni tiklash",
+    "referal": "Yo'naltirish tizimi",
+    "error_mess_card": "Plastik kartani qo‘shishda xatolik yuz berdi",
+    "form_withdrawal": "Pul yechish uchun so'rov shakli",
+    "withdrawal_personal_data": "1. O‘zingizni ma'lumotlaringizni kiriting",
+    "withdrawal_request": "2. So'ralgan pul yechish usuli va miqdori",
+    "directions": "Yo'nalishlar",
+    "want_parent_control": " ''Ota-ona nazorati'' xizmatini yoqishni xohlaysizmi?",
+    "rate_course": "Darsni baholash",
+    "test_results": "Test natijalari",
+    "instruction_send": "Ko'rsatma yuborildi",
+    "check_spam": "E-mailga hech qanday xabar yuborilmadi? Spam papkani tekshiring.",
+    "check_email": "Iltimos, elektron pochta manzilingizni tekshiring va elektron pochta orqali ko'rsatmalarga rioya qiling.",
+    "send_email": "Siz ko'rsatgan elektron pochta manziliga xat yuborildi. Iltimos, ro'yxatdan o'tishni yakunlash uchun elektron pochta manzilidan foydalaning!",
+    "verification": "Tekshirish",
+    "change_password": "Parolni o‘zgartirish",
+    "article_info": "Maqola",
+    "subcategory": "Kichik kategoriya",
+    "error_text_card": "Iltimos, to'ldirilgan qatorning to‘g‘ri yoki yo‘qligini tekshiring yoki keyinroq qayta urinib ko‘ring."
+  },
+  "buttons": {
+    "close_btn": "O'chirish",
+    "start_again": "QAYTA BOSHLASH",
+    "turn_off": "O'chirish",
+    "turn_on": "Yoqish",
+    "continue": "Davom etish",
+    "download_certificate": "Sertifikat yuklab olish",
+    "share_btn": "Baham ko'ring",
+    "lesson_content": "Darsingizni ko'ring",
+    "lesson_watching": "Dars materiallari",
+    "rate_it": "Baholang",
+    "join_btn": "Qoʻshiling",
+    "buy_course": "Kursni sotib olish",
+    "join": "Qoʻshilmoq",
+    "events": "Voqealar",
+    "news": "Yangiliklar",
+    "smart_subscribe": "Smart obuna",
+    "show_all_btn": "Hammasini koʻrish",
+    "show_else": "Koʻproq koʻrsatish",
+    "more_news_and_events_btn": "Yanada ko'proq yangiliklar va voqealar",
+    "all_category_btn": "Barcha toifalar",
+    "apply": "Qo'llash",
+    "news_btn": "Yangiliklar",
+    "send_btn": "Yuborish",
+    "finish_btn": "Yakunlash",
+    "cancel_btn": "Bekor qilish",
+    "show_more_btn": "Koʻproq koʻrish",
+    "login": "Kirish",
+    "send_again_btn": "Yana yuboring",
+    "delete_btn": "Oʻchirish",
+    "replenish": "Toʻldiring",
+    "save_btn": "Saqlash",
+    "cancelation_btn": "Bekor qilish",
+    "clear_btn": "Aniq shakl \\ tushunarli",
+    "keep_btn": "Saqlash",
+    "forgot_password": "Parolni unutdingizmi?",
+    "filtration_btn": "Filtrlash",
+    "clear_all_btn": "Hammasini tozalamoq",
+    "change_btn": "O'zgarish",
+    "edit_btn": "Profilni tiklash",
+    "download_btn": "Faylni yuklash",
+    "start": "Boshlash",
+    "to_main": "Asosiyga",
+    "verification": "Tekshirish",
+    "subscribe": "Obuna bo‘ling",
+    "pay": "Toʻlash",
+    "refresh": "Obunani yangilash",
+    "next_step": "Keyingi qadam",
+    "go_back": "Orqaga",
+    "cansel": "Bekor qilish",
+    "watch_misstakes": "Xatolarni koʻrish",
+    "go_back_to_tests": "Testlarga qaytish",
+    "go_to_next_lesson": "Keyingi darsga",
+    "go_to_individual_task": "Individual dars uchun",
+    "go_back_to_lesson": "Oldingi darsga qaytish",
+    "go_to_test_again": "Yana sinovdan o'tish",
+    "try_again": "Qayta urinib koʻring",
+    "check_answer": "Javobni tekshiring",
+    "start_test": "Sinovni boshlang",
+    "test_more": "Batafsil maʼlumot",
+    "go_to_trial_tests": "Testlardan o'tish",
+    "unsubscribe": "Obunani bekor qilish",
+    "confirm": "Tasdiqlash",
+    "go_to_bot": "Botga oʻtish",
+    "sent_resume": "Rezyumeni yuborish uchun",
+    "go_to_lessons": {
+      "school": "Darslarga oʻtish",
+      "pro": "Kurslarga oʻtish"
+    },
+    "go_to_lesson": "Darsga oʻtish",
+    "buy": "Sotib olish",
+    "write_to_telegram": "Telegramga yozing",
+    "payment_data": "To'lov tafsilotlari",
+    "events_btn": "Ishlanmalar",
+    "trial": "DTM 2022",
+    "quiz": "Testlar",
+    "delete_card": "Kartani oʻchirish",
+    "dont_want": "Istamayman",
+    "delete_card_warning": "Kartani qayta tiklamagan holda, o‘chirib tashlashga ishonchingiz komilmi?",
+    "go_to_tests": "Testlarga o'tish",
+    "go_to_courses": "Kurslarga o'tish",
+    "output": "Pul mablag'larini yechish",
+    "goToCourse": "О'tish",
+    "go_back_to_profile": "Profilga qaytish",
+    "have_not_courses": "Sizda boshlangan darslar yo'q",
+    "courseDetails": "Kurs tafsilotlari",
+    "balance_value": "Joriy balans:"
+  },
+  "months": {
+    "january": "Yanvar",
+    "february": "Fevral",
+    "march": "Mart",
+    "april": "Aprel",
+    "may": "May",
+    "june": "Iyun",
+    "july": "Iyul",
+    "august": "Avgust",
+    "september": "Sentabr",
+    "october": "Oktabr",
+    "november": "Noyabr",
+    "december": "Dekabr"
+  },
+  "form": {
+    "optional": "(ixtiyoriy)",
+    "form_withdrawal": "Pul o'tkazish uchun ariza shakli",
+    "withdrawal_personal_data": "1. Tafsilotlaringizni kiriting",
+    "withdrawal_request": "2. Talab qilingan pul olish usuli va miqdori",
+    "bank_details": "Qiwi hamyon / Bank hisobi tafsilotlari",
+    "amount": "So'm",
+    "login_error": "To'g'ri e-mailni kiriting",
+    "write_password": "Shaxsiy kabinetingiz bilan bogʻlangan elektron pochta manzilingizni kiriting. Biz sizga parolingizni tiklash boʻyicha koʻrsatmalarni elektron pochtangizga yuboramiz",
+    "empty_error": "Maydon bo'sh bo'lishi mumkin emas",
+    "exist_login_error": "Ushbu e-pochta manzili ro'yxatdan o'tkazilgan",
+    "not_found_email": "E-mail topilmadi",
+    "bank_detail_error": "To'g'ri ma'lumotlarni kiriting",
+    "short_full_name": "Ism va familiya",
+    "password_placeholder": "Parol",
+    "i_agree": "\"Yuborish\" tugmasini bosish orqali ILM online talabalari mening sharhimni ko'rib chiqishiga rozilik beraman",
+    "error_reset_info": "Parolni tiklash vaqti tugadi! Kirish sahifasiga qayting va qayta urinib ko'ring",
+    "invalid_verification": "Elektron pochtangizda ro'yxatdan o'tkaningizni tasdiqlang",
+    "register": "Roʻyxatdan oʻtish",
+    "create": "Yaratmoq",
+    "current_password": "Joriy parol",
+    "full_name": "To'liq ism",
+    "in_first": "ILM online da birinchi martamisiz ?",
+    "policy_info": "\"Ro'yxatdan o'tish\" tugmasini bosish orqali siz quyidagi qoidalarga rozilik bildirasiz",
+    "policy_info_url": "Maxfiylik siyosati",
+    "login": "Tizimga kirish",
+    "choose_role": "Iltimos, maqomingizni tanlang",
+    "student": "Talaba",
+    "teacher": "O'qituvchi",
+    "name": "Ism",
+    "card_number": "Plastik karta raqami",
+    "card_cvv": "CVV",
+    "expire_date": "Oy / Yil",
+    "new_password": "Yangi parol",
+    "reapet_password": "Parolni takrorlang",
+    "back_to_main": "Asosiy sahifaga qaytish",
+    "reapet_password_placeholder": "Parolni qaytadan kiriting",
+    "password_error": "To'g'ri parolni kiriting",
+    "incorrect_password_error": "Parol noto‘g‘ri kiritildi",
+    "password_tooltip": "Parol kamida 6 ta belgi, raqamlar, katta va kichik harflardan iborat boʻlishi kerak.",
+    "confrim_password_error": "Parollar mos kelmayapti",
+    "only_latin": "Faqat lotin harflari",
+    "password_uppercase": "Kamida 1 ta bosh harf",
+    "password_lowercase": "Kamida 1 ta kichik harf",
+    "min_length": "Minimal parol uzunligi 6 belgidan iborat",
+    "reset_title": "Yangi parol yaratilmoqda",
+    "password_digit": "Minimal 1 ta raqam",
+    "policy_url": "Maxfiylik siyosati",
+    "min_value": "Eng kam to'lov miqdori 500 UZS",
+    "telegram_user_name": "Telegramdagi foydalanuvchining @username",
+    "full_name_contact": "FIО (ota-ona, vasiy yoki qarmog'idagi shaxs)",
+    "minimal_amount": "Eng kam to'lov miqdori 500 UZS",
+    "error_full_name": "Maydonda ism va familiya bo'lishi kerak",
+    "error_city_name": "Faqat lotin yoki kirill alifbosi",
+    "contact_phone": "Aloqa telefon raqami",
+    "city": "Shahar",
+    "name_two_symbols": "Ism kamida 2 ta belgidan iborat bo‘lishi kerak",
+    "phone_number": "Telefon",
+    "share_info": "Ushbu dars haqidagi taassurotlaringiz bilan o'rtoqlashing. Sizga yoqdimi?",
+    "reset_info": "Parol kamida 6 ta belgidan, 1 raqam va 1 bosh harfdan iborat bo'lishi kerak.",
+    "optional_label": "Ixtiyoriy",
+    "confirm_number_length": "Kod 6 ta raqamdan iborat bo'lishi kerak"
+  },
+  "main": {
+    "payment_successful": "Toʻlov muvaffaqiyatli o'tdi!",
+    "empty-education_text": "Hozirda ushbu kichik turkum uchun maqolalar mavjud emas",
+    "cool": "Super",
+    "often_questions": {
+      "school": "Ko'p so'raladigan savollar",
+      "pro": "ILM Online"
+    },
+    "menu": "menyu",
+    "poorly": "Yomon",
+    "payment_failed": "Toʻlov amalga oshmadi!",
+    "payment_error": "Bank tizimingizda xatolik yuz berdi. Boshqa karta yoki toʻlov usulini sinab koʻring",
+    "have_joined_our": "Smart obunamizga qoʻshilganingizdan xursandmiz. Bilim uchun olgʻa",
+    "education": "Bilimlar bazasi",
+    "popular": "Mashhur maqolalar",
+    "not_found": "Bu soʻrov boʻyicha hech qanday natija topilmadi",
+    "interestedLesson": "Biz siz uchun sizni qiziqtirishi mumkin bo'lgan darsni tanladik.",
+    "interestedLessonText": "Faqat oldinga boring va maqsadingizga har kuni bir qadam yaqinlashing!",
+    "similar": "Shunga o'xshash maqolalar",
+    "smart_subscription_canceled": "Smart obunangiz bekor qilindi.",
+    "smart_subscription_updated": "Smart obunangiz yangilandi",
+    "smart_subscription_formalized": "Smart obunangiz tugallandi",
+    "search_placholder": "Qidirmoq",
+    "copy_telegram_content": "Sizga nusxa ko‘chirishingiz va botga yuborishingiz kerak bo‘lgan maxsus kod beriladi. Shundan so‘ng, bot ushbu kodni yuborgan Telegram foydalanuvchisiga ulanadi.",
+    "no_results": "Qidiruv hech qanday natija bermadi"
+  },
+  "mainPage": {
+    "welcome_ilm": "Salom! ILM online ga xush kelibsiz.",
+    "welcome_ilm_choose": "Qaysi yo'nalishda o‘qishni xohlaysiz?",
+    "head_title": {
+      "school": "Ilm sari <span style=\"color: {spanColor}\">biz bilan!</span>",
+      "pro": "ILM online bilan o‘z <span style=\"color: {spanColor}\">mahoratingizni </span> oshiring"
+    },
+    "why_ilm_title": {
+      "school": "Nima uchun <span style=\"color: {spanColor}\">ILM</span>?",
+      "pro": "Nima uchun <span style=\"color: {spanColor}\">ILM online</span>?"
+    },
+    "why_ilm_subtitle": "Shuning uchun ular bizni tanlaydilar",
+    "free_dtm": "DTM 2021\"dan bepul o'ting",
+    "get_result_now": "Natijangizni hoziroq bilib oling!",
+    "any_question_title": "Savol bering",
+    "popular_class": {
+      "school": "Bizning mashur sinfimizga qoʻshiling, olingan bilimlar albatta foydali boʻladi",
+      "pro": "O'quv formatini tanlang: Oflayn, Onlayn, Video kurslar yoki yozib olingan darslar. Mutaxassislarimizdan o'zingiz uchun eng qulay bo'lgan shaklda bilim oling."
+    },
+    "popular_coursies": {
+      "school": "Ommabop darslar",
+      "pro": "Mashhur kurslar"
+    },
+    "short_naming": "Qisqa ism",
+    "amount": "To'lov miqdori",
+    "email": "E-mail",
+    "name_in_messanger": "Messenjerda foydalanuvchi ismingiz",
+    "you_message": "Sizning xabaringiz",
+    "agree_condition": "Davom etish orqali siz <span class=\"send_question__message--active\">foydalanuvchi shartnomasi shartlariga rozilik bildirasiz</span>"
+  },
+  "profilePage": {
+    "have_not_dialogs": "Sizda boshlangan suhbatlar yo'q",
+    "not_connected": "Ulanmagan",
+    "connected": "Ulangan",
+    "title_direction": "Smart obuna",
+    "have_not_results": "Hozircha natijalar yoʻq",
+    "have_not_tests": "Siz hech qanday testdan o'tmadingiz",
+    "valid_until": "<strong>1 sentyabrgacha</strong> amal qiladi",
+    "title_profile-edit": "Profilni tahrirlash",
+    "title_profile": "Profil va sozlamalar",
+    "title_profile-tests": "Mening testlarim",
+    "title_students": "O'quvchi",
+    "study_everything": {
+      "school": "Qiziqarli yoki mashhur darslarni o'rganing va o'z tafakkuringizni rivojlantiring",
+      "pro": "Qiziqarli yoki mashhur darslarni o'rganing va o'z tafakkuringizni rivojlantiring"
+    },
+    "save_money": {
+      "school": "Agar siz bu yil bir nechta kurslar tugatishni rejalashtirayotgan bo'lsangiz, o'qish uchun pulni tejashingiz mumkin",
+      "pro": "Agar siz bu yil bir nechta dars olishni rejalashtirmoqchi bo'lsangiz, o'qish uchun pulni tejashingiz mumkin"
+    },
+    "your_study_speed": {
+      "school": "O'z imkoniyatingiz doirasida o'rganing, bir vaqtning o'zida bir nechta darslarni o'zlashtiring",
+      "pro": "O'z imkoniyatingiz doirasida o'rganing, bir vaqtning o'zida bir nechta darslarni o'zlashtiring"
+    },
+    "title_referal": "Yo'naltirish tizimi",
+    "title_parent_control": "Ota-ona nazorati",
+    "title_smart_subscribe": "Smart obuna",
+    "title_payment": "To'lov tafsilotlari",
+    "title_payment_history": "To'lovlaringiz tarixi",
+    "title_payment_edit": "Kartani tahrirlash",
+    "title_payment_add": "Yangi karta qo'shish",
+    "title_installments": "Tez orada muddatli toʻlov ochiladi",
+    "smart_invest": "ILM online bilan kasbiy rivojlanishingizga sarmoya kiriting",
+    "payment_add_card": "Yangi karta qo'shing",
+    "payment_card_history": "To'lov tarixi",
+    "payment_card_info_content": "Sizning tranzaksiya ma'lumotlaringiz bizning saytimizning yuqori xavfsizlik standartlariga muvofiq xavfsiz tarzda himoyalangan. To'lov tez va komissiyasiz amalga oshiriladi.",
+    "payment_card_info": "ILM online sizga bank kartasi orqali onlayn to'lovlarni amalga oshirish uchun qulay va xavfsiz tizimni taklif etadi!",
+    "payment_title": "To'lov usullari",
+    "title_chat_for_teacher": {
+      "school": "Talabalar bilan suhbat",
+      "pro": "Talabalar bilan suhbat"
+    },
+    "title_chat_for_student": {
+      "school": "Kurator bilan suhbat",
+      "pro": "Kurator bilan suhbat"
+    },
+    "title_lessons": {
+      "school": "Mening darslarim",
+      "pro": "Mening kursalarim"
+    },
+    "balance": "Balans",
+    "smart_together": "ILM onlinega a'zo bo'lish orqali o'z maqsadlariga erishadigan minglab talabalar safiga qo'shiling",
+    "smart_expire_text": "Smart obuna _gacha amal qiladi",
+    "smart_info_1": "Tanlagan sohalaringiz haqida ma'lumotlarni va yangi ko'nikmalarni o'rganing",
+    "history_error__mess": "Yozuvlar yoʻq",
+    "confirm_phone_number": "Telefon raqamni tasdiqlang",
+    "title_teacher-lesson-detail": "Darslar",
+    "success_feedback": "Sizning xabaringiz muvaffaqiyatli yuborildi",
+    "success_withdrawal": "Mablag‘ yechish uchun so‘rov muvaffaqiyatli yuborildi.",
+    "error_withdrawal": "Xato. Balans so‘ralgan miqdordan kam.",
+    "success_logout": "Siz shaxsiy kabinetingizdan muvaffaqiyatli chiqdingiz",
+    "success_changes": "O'zgarishlar muvaffaqiyatli amalga oshirildi.",
+    "have_not_chats": "Sizda hali suhbatlar yo'q.",
+    "choose_course_for_chat": "O'qituvchilar bilan suhbatni boshlash uchun fanni tanlang",
+    "chat_with_students": "Talabalar bizning kurslarimizni o'tishni boshlaganda suhbat paydo bo'ladi",
+    "choose_direction": "Bilimlaringizni tekshirish uchun yo'nalishni tanlang",
+    "choose_course": "O‘qishni boshlash uchun fanni tanlang",
+    "confirm_phone_number__text": "Plastik karta egasi ekanligingizni tasdiqlash uchun SMS-xabarnomadagi kodni kiriting"
+  },
+  "aboutUs": {
+    "head_title": {
+      "school": "<span style=\"color: {spanColor}\">Bizning vazifamiz</span> - O‘zbekistonda hamma uchun yangi onlayn ta’lim standartini yaratishdir",
+      "pro": "<span style=\"color: {spanColor}\">Bizning vazifamiz</span> — O‘zbekistonda hamma uchun yangi onlayn ta’lim standartini yaratishdir"
+    },
+    "we_are_progressive_command": {
+      "school": "<span style=\"color: {spanColor}\">Biz ko'p qirrali jamoamiz</span> jasur vazifani bajarish uchun birlashganmiz, maqsadimiz - O'zbekistonda hamma uchun onlayn ta'limning yangi standartini yaratish.",
+      "pro": "<span style=\"color: {spanColor}\">Biz ko'p qirrali jamoamiz</span> jasur vazifani bajarish uchun birlashganmiz maqsadimiz - O'zbekistonda hamma uchun onlayn ta'limning yangi standartini yaratish."
+    },
+    "instruments_joining_text": {
+      "school": "<span style=\"color: O‘zbekistonning turli burchaklaridan</span> bo‘lgan millionlab talabalar ILM onlineda har kuni bilim olishadi",
+      "pro": "<span style=\"color: {spanColor}\">O‘zbekistonning turli burchaklaridan</span> bo‘lgan millionlab talabalar ILM online da har kuni bilim olishadi"
+    },
+    "instruments_describe": {
+      "school": "<p>ILM onlineda barcha toifadagi o‘qituvchilar o‘z o‘quvchilari nima bilan shug‘ullanayotganini va ularga qanday yordam berishni yaxshiroq tushunishlari uchun ko‘p ishlaydilar. Bir qarashda o‘quvchini qay darajada qiynalayotganini yoki sinfdan ancha oldinda ekanligini ko‘ra oladi.</p> </br> <p>Bizning “O‘qituvchi boshqaruv paneli” har bir talabaning muvaffaqiyati haqida qisqacha ma’lumot beradi, shuningdek, o‘quvchining batafsil profilini ham taqdim etadi.</p>",
+      "pro": "<p>ILM onlineda barcha toifadagi o‘qituvchilar o‘z o‘quvchilari nima bilan shug‘ullanayotganini va ularga qanday yordam berishni yaxshiroq tushunishlari uchun ko‘p ishlaydilar. Bir qarashda o‘quvchini qay darajada qiynalayotganini yoki sinfdan ancha oldinda ekanligini ko‘ra oladi.</p> </br> <p>Bizning “O‘qituvchi boshqaruv paneli” har bir talabaning muvaffaqiyati haqida qisqacha ma’lumot beradi, shuningdek, o‘quvchining batafsil profilini ham taqdim etadi.</p>"
+    },
+    "instruments_title": {
+      "school": "Ota-onalar va o'qituvchilar uchun <span style=\"color: {spanColor}\">bepul</span> vositalar",
+      "pro": "Ota-onalar va o'qituvchilar uchun<span style=\"color: {spanColor}\">bepul</span>vositalar"
+    },
+    "course_describe": {
+      "school": "ILM online platformasi o‘quvchilar har qanday joyda va istalgan vaqtda samarali bilim olish imkonini beradi. Shuningdek foydalanuvchilarga amaliy mashqlar, oʻquv video darslar va shaxsiy ta'lim paneli taklif etiladi.",
+      "pro": "ILM online platformasi o‘quvchilar har qanday joyda va istalgan vaqtda samarali bilim olish imkonini beradi. Shuningdek foydalanuvchilarga amaliy mashqlar, oʻquv video darslar va shaxsiy ta'lim paneli taklif etiladi."
+    },
+    "course_describe_part_second": {
+      "school": "Biz <span style=\"color: {spanColor}\"> Tabiiy fanlar, aniq fanlar, gumanitar fanlar va innovatsion darslar taklif qilmaiz.</span> Biz talabalarga  keyinchalik ular o'rganishlari uchun chegara bo'lmasligi va sifatli ta'lim olishda mustahkam poydevor bo'lishga harakat qilamiz!</p>",
+      "pro": "Biz  <span style=\"color: {spanColor}\">dasturiy ta'minot, marketing, dizayn, loyiha boshqaruvi, turli xorijiy tillar, ishlab chiqarish va boshqa ko'p narsalarni o'rgatamiz. </span>.Biz talabalarga  keyinchalik ular o'rganishlari uchun chegara bo'lmasligi va sifatli ta'lim olishda mustahkam poydevor bo'lishga harakat qilamiz!"
+    },
+    "join_to_glabal_class": "Siz global sinfga qo'shilasiz",
+    "we_are_progrmmists": "Biz dasturchilar, o'qituvchilar, dizaynerlar, strateglar, olimlar va dunyoni o'rganishda ilhomlantirishga chinakam ishonadigan kontent bo'yicha mutaxassislarmiz.",
+    "from_modest_to_cool_command": "Dastlab kichik bir jamoa, keyinroq esa jahon darajasidagi  kompaniya qadar",
+    "course_title": "Barcha yoshdagilar uchun moslashtirilgan o'quv resursi"
+  },
+  "whyIlmList": {
+    "title_id_1": {
+      "school": "Tasdiqlangan materiallar",
+      "pro": "Tasdiqlangan materiallar"
+    },
+    "title_id_2": {
+      "school": "Shaxsiylashtirilgan ta'lim",
+      "pro": "Shaxsiylashtirilgan ta'lim"
+    },
+    "title_id_3": {
+      "school": "Darslar va bilimlar hamma uchun ochiq",
+      "pro": "Bilimlar hamma uchun ochiq va oson"
+    },
+    "content_id_1": {
+      "school": "ILM onlinening moslashtirilgan video darslari aniq fanlar, tabiiy fanlar, gumanitar fanlar, xorijiy til va boshqa sohalar boʻyicha haqiqiy mutaxassislar tomonidan yaratilgan. Video darslarning  barchasi eng kichik detallargacha o'ylangan va samarali natija beradi.",
+      "pro": "ILM onlinening moslashtirilgan video darslari aniq fanlar, tabiiy fanlar, gumanitar fanlar, xorijiy til va boshqa sohalar boʻyicha haqiqiy mutaxassislar tomonidan yaratilgan. Video darslarning  barchasi eng kichik detallargacha o'ylangan va samarali natija beradi."
+    },
+    "content_id_2": {
+      "school": "Har bir inson o'z imkoniyati doirasida o'rganishi mumkin bo'ladi, avval materialni tushunishdagi kamchiliklar to'ldiriladi, keyin esa bilimlari yanada chuqurlashtiriladi.",
+      "pro": "Har bir inson o'z imkoniyati doirasida o'rganishi mumkin bo'ladi, avval materialni tushunishdagi kamchiliklar to'ldiriladi, keyin esa bilimlari yanada chuqurlashtiriladi."
+    },
+    "content_id_3": {
+      "school": "ILM online barchaga sifatli ta'lim olish va rivojlanishning yangi darajasiga chiqishda yordam beradi, shuningdek, o'qituvchilar va ta'lim muassasalariga talabalar bilimidagi kamchiliklarni aniqlashda va har bir kishi uchun individual dastur yaratishda yordam beradi.",
+      "pro": "ILM online barchaga sifatli ta'lim olish va rivojlanishning yangi darajasiga chiqishda yordam beradi, shuningdek, o'qituvchilar va ta'lim muassasalariga talabalar bilimidagi kamchiliklarni aniqlashda va har bir kishi uchun individual dastur yaratishda yordam beradi."
+    }
+  },
+  "policy": {
+    "user_agreement_title": "1. Foydalanish shartlari",
+    "user_agreement_text": "1.1.Ta'lim platformasidan (sayt) foydalanish shartlari https://ilmonline.uz <br /> https://https://ilmonline.uz/ saytidan foydalanishni boshlashdan oldin (keyingi o'rinlarda \"https: //ilmonline\" deb yuritiladi. .uz” ), unda taqdim etilgan xizmatlar va funksiyalar uchun ushbu hujjatni diqqat bilan o‘qib chiqing. https://ilmonline.uz saytining istalgan funksiyalari, xizmatlari va imkoniyatlaridan foydalangan holda, shu jumladan https://ilmonline.uz sayti sahifalarini oddiygina ko‘rib chiqish orqali siz saytda ro‘yxatdan o‘tganligingizdan qat’i nazar “Foydalanuvchi” hisoblanasiz. yoki roʻyxatdan oʻtmasdan tashrif buyuring, ushbu Foydalanuvchi shartnomasini (keyingi oʻrinlarda “Shartnoma” deb yuritiladi), shu jumladan, unda koʻrsatilgan barcha maxsus shartlar va qoidalarni hech qanday istisno va izohlarsiz oʻqib chiqqanligingizni, tushunganingizni va majburiyatlarga rozi ekanligingizni eʼlon qiling <br /> 1.2. Agar siz ushbu Shartnomaning barcha yoki ayrim qoidalariga rioya qilishga rozi boʻlmasangiz, https://ilmonline.uz saytidan foydalanmang, uni darhol tark eting, agar roʻyxatdan oʻtgan foydalanuvchi boʻlsangiz, https:/ saytidagi akkauntingizni oʻchirib tashlang. /ilmonline.uz yoki saytning mualliflik huquqi egasiga murojaat qilib, uni olib tashlashni iltimos qiling.",
+    "general_conditions_title": "2. Umumiy shartlar",
+    "general_conditions_text": "2.1. Ushbu sayt INNOVATION ILM PLATFORM MChJ “https://ilmonline.uz” (keyingi o‘rinlarda “Mualliflik huquqi egasi” deb yuritiladi) tomonidan boshqariladigan ta’lim platformasi hisoblanadi. Yuridik manzili: Toshkent sh., Mirobod tumani, ko'ch. R. Pirmuhamedov, 86A uy <br /> 2.2. https://ilmonline.uz sayti foydalanuvchini https://ilmonline.uz xizmatlari bilan oldindan tanishtirish, shuningdek https saytidan samarali foydalanish maqsadida chop etiladigan bepul materiallarni (kontentni) o'z ichiga oladi. ://ilmonline.uz. <br /> 2.3. Foydalanuvchi https://ilmonline.uz saytiga obuna bo‘lish orqali xizmat uchun to‘lov qaytarilmasligiga rozi. <br /> 2.4. Mualliflik huquqi egasi https://ilmonline.uz taqdim etilayotgan xizmatlar sifatini yaxshilash maqsadida Foydalanuvchini oldindan ogohlantirmasdan istalgan kontentni oʻchirish, oʻzgartirish, toʻldirish yoki koʻchirish huquqini oʻzida saqlab qoladi. <br /> 2.5. Mualliflik huquqi egasi https://ilmonline.uz foydalanuvchisidan hozirda yoki istalgan vaqtda bepul bo'lgan muayyan kontent uchun haq undirish huquqini o'zida saqlab qoladi. <br /> 2.6. https://ilmonline.uz saytida boshqa tashkilotlarning reklamalarini Foydalanuvchining roziligisiz yuklab olish huquqi https://ilmonline.uz MChJ tomonidan o'zida saqlab qolinadi. <br /> 2.7. Barcha savollar boʻyicha Foydalanuvchi support@ilmonline.uz elektron manziliga xat yuborishi yoki oʻz akkauntida koʻrsatilgan telefon raqamiga qoʻngʻiroq qilishi mumkin.",
+    "policy_title": "3. Maxfiylik siyosati",
+    "policy_text": "3.1. https://ilmonline.uz saytiga tashrif buyurib yoki sayt tomonidan taqdim etilgan kontentdan foydalangan holda, Foydalanuvchi ushbu Shartnomada ko'rsatilgan maxfiylik siyosatiga rozilik bildiradi va shu bilan Foydalanuvchi ro'yxatdan o'tishda o'zi ko'rsatgan shaxsiy ma'lumotlarni yig'ish va qayta ishlashga rozilik beradi. https://ilmonline .uz sayti. <br /> 3.2. Maxfiylik siyosati https://ilmonline.uz va Foydalanuvchi oʻrtasidagi munosabatlarni, jumladan, dasturiy taʼminot (yuklangan, yuklanmagan), texnologiyalar, foydalanuvchi interfeyslari, forumlar, chatlar, profillar, vidjetlar, xabarlar, kontentdan foydalanish nuqtai nazaridan tartibga soladi. https://ilmonline.uz saytida joylashgan havolalar, elektron pochta, jadvallar, matnlar, tasvirlar, videolar, kodlar, tovushlar, ohanglar, oʻyinlar, barcha audiovizual yoki boshqa materiallar, shu jumladan sayt dizayni va tashqi koʻrinishi, yetakchi maʼlumotlar va hujjatlar (keyingi o'rinlarda Tarkib deb yuritiladi). <br /> 3.3. https://ilmonline.uz saytidagi barcha kontent Oʻzbekistonning amaldagi qonunchiligiga muvofiq chop etiladi. <br /> 3.4. Maxfiylik siyosati uchinchi shaxslar yoki mualliflik huquqi egasi nazorat qilmaydigan, egalik qilmaydigan yoki boshqarmaydigan saytlar tomonidan ma'lumotlarni to'plash yoki ishlatishni o'z ichiga olmaydi. <br /> 3.5. Huquq egasi o‘z texnologiyalarini O‘zbekiston qonunchiligida belgilangan maqsad va tamoyillarga mos keladigan tarzda ishlab chiqadi va moslashtiradi. <br /> 3.6. Maxfiylik siyosati foydalanuvchi tomonidan https://ilmonline.uz saytidan foydalanish jarayonida mualliflik huquqi egasi to'playdigan ma'lumotlar turlarini belgilaydi, shuningdek ma'lumotlardan ruxsatsiz foydalanishdan himoya qilishga qaratilgan chora-tadbirlarni belgilaydi.<br /> 3.7. Ma'lumotlar to'plami https://ilmonline.uz saytga tashrif buyurgan foydalanuvchilar haqidagi ma'lumotlarni to'playdi. Saytning har bir tashrifchisiga brauzerda “cookie” deb nomlangan standart funksiyadan foydalanish orqali noyob raqam beriladi. Cookie-fayllar mualliflik huquqi egasiga foydalanuvchilar tomonidan o'qilgan sayt sahifalarini kuzatish, shuningdek, statistik ma'lumotlarni to'plash imkonini beradi. Foydalanuvchi to'g'risidagi ma'lumotlar Foydalanuvchilarga shaxsiylashtirilgan xizmatlarni taqdim etishga, shuningdek ularning sifatini yaxshilashga yordam beradi.<br /> 3.8. Foydalanuvchi haqida ma'lumot» - foydalanuvchini identifikatsiya qilish imkonini beruvchi ma'lumot, xususan, to'liq ism, elektron pochta va manzil haqidagi ma'lumotlar; \"Anonim ma'lumotlar\" foydalanuvchilarni aniqlamaydigan ma'lumotlarni anglatadi. Mualliflik huquqi egasi firibgarlikning mumkin bo'lgan holatlarini yoki hisoblardan bepul yoki ulardan foydalanish shartlarini buzadigan boshqa maqsadlarda foydalanishni kuzatish uchun cookie-fayllardan foydalanadi. Foydalanuvchi cookie-fayllarni qabul qilish yoki qabul qilmaslik huquqiga ega; Foydalanuvchi brauzerdagi barcha cookie-fayllarni yoki https://ilmonline.uz cookie-fayllarini rad etishga haqli. <br /> 3.9 Biroq, agar Foydalanuvchi cookie-fayllarni rad etish yoki ularni o'chirishni tanlasa, bu https://ilmonline.uz saytidan foydalanishda ba'zi funksiyalarni cheklashi mumkin. Foydalanuvchilar haqidagi maʼlumotlardan https://ilmonline.uz xizmatlarini koʻrsatish bilan bogʻliq boʻlmagan maqsadlarda yoki Foydalanuvchining roziligisiz boshqa maqsadlarda foydalanilmaydi. https://ilmonline.uz sayti xizmat sifatini oshirish maqsadida brauzer, operatsion tizim yoki texnik maʼlumotlar haqida toʻplangan maʼlumotlardan foydalanish huquqiga ega. https://ilmonline.uz mustaqil ravishda foydalanish va sayt o'quvchilari va foydalanuvchilari haqidagi anonim (shaxssiz) ma'lumotlarni uchinchi shaxslarga, shuningdek, hamkorlar va reklama beruvchilarga oshkor qilish huquqini o'zida saqlab qoladi. <br /> 3.10. Agar https://ilmonline.uz foydalanuvchisi yoki sayt o‘quvchisiga zarar yetkazish xavfi mavjud bo‘lsa, bunday harakatlar amalga oshirilmaydi. Maxfiylik siyosatiga muvofiq https://ilmonline.uz metamaʼlumotlaridan foydalanuvchilarga xizmat koʻrsatish sifatini oshirish maqsadida foydalanish metamaʼlumotlardan, xususan, kalit soʻzlardan (ular shu jumladan, lekin cheklanmagan holda) foydalanish huquqiga ega. ga), qidiruv tarixi, havolalar, sharhlar, xabarlar va kirish ma'lumotlari. https://ilmonline.uz to'plangan ma'lumotlardan reklama maqsadida va homiylarni jalb qilish uchun foydalanish huquqiga ega.<br /> Foydalanuvchi ma'lumotlari oshkor etilmaydi. Xavfsizlik qoidalari Agar foydalanuvchi ro'yxatdan o'tish shaklini to'ldirishda maxfiy ma'lumotlarni kiritsa (masalan, kredit karta raqami), u holda bu ma'lumot umumiy elektron tijorat shifrlash texnikasi yordamida shifrlanadi.<br /> 3.12. uzatish, shuningdek qayta ishlash. Huquq egasi foydalanuvchilarning ma'lumotlaridan faqat xizmatlar sifatini yaxshilash yoki ma'lumotlarni yangilash maqsadida foydalanadi; Mualliflik huquqi egasi foydalanuvchilarning olingan ma'lumotlarini uchinchi shaxslarga sotmaydi yoki litsenziyalamaydi. Axborot byulletenlari va e'lonlar Agar Foydalanuvchi https://ilmonline.uz axborot byulleteniga obuna bo'lishni istasa, Mualliflik huquqi egasi foydalanish huquqiga ega",
+    "access_title": "4. Saytga kirish",
+    "access_text": "4.1. https://ilmonline.uz sayti faqat shaxsiy foydalanish uchun moʻljallangan, yaʼni boshqa tomon tomonidan saytdan boshqa maqsadlarda foydalanishga yoʻl qoʻyilmaydi, agar shunday holat yuz bersa, unda kirish bekor qilinadi. Sayt egasining yozma ruxsatisiz uni yuklab olish (sayt sahifalarini ko'rish uchun zarur bo'lgan narsalar bundan mustasno) yoki sayt ma'lumotlarini yoki uning bir qismini o'zgartirishga yo'l qo'yilmaydi. https://ilmonline.uz yuklab olish uchun cheklangan turdagi kontentni taqdim etadi, ular “Yuklab olish” tugmasi yordamida amalga oshiriladi, bu eksklyuziv huquqlarga asoslangan va kontentni tarqatish, nusxalashga ruxsat bermaydi. <br /> 4.2. Mualliflik huquqi egasining yozma roziligisiz https://ilmonline.uz yuklangan/koʻmilgan kontentdan tijorat maqsadlarida foydalanish taqiqlanadi. <br /> 4.3. Belgilangan ruxsat https://ilmonline.uz saytini qayta sotish yoki uning Kontentini qayta sotish yoki undan tijorat maqsadida foydalanish huquqini bermaydi. https://ilmonline.uz sayti mualliflik huquqi egasining yozma roziligisiz sayt mazmunini va saytga kirishni koʻpaytirish, tarqatish, nusxalash, qayta nashr qilish, dekompilyatsiya qilish, sotish, qayta sotish yoki undan foydalanish taqiqlanadi. <br /> 4.4. Yuqoridagilarga qaramasdan, agar https://ilmonline.uz saytining istalgan sahifasida kontentni (diplomlar, tashakkurnomalar, sertifikatlar va h.k.) chop etish imkonini beruvchi tugma paydo bo‘lsa, Foydalanuvchi ushbu sahifani chop etishga haqli. faqat shaxsiy foydalanish uchun va ta'lim maqsadlarida tijorat xarakterini tarqatish huquqisiz. <br /> 4.5. Foydalanuvchi https://ilmonline.uz saytining mualliflik huquqi egasining yozma roziligisiz savdo belgisi, logotip yoki boshqa shaxsiy maʼlumotlarni (jumladan, tasvirlar, matn, sahifa tartibi va boshqa maʼlumotlar) yaratish yoki ishlatishga haqli emas. https://ilmonline.uz saytidan har qanday holatda ham ruxsatsiz foydalanish saytga kirish imkoniyatini avtomatik ravishda istisno qiladi. Agar foydalanuvchi ushbu Shartlarni buzsa yoki Mualliflik huquqi egasi foydalanuvchi ularni buzgan deb hisoblash uchun asosli asoslarga ega bo'lsa, mualliflik huquqi egasi ogohlantirmasdan saytga kirishni to'xtatib turish va/yoki bekor qilish, butun bonus reytingini bekor qilish va foydalanishni cheklash huquqiga ega. bir oy davomida https://ilmonline platformasi uz. Shuningdek, Mualliflik huquqi egasi ushbu Foydalanuvchini Qozog'iston Respublikasining amaldagi qonunchiligiga muvofiq javobgarlikka tortish huquqini o'zida saqlab qoladi. <br /> 4.6. Foydalanuvchi zararli dasturlar (viruslar, troyanlar va h.k.) yoki boshqa zararli dasturlar, siyosiy xabarlar, haqoratomuz maʼlumotlar va xabarlar, ommaviy xatlar va boshqa turdagi “spam”larni joʻnatmasligini yoki foydalanmasligini tasdiqlaydi. <br /> 4.7. Foydalanuvchi kompyuter tizimiga, tizimning maxfiy ma'lumotlariga, boshqa foydalanuvchilar haqidagi ma'lumotlarga kirish huquqiga ega bo'lgan taqdirda, u ulardan noqonuniy maqsadlarda va boshqa tomonning roziligisiz foydalanmasligiga rozi bo'ladi. <br /> 4.8. Foydalanuvchi elektron taxallusi va/yoki IP-manzilini, boshqa shaxs yoki tashkilotning taxallusidan foydalanishga, boshqa foydalanuvchi yoki shaxs nomini niqob qilib olgan har qanday harakatlarni amalga oshirishga haqli emas. <br /> 4.9. E'tibor bering, sayt har doim ham mavjud bo'lmasligi mumkin. Tizimga texnik qo'shimchalar, muammolarni bartaraf etish xizmatlari yoki boshqa texnik sabablar ma'lum vaqt davomida mavjud bo'lmasligi mumkin",
+    "account_title": "5. Foydalanuvchi hisobi",
+    "account_text": "5.1. https://ilmonline.uz kontentidan foydalanish uchun roʻyxatdan oʻtishingiz kerak. https://ilmonline.uz saytida roʻyxatdan oʻtish orqali Foydalanuvchi shaxsiy maʼlumotlardan https://ilmonline.uz taʼlim platformasi shartlariga muvofiq foydalanishga rozilik bildiradi. <br /> 5.2. Foydalanuvchi tomonidan https://ilmonline.uz saytiga taqdim etilgan shaxsiy ma’lumotlardan, agar Foydalanuvchi ushbu shartnoma bandlarida va O‘zbekiston Respublikasi Qonunida ko‘rsatilgan talablarni buzmagan bo‘lsa, unga qarshi yoki unga zarar yetkazish uchun foydalanilishi mumkin emas. Qozog'iston. <br /> 5.3. https://ilmonline.uz taʼlim platformasida foydalanuvchilar oʻrtasida xabar almashish imkoniyati mavjud. Muloqot chog‘ida odob-axloq me’yorlarini buzishga, haqoratli so‘zlardan foydalanishga, sha’ni, vijdonini haqorat qilishga, shuningdek, millatlararo, dinlararo va boshqa adovatni qo‘zg‘atishga yo‘l qo‘yilmaydi. Eslatib oʻtamiz, Oʻzbekistonning amaldagi qonunchiligiga muvofiq, mazkur normalarni buzganlik uchun maʼmuriy va jinoiy jazolar nazarda tutilgan. <br /> 5.4. https://ilmonline.uz foydalanuvchilari oʻrtasida shaxsiy yozishmalar yuzaga kelgan taqdirda platforma xodimlari boshqa foydalanuvchilar tomonidan etika va axloq meʼyorlariga rioya qilishlari uchun javobgar emaslar. <br /> 5.5. Platforma xodimlari, shuningdek, agar kerak bo'lsa, moderator sifatida o'quv platformasi foydalanuvchilarining yozishmalari va xabarlarini tahrirlash, Foydalanuvchining iltimosiga binoan parolni o'zgartirish huquqiga ega. <br /> 5.6. https://ilmonline.uz sayti ochiq va erkin foydalanishga asoslangan bepul Kontentga ega, ammo barcha kontentga kirish uchun Foydalanuvchi ro'yxatdan o'tishi kerak. https://ilmonline.uz pullik kontentga ochiq va bepul kirishga asoslangan bepul kontentni uzatish va kelajakda pullik xizmatlar ko‘rsatish huquqiga ega. <br /> 5.7. Agar Foydalanuvchi pullik xizmatlarni olishga rozi bo'lsa, kelajakda u https://ilmonline.uz saytidan ro'yxatdan o'tishi va undan foydalanishi kerak. <br /> 5.8. Agar Foydalanuvchi https://ilmonline.uz kontentidan foydalanish uchun roʻyxatdan oʻtmoqchi boʻlsa, Foydalanuvchi rozilik bildiradi va Foydalanish shartlariga rioya qilishi shart. <br /> 5.9. Foydalanuvchi maxfiylik uchun javobgardir",
+    "information_copyright_holder_title": "6.Mualliflik huquqi egasi haqida ma'lumot",
+    "information_copyright_holder_text": "ООО «INNOVATION ILM PLATFORM» <br />Manzil: Toshkent sh., Mirobod tumani, ko'ch. R. Pirmuhamedova, 86A uy <br /> TIN: 309151676, veb-sayt: https://ilmonline.uz <br /> e-mail: support@ilmonline.uz "
+  },
+  "agreement": {
+    "intellectual_property_text": "9.1. Veb-sayt mazmuni hamda Darslar va tadbirlarning mazmuni Kompaniyaning intellektual mulki hisoblanadi yoki u tomonidan uchinchi shaxslarning tegishli tarzda rasmiylashtirilgan roziligi asosida foydalaniladi va qonun hujjatlariga muvofiq himoya qilinishi kerak. Foydalanuvchi tomonidan Dars/Darslar yoki Tadbirda olingan ma’lumotlarni tijorat maqsadlarida kompaniyaning bunday harakatlarga bevosita roziligisiz har qanday usulda tarqatishi taqiqlanadi. <br />9.2. Foydalanuvchiga Veb-sayt sahifalariga kirishni taʼminlash Foydalanuvchiga Kompaniyaning intellektual mulkidan foydalanish uchun har qanday litsenziya berilganligini anglatmaydi. Ushbu Shartnoma boʻyicha Foydalanuvchiga aniq berilgan huquqlardan tashqari barcha huquqlar Kompaniya tomonidan himoyalangan.<br /> 9.3. Veb-saytda yuklab olish mumkin boʻlgan har qanday dasturiy taʼminot Kompaniya va/yoki uning hamkorlarining intellektual mulki hisoblanadi. Dasturiy taʼminotdan foydalanish foydalanuvchiga bunday dasturiy taʼminotni yuklab olishda uning shartlarini qabul qilish uchun taqdim etilgan litsenziya shartnomasi shartlari bilan tartibga solinadi. Agar foydalanuvchiga dasturiy taʼminotdan foydalanish uchun litsenziya shartnomasi taqdim etilmagan boʻlsa, Kompaniya Foydalanuvchiga dasturiy taʼminotdan faqat foydalanuvchining shaxsiy notijorat maqsadlarida foydalanish huquqini beradi va bunday dasturiy taʼminotdan foydalanganlik uchun toʻlov toʻlov narxiga kiritiladi. Dasturiy taʼminotga boʻlgan barcha huquqlar, shu jumladan, bunday dasturiy taʼminotga boʻlgan mualliflik huquqi va boshqa eksklyuziv huquqlar Kompaniya va/yoki dasturiy taʼminot ishlab chiqaruvchisi tomonidan himoyalangan.",
+    "intellectual_property_title": "INTELLEKTUAL MULK HUQUQLARI",
+    "order_title": "Shartnoma taklifi",
+    "order_subtitle": "Ushbu Shartnoma <strong>“INNOVATION ILM PLATFORM”</strong>ChJning (keyingi o‘rinlarda “Kompaniya” deb yuritiladi) rasmiy taklifi (ommaviy oferta) bo‘lib, u cheklanmagan miqdordagi shaxslarga quyidagi shartlarda Veb-saytdan foydalanish bo‘yicha shartnoma tuzishni taklif qiladi:",
+    "terminology_title": "SHARTLARNING TA'RIFI",
+    "terminology_text": "1.1. Ushbu Shartnomada foydalaniladigan terminologiya quyidagilarni anglatadi: <br /> 1.1.1. Avtorizatsiya - foydalanuvchi yoki Tashkilotchi tomonidan kiritilgan autentifikatsiya ma'lumotlarini veb-saytning dasturiy qismi tomonidan tahlil qilish jarayoni, uning natijalari shaxsiy sahifa va veb-sayt xizmatlariga kirish huquqining mavjudligini aniqlaydi; <br /> 1.1.2. Aksept - Saytda ro'yxatdan o'tish amallarini bajarish orqali Ofertani to'liq va so'zsiz qabul qilish; <br /> 1.1.3. Autentifikatsiya ma'lumotlari - Shaxsiy sahifaga kirish uchun foydalaniladigan noyob foydalanuvchi identifikatori. Autentifikatsiya ma'lumotlari foydalanuvchining logini, paroli, elektron pochta manzillarini o'z ichiga oladi; <br /> 1.1.4. Veb-sayt – jamiyat ixtiyorida boʻlgan hamda yuridik va jismoniy shaxslarga maʼlum matn, grafik yoki tovush koʻrinishidagi axborot resurslari bilan birgalikda ilm domen zonasida Internet tarmogʻida yagona manzilga ega boʻlgan dasturiy-texnik vositalar majmui. ushbu axborot resurslariga va boshqa axborot xizmatlariga internet tarmog‘i orqali kirish; <br /> 1.1.5. Tadbirga kirish - kompaniya tomonidan yaratilgan elektron pochta, shu jumladan, lekin faqat Tashkilotchining ko'rsatmasi bo'yicha, foydalanuvchiga ishtirok etish huquqini beruvchi ma'lum bir Tadbirga (URL, kirish kodi) kirish tafsilotlarini o'z ichiga olgan. u tanlagan voqea. Tadbirga kirish foydalanuvchining shaxsiy sahifasidan foydalanish orqali ham mumkin; <br /> 1.1.6. Internet-sahifa (HTML sahifasi) - Veb-saytning ajralmas qismi sifatida Internet tarmog'ida ma'lumotlarni e'lon qilish uchun mo'ljallangan, dasturiy va texnik vositalar bilan birlashtirilgan, shu jumladan matn, grafikalarni o'z ichiga olgan axborot materiallari to'plami, Sayt sahifasi; <br /> 1.1.7. Qonun hujjatlari – O‘zbekistonning amaldagi qonunchiligining mazkur Bitimga nisbatan qo‘llaniladigan qoidalarini anglatadi; <br /> 1.1.8. Tadbir - Tashkilotchi tomonidan Veb-sayt xizmatlaridan foydalangan holda tashkil etiladigan mavzuli treninglar, seminarlar, konferentsiyalar, vebinar yoki onlayn maslahatlar formatidagi mahorat darslari va boshqa masofaviy tadbirlar; <br /> 1.1.9. Ilova - Ofertada belgilangan tartibda veb-sayt yordamida amalga oshirilgan foydalanuvchining muayyan Tadbirda ishtirok etish istagi; <br /> 1.1.10. Veb-sayt tarkibi - intellektual faoliyat natijalari va tenglashtirilgan individuallashtirish vositalari, shu jumladan: adabiy asarlar, matnlar, ma'ruzalar, nutqlar, nutqlar, kompyuter dasturlari, mobil telefonlar uchun dasturlar va ilovalar, audiovizual asarlar (video kurslar, infografika, fonogrammalar , tasvirlar, savdo belgilari). va xizmat ko'rsatish belgilari, savdo nomlari va savdo nomlari, logotiplar, gipermatnli havolalar, ularning bo'laklari, ma'lumotlar, vidjetlar va veb-saytda joylashtirilgan boshqa ob'ektlar;<br /> 1.1.11 Tadbir va dars mazmuni - sessiya mazmunini tashkil etuvchi barcha ma'lumotlar Muayyan hodisa, shu jumladan jonli translyatsiyalar, ma'lumotlar fayllari, matnlar, kompyuter dasturlari, ovozli fayllar, fotosuratlar, videolar va boshqa tasvirlar, shu jumladan veb-saytdan foydalangan holda yangi tashkil etilganlar; <br / > 1.1.12.Foydalanuvchi - qabul qilgan shaxs Ushbu ommaviy oferta shartnomasida mavjud bo'lgan taklif va ma'lumotlarga kirish huquqiga ega, veb-saytida joylashtirilgan. Foydalanuvchi o'z akkauntidan foydalanish huquqiga ega bo'lmagan har qanday shaxs tomonidan foydalanish bilan bog'liq barcha xavflarni va bunday foydalanish oqibatlarini o'z zimmasiga oladi; <br /> 1.1.13. Ruxsatsiz kirish - uchinchi shaxs tomonidan foydalanuvchi autentifikatsiya ma'lumotlaridan foydalanish; <br /> 1.1.14. Hisob qaydnomasi - Veb-sayt serverlarida saqlanadigan foydalanuvchi autentifikatsiya ma'lumotlari va shaxsiy ma'lumotlar; <br /> 1.1.15. Tashkilotchi - Kompaniyaning agenti va/yoki litsenziati bo'lgan va foydalanuvchilarni Tadbirda ishtirok etishga jalb qilish bo'yicha faoliyatni amalga oshiruvchi jismoniy shaxs, yakka tartibdagi tadbirkor yoki yuridik shaxs, shu jumladan. Tadbirda ishtirok etish uchun to'lovlarni qabul qilish huquqi bilan; <br /> 1.1.16. Shaxsiy sahifa - Foydalanuvchining Shaxsiy ma'lumotlarni o'z ichiga olgan akkauntni olishi natijasida Veb-saytning dasturiy imkoniyatlaridan foydalangan holda yaratilgan Internet sahifasi; <br /> 1.1.17. Shaxsiy ma'lumotlar - Kompaniyaga foydalanuvchini avtorizatsiya qilish tartib-qoidalarini amalga oshirish imkonini beruvchi ishonchli, to'liq va dolzarb ma'lumotlar, Foydalanuvchi tomonidan Shaxsiy sahifada ixtiyoriy ravishda va bepul joylashtiriladi. Ushbu ma'lumot foydalanuvchi tomonidan Saytda ro'yxatdan o'tish jarayonida taqdim etiladi, unda ism, login, elektron pochta manzili va Foydalanuvchi o'zi haqida taqdim etishi kerak bo'lgan boshqa ma'lumotlar bo'lishi mumkin. Shaxsiy ma'lumotlarni saqlash veb-saytda avtorizatsiya qilish imkoniyatini ta'minlash maqsadida amalga oshiriladi, ma'lumotlarni saqlash tartibi Maxfiylik siyosatida va shaxsiy ma'lumotlarni qayta ishlashda nazarda tutilgan; <br /> 1.1.18. Oferta - bu ommaviy oferta shartnomasi bo'lib, kompaniya va foydalanuvchi o'rtasida kompaniya tomonidan taklif qilingan shartnomaga foydalanuvchi qo'shilish orqali tuziladi.",
+    "subject_contract_title": "SHARTNOMA MAVZUSI",
+    "subject_contract_text": "2.1. Ushbu Shartnoma rasmiy ommaviy oferta (oferta) bo'lib, Kompaniyaning barcha manfaatdor tomonlarga Veb-sayt xizmatlaridan foydalanishni ta'minlash bo'yicha xizmatlarni taqdim etishi uchun barcha muhim shartlarni o'z ichiga oladi. <br /> 2.2. Kompaniya ushbu Ofertada nazarda tutilgan tartibda va shartlarda Foydalanuvchiga Veb-saytdan foydalanish imkoniyatini beradi va Foydalanuvchi Veb-saytdan ushbu Oferta shartlariga muvofiq foydalanish majburiyatini oladi. <br /> 2.3. Kompaniya veb-sayti tadbirlarni o'tkazish uchun platforma hisoblanadi. Agar ushbu Shartnomada yoki muayyan Tadbirda ishtirok etish shartlarida boshqacha tartib nazarda tutilmagan bo'lsa, Kompaniya Tadbirlarni o'tkazish uchun javobgar shaxs emas. Tadbirlarni o'tkazish, pullik xizmatlar ko'rsatish bo'yicha barcha majburiyatlar Foydalanuvchi va O'qituvchi va/yoki uchinchi shaxslar o'rtasida yuzaga keladi. Agar ushbu Shartnomada yoki muayyan Tadbirda ishtirok etish shartlarida boshqacha qoida nazarda tutilmagan bo'lsa, Kompaniya ushbu majburiyatlarning haqiqiyligi va bajarilishi imkoniyati uchun javobgar emas. Tadbirlarni o'tkazish bilan bog'liq majburiyatlarni bajarishning asosliligi va imkoniyati, shuningdek, Tadbirlar mazmuni uchun javobgarlik faqat o'qituvchining zimmasida. <br /> 2.4. Foydalanuvchining Veb-saytda ro'yxatdan o'tish fakti ushbu Oferta shartlarini to'liq va so'zsiz qabul qilish (qabul qilish) hisoblanadi. <br /> 2.5. Veb-saytda e'lon qilingan Tadbirlar jadvali, soni va davomiyligi, shuningdek, Tadbirlarning narxi va Tadbirlar uchun boshqa muhim holatlar veb-saytda real vaqt rejimida e'lon qilinishi mumkin. <br /> 2.6. Kompaniya va O'qituvchi o'rtasidagi tegishli shartnomalarda nazarda tutilgan shartlarga ko'ra, Kompaniya foydalanuvchilar bilan munosabatlarda o'z nomidan, lekin o'qituvchi nomidan ish yuritadi va o'qituvchi tomonidan Tadbirlarga kirishni amalga oshirishda texnik yordam ko'rsatadi. Foydalanuvchilar. <br /> 2.7. Foydalanuvchi ushbu Taklifning joriy versiyasini Veb-saytga joylashtirish orqali kelajakda Kompaniya tomonidan ushbu Taklif shartlari o'zgartirilishi mumkinligiga rozilik bildiradi. Agar Foydalanuvchi Taklifning yangi (o'zgartirilgan) shartlariga rozi bo'lmasa, Kompaniya Foydalanuvchining hisobini bloklash yoki bekor qilish huquqini o'zida saqlab qoladi.",
+    "user_registration_title": "WEB-SAYTDA FOYDALANUVCHI RO'YXATDAN OTISHI",
+    "user_registration_text": "3.1. Foydalanuvchiga Xizmatni taqdim etish, agar Foydalanuvchi Veb-saytda ro'yxatdan o'tish jarayonini tugatsa (foydalanuvchi tegishli akkauntni (ro'yxatdan o'tish hisobini) yaratadi). Hisob qaydnomasida (ro'yxatdan o'tish akkaunti) foydalanuvchining logini (taxallus (taxallus) yoki Foydalanuvchi nomi), uning elektron pochta manzili va paroli.<br /> 3.2 Foydalanuvchining Veb-saytda ro'yxatdan o'tishlari bepul va ixtiyoriydir.<br /> 3.3 Foydalanuvchi ro'yxatdan o'tishdan oldin ushbu Shartnoma shartlari bilan to'liq tanishishi shart. Veb-sayt. va Foydalanuvchi tomonidan ushbu Shartnoma shartlarini so'zsiz qabul qilishi.<br /> 3.4.Akkauntni ro'yxatdan o'tkazish ro'yxatdan o'tish formasini to'ldirish orqali amalga oshiriladi.Ro'yxatdan o'tish formasida Foydalanuvchi taxallus yoki haqiqiy ismini ko'rsatishi, to'g'ri elektron pochta manzili, parol Ushbu shaklni to'ldirgandan so'ng, kompaniya ko'rsatilgan elektron pochta manziliga yuboradi havolani o'z ichiga olgan elektron pochta xabarini yubordi, uni bosish orqali Foydalanuvchi ro'yxatdan o'tishni tasdiqlaydi. Ushbu qadamlar ro'yxatdan o'tish uchun majburiydir. Shuningdek, Kompaniya ro'yxatdan o'tish jarayonida Veb-saytda ko'rsatilgan tartibda ijtimoiy tarmoqlardan biridagi joriy hisob qaydnomasidan (profilidan) foydalangan holda foydalanuvchini ro'yxatdan o'tkazishning texnik imkoniyatini ta'minlashi mumkin. <br /> 3.5. Foydalanuvchi Veb-saytda muvaffaqiyatli ro'yxatdan o'tgandan so'ng, Kompaniya ushbu Shartnomada ko'rsatilgan Foydalanuvchi oldidagi huquq va majburiyatlarni o'z zimmasiga oladi. Foydalanuvchi tomonidan ko'rsatilgan login (ism, taxallus) va parol foydalanuvchining Veb-saytdagi shaxsiy sahifasiga kirishi uchun zarur va etarli ma'lumotdir. <br /> 3.6. Foydalanuvchi o'z login va parolini uchinchi shaxslarga o'tkazish huquqiga ega emas va saqlash usulini mustaqil tanlagan holda, ularning xavfsizligi uchun to'liq javobgardir. Agar Foydalanuvchi aksini isbotlamasa, uning login va parolidan foydalangan holda amalga oshirilgan har qanday harakatlar Foydalanuvchi tomonidan sodir etilgan deb hisoblanadi va undan keyingi barcha oqibatlarga olib keladi. <br /> 3.7. Foydalanuvchi o'z parolining maxfiyligini saqlash uchun javobgardir. Agar Foydalanuvchi o'z akkauntiga ruxsatsiz kirish faktlarini aniqlasa, u ushbu holat haqida imkon qadar tezroq Kompaniyani xabardor qilishga majburdir. <br /> 3.8. Kompaniya hech qachon Foydalanuvchidan bank kartasi raqami yoki pin kodini taqdim etishni talab qilmaydi. Bunday so'rovlar (veb-saytda yoki elektron xabarlar ko'rinishida) yuzaga kelgan taqdirda, Foydalanuvchi veb-saytdan foydalanishni darhol to'xtatishi va bu haqda Kompaniyani xabardor qilishi kerak. <br /> 3.9. Kompaniya hech qachon Foydalanuvchiga ro'yxatdan o'tish paytida ko'rsatilgan parolni Kompaniya yoki Tashkilotchiga ko'rsatish, tasdiqlash yoki boshqa yo'l bilan xabardor qilish so'rovi bilan elektron so'rovlarni yubormaydi. Parol veb-saytda shifrlangan shaklda saqlanadi. <br /> 3.10. Foydalanuvchi veb-saytga kirish uchun autentifikatsiya ma'lumotlarini yo'qotgan taqdirda yoki ro'yxatdan o'tish paytida foydalanuvchi tomonidan ko'rsatilgan taxallus yoki elektron pochta manzilini o'zgartirish zarur bo'lsa, foydalanuvchini yo'qolgan ma'lumotlar to'g'risida qayta xabardor qilish va/yoki o'zgartirish taxallus yoki elektron pochta manzili Foydalanuvchi tomonidan shaxsan Veb-sayt xizmatlaridan foydalangan holda amalga oshirilishi mumkin, shuningdek, Foydalanuvchining yozma iltimosiga binoan Kompaniya, bunday so'rovda Foydalanuvchining familiyasi, ismi va otasining ismini ko'rsatgan holda. , Foydalanuvchining taxallusi va/yoki identifikatsiya raqami, shuningdek, Kompaniyaning iltimosiga binoan, Foydalanuvchi Tadbirda ishtirok etish uchun to'lovni amalga oshirganligini tasdiqlovchi to'lov hujjatining nusxasini taqdim etadi (to'lov yo'riqnomalari, kvitansiyalar va boshqalar). Yo'qotilgan ma'lumotlar foydalanuvchiga ro'yxatdan o'tish paytida yoki foydalanuvchi so'rovida ko'rsatilgan elektron pochta manziliga xabar qilinadi va Kompaniya so'rov bo'yicha foydalanuvchiga shaxsiy ma'lumotlariga kirish, ularni tuzatish imkoniyatini (agar bo'lsa) ta'minlash uchun barcha imkoniyatlarni ishga soladi. ular noto'g'ri) va agar kerak bo'lsa, ularni o'chirib tashlash. ",
+    "rights_responsibilities_title": "FOYDALANUVCHINING HUQUQ VA MAJBORATLARI",
+    "rights_responsibilities_text": "4.1. Foydalanuvchi huquqlari: <br /> 4.1.1. Foydalanuvchi Veb-saytdan foydalanish huquqiga ega, xususan, Saytda joylashtirilgan Tadbir haqida ma'lumot olish, shuningdek, Anketani to'ldirish, Kompaniya tomonidan taqdim etilgan harakatlarni bajarish va Tadbirlarda ishtirok etish imkoniyatini qo'lga kiritish orqali. / yoki Tashkilotchi va Tadbirga kirish huquqiga ega. <br /> 4.1.2. Foydalanuvchi veb-saytdan Kompaniya tomonidan taqdim etilgan boshqa usullarda foydalanish huquqiga ega. <br /> 4.1.3. Foydalanuvchi Arizani ro'yxatdan o'tkazgandan va to'lovni amalga oshirgandan so'ng, faqat bunday rad etish uchun asosli (uzrli) sabab bo'lgan taqdirda, uchinchi dars boshlanishidan kechiktirmay Tadbirlarda ishtirok etishni rad etishga haqli. Bunday holda, Foydalanuvchi tomonidan to'langan mablag'larni qaytarish Kompaniya/Tashkilotchi tomonidan amalga oshiriladi. <br /> 4.1.4. Yakka tartibdagi foydalanuvchi bunday munosabatlarni tartibga soluvchi amaldagi qonun hujjatlariga muvofiq iste'molchining barcha huquqlaridan foydalanadi. <br /> 4.2. Foydalanuvchining majburiyatlari: <br /> 4.2.1. Foydalanuvchi Veb-saytda akkaunt yaratish (ro'yxatdan o'tish) jarayonida o'zi haqida ishonchli ma'lumotlarni taqdim etishi shart. <br /> 4.2.2. Foydalanuvchi Veb-saytda o'zi uchun mavjud bo'lgan ma'lumotlar va materiallarni ko'paytirmaslik, takrorlamaslik, nusxa ko'chirmaslik, sotmaslik yoki biron bir maqsadda foydalanmaslik majburiyatini oladi, shaxsiy foydalanishdan tashqari. <br /> 4.2.3. Foydalanuvchi o'zining veb-saytga kirishini ta'minlaydigan o'z jihozlari va aloqa kanallarini yaxshi texnik holatda saqlashi, bir vaqtning o'zida faqat bitta qurilmadan (shaxsiy kompyuter, planshet va boshqalar) veb-saytga o'z akkaunti ostida kirishi shart. Kompaniyaga bog'liq bo'lmagan sabablarga ko'ra veb-saytga va/yoki veb-saytning ayrim xizmatlariga kirishni ta'minlamaslik uchun kompaniya javobgar emas. <br /> 4.2.4. Foydalanuvchi veb-sayt xizmatlaridan foydalanishni boshlagunga qadar har safar veb-saytga tashrif buyurganida ushbu Shartnomaning joriy versiyasi bilan tanishish majburiyatini oladi. <br /> 4.2.5. Tadbirda ishtirok etish uchun to'lov usullari va shartlariga oid savollar tug'ilganda, Foydalanuvchi Arizani topshirishdan oldin Kompaniya/Tashkilotchi xodimlari bilan bog'lanish orqali bunday to'lov usullari va shartlari bilan tanishib chiqish majburiyatini oladi. <br /> 4.2.6. Foydalanuvchi Tadbirlar mazmuni, roʻyxatdan oʻtish shartlari va oʻtkazish tartibi, shuningdek, Kompaniya/Tashkilotchi/Oʻqituvchi tomonidan Arizani toʻldirish uchun qoʻyiladigan qoʻshimcha talablar bilan tanishish majburiyatini oladi. Agar Foydalanuvchi Tadbirlarni o‘tkazish uchun biron-bir shartni, shu jumladan to‘lov tartibini to‘liq tushunmasa, Foydalanuvchi ushbu shartlarga aniqlik kiritish majburiyatini oladi, agar tushuntirishning iloji bo‘lmasa, Arizani to‘ldirish va Tadbirlarda ishtirok etishni rad etadi. <br /> 4.2.7. Foydalanuvchi Tadbirda ishtirok etish narxini mustaqil ravishda yoki uchinchi shaxslar orqali to‘liq to‘lash majburiyatini oladi. Bunday to'lovdan so'ng Foydalanuvchi tadbirlarda qatnashish yoki O'qituvchi tomonidan taqdim etilgan boshqa xizmatdan foydalanish huquqiga ega. <br /> 4.2.8. Agar Foydalanuvchi ushbu Shartnomaga yoki unga Kompaniya tomonidan kiritilgan o'zgartirishlarga rozi bo'lmasa, Foydalanuvchi bu haqda Kompaniyani xabardor qilgan holda Veb-saytdan foydalanishni rad etishga majburdir. <br /> 4.3. Veb-saytdan foydalanganda Foydalanuvchi quyidagi huquqlarga ega emas: <br /> 4.3.1. Veb-saytga joylashtirish va/yoki veb-sayt orqali/foydalanib istalgan joyga yuborish (yuklash, saqlash, nashr qilish, tarqatish, har qanday ma'lumotga kirishni ta'minlash yoki boshqa yo'l bilan foydalanish, shu jumladan unga havolalar) quyidagi xarakterdagi har qanday materiallar: (I) joriy qoidalarni buzgan holda Qonun hujjatlari, xalqaro huquq normalari yoki xorijiy davlatlar qonunlari; tahdidlar, tuhmat yoki haqoratlarni o'z ichiga olgan; boshqa shaxslarni obro'sizlantirish, fuqarolarning shaxsiy hayotga bo'lgan huquqlarini yoki jamoat tartibini buzish; odobsiz yoki odobsiz so'z, pornografik tasvirlar va matnlar yoki shahvoniy xarakterdagi sahnalar, zo'ravonlik, ham voyaga etmaganlar ishtirokida, ham ishtirok etmasdan; hayvonlarga nisbatan shafqatsizlik sahnalarini o'z ichiga olgan; o'z joniga qasd qilish vositalari va usullari, uni sodir etishga yoki hayoti va (yoki) sog'lig'iga tahdid soladigan, shu jumladan sog'lig'iga zarar etkazuvchi harakatlarni sodir etishga undashning tavsifini o'z ichiga olgan; II) boshqa shaxslarning sha’ni va qadr-qimmati hamda ishchanlik obro‘sini, huquqlari va qonun bilan qo‘riqlanadigan manfaatlarini, shu jumladan voyaga etmaganlarning huquqlarini ma’lum darajada buzish; (III) diniy, irqiy yoki millatlararo (millatlararo) adovatni qo'zg'atishga qaratilgan, nafratni qo'zg'atishga urinishlar yoki zo'ravonlikka da'vatlarni o'z ichiga olgan, fashizm yoki irqiy ustunlik mafkurasini, boshqa ijtimoiy patologiyalarni targ'ib qilish yoki tarqatish; (IV) jinoiy faoliyatni targ'ib qiluvchi yoki jinoiy harakatlarni sodir etish bo'yicha maslahatlar, ko'rsatmalar yoki ko'rsatmalarni o'z ichiga olgan ekstremistik materiallar; (V) cheklangan kirish ma'lumotlarini o'z ichiga olgan, shu jumladan, lekin ular bilan cheklanmagan holda, davlat va tijorat sirlari, shaxsiy ma'lumotlar',",
+    "rights_responsibilities_compane_title": "KOMPANIYANING HUQUQ VA MAJBORATLARI",
+    "rights_responsibilities_compane_text": "5.1. Kompaniya quyidagi huquqlarga ega: <br /> 5.1.1. Veb-saytning har qanday dasturiy ta'minotiga o'zgartirishlar kiritish, muhim nosozliklar, xatolar va nosozliklar aniqlanganda va veb-saytga ruxsatsiz kirishni saqlab qolish va oldini olish uchun veb-saytni tugatish. <br /> 5.1.2. Foydalanuvchi tomonidan taqdim etilgan shaxsiy ma'lumotlardan qonunga zid bo'lmagan har qanday usulda foydalanish. <br /> 5.1.3. Roʻyxatdan oʻtish/tasdiqlash/Tadbirda ishtirok etish narxini toʻlash, shu jumladan Saytda roʻyxatdan oʻtish vaqtida Foydalanuvchi tomonidan koʻrsatilgan elektron pochta manzili yoki telefon raqami boʻyicha Foydalanuvchi bilan mustaqil bogʻlanish vaqtida foydalanuvchiga maslahat berish. <br /> 5.1.4. istalgan vaqtda ushbu Oferta shartlarini bir tomonlama tartibda, Foydalanuvchini oldindan ogohlantirmasdan, o'zgartirishlarni veb-saytda e'lon qilish orqali, u qabul qilingan / joriy etilgan kundan boshlab 3 ish kunidan kechiktirmay o'zgartiring. Kompaniya Foydalanuvchiga ushbu Taklif shartlarini o'zgartirish va/yoki qo'shimchalar mavjudligini muntazam tekshirib turishni tavsiya qiladi. Kompaniya Taklifga o'zgartirishlar va/yoki qo'shimchalar kiritgandan so'ng Foydalanuvchi tomonidan Veb-saytdan foydalanishda davom etishi Foydalanuvchining bunday o'zgartirish va qo'shimchalarni so'zsiz va to'liq qabul qilishi va roziligini bildiradi. <br /> 5.1.5. Foydalanuvchi bilan munosabatlaridan kelib chiqadigan huquq va majburiyatlarini qonun hujjatlarida nazarda tutilgan Foydalanuvchining huquq va manfaatlarini hisobga olgan holda uchinchi shaxslarga berish yoki boshqacha tarzda o‘tkazish. <br /> 5.1.6. Foydalanuvchi ushbu Oferta shartlarini buzgan taqdirda, Kompaniya Foydalanuvchining akkauntini bloklash yoki elektron pochta orqali yoki Shaxsiy sahifadan foydalangan holda veb-saytga kirishni boshqa yo'l bilan cheklash huquqiga ega. <br /> 5.2. Kompaniya Foydalanuvchini Arizaning holati va Tadbirda qatnashish uchun to'lov muvaffaqiyatli amalga oshirilganligi to'g'risida xabardor qilishi shart. Foydalanuvchining xabardor qilinganligi - bu Saytda ro'yxatdan o'tishda Foydalanuvchi tomonidan ko'rsatilgan elektron pochta manziliga tegishli tasdiqlash ma'lumotlarini o'z ichiga olgan elektron xat yuborilganligi. <br /> 5.3. Kompaniya veb-sayt ishida yangilanishlar va/yoki takomillashtirish va/yoki takomillashtirish va/yoki boshqa o'zgarishlarni amalga oshirishga majbur emas. Kompaniya istalgan vaqtda va har qanday sababga ko'ra veb-saytdan foydalanish imkoniyatlari va cheklovlarini aniqlash, shuningdek, veb-saytdan foydalanishni joriy etish va o'zgartirish uchun veb-saytni o'zgartirish yoki to'xtatish yoki to'xtatib turish huquqini o'zida saqlab qoladi. <br /> 5.4. Kompaniya Foydalanuvchining shaxsiy ma'lumotlarini saqlash va qayta ishlash uchun javobgardir, ushbu Shartnoma shartlariga, Kompaniyaning Maxfiylik va Shaxsiy ma'lumotlarni himoya qilish siyosatiga muvofiq qayta ishlash jarayonida ushbu ma'lumotlarning maxfiyligini ta'minlaydi. ushbu Shartnoma, shuningdek, amaldagi qonun hujjatlariga muvofiq. <br /> 5.5. Kompaniya Foydalanuvchi tomonidan veb-sayt sahifalarida ochiq shaklda taqdim etilgan ma'lumotlarning oshkor etilishi uchun javobgar emas.",
+    "granting_access_title": "DARS VA TADBIRLARGA KIRISH SHARTLARI",
+    "granting_access_text": "6.1. Foydalanuvchi ushbu ruxsatdan foydalanishning texnik imkoniyatiga ega bo'lsa, Veb-sayt va Voqealar xizmatlaridan foydalanish huquqiga ega bo'ladi. <br /> 6.2. Kompaniya ma'lumotlar almashinuvini (Tadbirning veb-interfeysi) va Tadbirning dasturiy ta'minotini ta'minlovchi veb-ilovani o'zgartirishga, shuningdek, xizmatlarni olish uchun Foydalanuvchi tomonidan qo'llanilishi kerak bo'lgan texnik va dasturiy ta'minot talablarini o'zgartirishga haqli. Ushbu o'zgarishlarning barchasi va har qanday o'zgarishlar bilan, agar Kompaniya tomonidan boshqacha ko'rsatilmagan bo'lsa, ushbu Shartnoma bunday o'zgarishlarga nisbatan qo'llaniladi. <br /> 6.3. Muayyan Voqealar to'g'risidagi ma'lumotlar va/yoki muayyan Voqealar funktsional tarkibi, Tadbirlarga kirishni ta'minlash shartlari va/yoki Tadbirlarning bepul tabiati to'g'risidagi ma'lumotlar, Tadbirlarga kirishni texnik qo'llab-quvvatlash bo'yicha talablar va/yoki tavsiyalar spetsifikatsiyasi, Ushbu Shartnoma yoki Qonun hujjatlari talablariga muvofiq Foydalanuvchiga etkazilishi kerak bo'lgan va/yoki etkazilishi mumkin bo'lgan boshqa ma'lumotlar yoki talablar, agar ko'rsatilgan ma'lumotlar bo'lsa, Foydalanuvchiga to'g'ri berilgan deb hisoblanadi: <br /> 6.3.1. kompaniyaning veb-saytida e'lon qilingan; <br /> 6.3.2. Shartnomani tuzishda Shartnoma matnida Foydalanuvchi e'tiboriga havola qilingan; <br /> 6.3.3. ro'yxatdan o'tish paytida ko'rsatilgan foydalanuvchining elektron pochtasiga yuborilgan elektron xabarlar orqali foydalanuvchi e'tiboriga etkazilgan; <br /> 6.3.4. Kompaniyaning reklama va axborot materiallarida chop etilgan; <br /> 6.3.5. Kompaniyaning aloqa manzillari va telefon raqamlariga murojaat qilganda foydalanuvchi e'tiboriga havola qilingan; <br />6.3.6. Foydalanuvchi e'tiboriga Kompaniyada mavjud bo'lgan boshqa vositalar, shu jumladan ommaviy axborot vositalari (reklama) orqali yetkaziladi. <br /> 6.4. Foydalanuvchining Tadbirda ishtirok etishiga ruxsati, bu haqda ma'lumot veb-saytda joylashtirilgan, ushbu Shartnomada, veb-saytda yoki ushbu Shartnomada belgilangan tartibda va tartibda bunday Tadbirda ishtirok etish narxini 100% oldindan to'lash sharti bilan taqdim etiladi. aks holda Foydalanuvchiga xabar qilinadi. <br /> 6.5. Tadbirda ishtirok etish amallarning yakuniy ketma-ketligini bajarishdan iborat bo'lgan arizani to'ldirish bilan tasdiqlanadi: (I) tanlangan tadbir haqidagi ma'lumot oynasini bosish (bosish), (II) ko'rsatilgan sahifaga o'tish. Veb-saytdagi tadbir, (III) \"Ro'yxatdan o'tish\" tugmasini bosish va (IV) ma'lum bir Tadbir tashkilotchisi tomonidan belgilanadigan usullardan birida ishtirok etish uchun to'lov. To'lov Ariza topshirilgan kundan boshlab 30 (o'ttiz) kun ichida, lekin har qanday holatda, Tadbir boshlanganidan kechiktirmay amalga oshiriladi. <br /> 6.6. Tadbirga kirish Foydalanuvchiga Veb-saytda ro'yxatdan o'tish paytida ko'rsatgan foydalanuvchining elektron pochta manziliga tegishli elektron pochta xabarini yuborish orqali taqdim etiladi. Shuningdek, rejalashtirilgan va o'tkaziladigan Tadbir haqidagi ma'lumotlar Foydalanuvchining shaxsiy sahifasida \"Shaxsiy tadbirlar\" bo'limida aks ettirilgan. Shaxsiy sahifaga kirish Foydalanuvchi tomonidan elektron pochta manzili (yoki Foydalanuvchi login) va parolni kiritish va “Login” so‘zini bosish orqali amalga oshiriladi. <br /> 6.7. Ilovaning veb-saytdan foydalangan holda bajarilishi veb-saytning bir qismi sifatida ulanishni dasturiy nazorat qilish va xarajatlarni hisobga olish (to'lov) bo'yicha ma'lumot (hisob) yozuvlari bilan tasdiqlanadi. Foydalanuvchining Ilovaga obuna bo'lish / rad etish bo'yicha har qanday harakatlari, agar tomonlar yozma ravishda tegishli shartnoma tuzgan bo'lsa, ekvivalent yuridik kuchga ega. <br /> 6.8. Agar ushbu Shartnomada boshqacha qoida nazarda tutilmagan bo'lsa, foydalanuvchi tomonidan bajarilgan xatti-harakatlarning etarli dalili, ular amalga oshirilgan usul va/yoki texnik qurilmadan qat'i nazar, Kompaniya veb-saytining ishlashini ta'minlaydigan serverlardagi ma'lumotlar (hisob) yozuvlari bo'ladi. . <br /> 6.9. Ushbu Shartnoma bo'yicha har qanday harakatlarni (operatsiyalarni) amalga oshirish vaqti Britaniya vaqti bo'lib, kompaniya veb-saytining ishlashini ta'minlaydigan serverlardagi hisob ma'lumotlari asosida belgilanadi, agar vaqtni aniqlashning boshqa tartibi o'rtasidagi kelishuvlarda qo'shimcha ravishda kelishilmagan bo'lsa. Tomonlar. <br /> 6.10. Agar Tadbirda ishtirok etish uchun to'lovni to'lash tartibi tugagandan so'ng, lekin har qanday holatda ham Tadbir boshlangan kundan kechiktirmay, Foydalanuvchi u yoki bu sabablarga ko'ra Tadbirga kirish huquqini olmagan bo'lsa, u Kompaniyaning aloqa telefon raqami yoki veb-saytda ko'rsatilgan boshqa raqam bo'yicha Kompaniyaning qo'llab-quvvatlash xizmatiga murojaat qilishi kerak. <br /> 6.11. Kompaniya Foydalanuvchining Tadbirda ishtirok etishini bekor qilish huquqini o'zida saqlab qoladi, Kompaniya/Tashkilotchi/O'qituvchi esa Foydalanuvchi tomonidan Tadbirda o'zini tutish qoidalarini buzgan taqdirda to'langan to'lovni qaytarishga majbur emas. Ushbu qoidabuzarliklar Foydalanuvchi tomonidan ushbu Shartnomaning 4.3.1-bandida taqiqlangan ma'lumotlarni, shu jumladan, etnik nizolarni qo'zg'atuvchi, odobsiz so'zlarni o'z ichiga olgan yoki Tadbirning boshqa ishtirokchilarini boshqa tarzda haqorat qilgan ma'lumotlarni sharhlarda yoki boshqa usulda e'lon qilishdir. ",
+    "price_procedure_form_title": "NARXI, TARTIBI VA TO‘LOV SHAKLI",
+    "price_procedure_form_text": "7.1. Foydalanuvchiga Veb-saytga pullik kirishda joylashtirilgan Tadbir mazmuniga kirishni ta'minlash uchun to'lovlar Foydalanuvchi va Kompaniya/Tashkilotchi o'rtasida bevosita amalga oshiriladi. <br /> 7.2. Kompaniya intellektual mulk huquqi yoki litsenziyasi Kompaniyaga tegishli bo'lgan individual Veb-sayt Kontentidan foydalanish, shuningdek bevosita Kompaniya tomonidan tashkil etilgan Tadbirlar uchun foydalanuvchilardan mablag'larni qabul qilish huquqini o'zida saqlab qoladi. <br /> 7.3. Tadbirda ishtirok etish narxlari Veb-saytda har bir Tadbir uchun alohida tadbirda ishtirok etish uchun arizalar to'plamini ochish vaqtida alohida ko'rsatilgan yoki foydalanuvchiga elektron xabar yuborish orqali xabar qilinadi. <br /> 7.4. Foydalanuvchi 100% oldindan toʻlash tartibida Kompaniya/Tadbir tashkilotchisiga Tadbirda ishtirok etish qiymati miqdorida mablagʻ oʻtkazadi. <br /> 7.5. Norezident foydalanuvchilar Kompaniya/Tashkilotchi tomonidan berilgan hisob-fakturaga muvofiq valyutada to‘lovlarni amalga oshiradilar. Foydalanuvchi banki yoki vakillik banklari tomonidan undiriladigan har qanday bank to‘lovlari Foydalanuvchi tomonidan to‘lanadi. <br /> 7.6. To'lov usuli Kompaniya/Tashkilotchi tomonidan belgilanadi va foydalanuvchi e'tiboriga elektron xabar yuborish orqali yoki Tashkilotchi tanlagan boshqa usulda yetkaziladi. <br /> 7.7. Foydalanuvchi mumkin bo'lgan va to'lov vaqtida Veb-saytda mavjud bo'lgan qulay to'lov usulini mustaqil ravishda tanlaydi. To'lovni amalga oshirish va tasdiqlash uchun veb-saytda taqdim etilmagan va mavjud bo'lmagan to'lov usullari va usullari qabul qilinmaydi. <br /> 7.8. Kompaniya to'lov usullarining bir va bir nechta variantlarini taqdim etish huquqiga ega. Kompaniya istalgan vaqtda va o'z xohishiga ko'ra, ushbu Shartnomaga hech qanday xabar va o'zgartirishlar kiritmasdan, veb-saytdagi har qanday to'lov usullarini o'zgartirish / o'chirish huquqiga ega. <br /> 7.9. To‘lov kartasi bilan to‘lov usulini tanlashda Foydalanuvchi to‘lov kartalari bilan bog‘liq ma’lumotlarni, xususan: karta raqami, amal qilish muddati, CVC/CVV kodi va to‘lov kartasi egasining nomini ko‘rsatadi va Kompaniya/Tashkilotchi/To‘lov tizimiga ishlov berishga rozilik beradi. ularning shaxsiy va to'lov ma'lumotlari , tanlangan Tadbir uchun pul o'tkazish uchun. <br /> 7.10. Toʻlov usulini tanlash va tasdiqlash orqali Foydalanuvchi Kompaniya/Tashkilotchi/Toʻlov tizimiga oʻzi koʻrsatgan toʻlov kartasi/bank hisobvaragʻidan tanlangan toʻlov usuli orqali Veb-saytda koʻrsatilgan Tadbirda ishtirok etishning toʻliq qiymatini yechib olishga ruxsat beradi, shu jumladan komissiyalar, pul mablag'larini o'tkazish uchun tegishli qo'shimcha to'lov, mumkin bo'lgan konvertatsiya miqdori va to'lovni qayta ishlash uchun qo'llaniladigan valyuta farqi, shuningdek, ushbu shaxslarga (i) ishtirok etish narxini to'lash uchun to'lov va shaxsiy ma'lumotlardan foydalanishga ruxsat beradi. Bunday holda, (ii) agar kerak bo'lsa, to'lovlarni qaytarishni va (iii) ushbu Shartnoma shartlarini bajarish uchun zarur bo'lgan boshqa maqsadlarni amalga oshiradi. Foydalanuvchi to'liq xabardor va Kompaniyaga to'lovni amalga oshirish vaqtida to'lov operatsiyalarini qayta ishlash uchun qo'shimcha xarajatlar miqdori noma'lum ekanligiga rozi. <br /> 7.11. Kompaniya Foydalanuvchidan so'rash huquqiga ega va Foydalanuvchi Qonun hujjatlarida nazarda tutilgan hollarda to'lovni qaytarish bilan bog'liq bahsli moliyaviy masalalarni hal qilish uchun bank ko'chirmasini taqdim etish majburiyatini oladi. shuningdek, boshqa bahsli moliyaviy masalalarni hal qilish. <br /> 7.12. Arizani yaratish/bajarishda to‘lov kartasidagi mablag‘lar keyinchalik ularni hisobdan chiqarish bilan bloklanishi mumkin. To'lov kartasidan pul mablag'larini hisobdan chiqarish Kompaniya yoki Tashkilotchi tomonidan amalga oshirilishi mumkin. Foydalanuvchi to‘lov kartasidan pul mablag‘larini yechib olish Kompaniya yoki Tashkilotchi tomonidan istalgan vaqtda mumkin va mavjud bo‘lishini ta’minlash uchun barcha choralarni ko‘rish majburiyatini oladi (masalan, bank-emitentning to‘lovlarni amalga oshirish bo‘yicha barcha cheklovlari va cheklovlari bekor qilinishi kerak). Hisobdan mablag'lar haqiqiy hisobdan chiqarilgunga qadar foydalanuvchi). <br /> 7.13. To'lov kuni pul mablag'larini oluvchining bank hisobvarag'iga kelib tushgan kun hisoblanadi. <br /> 7.14. Agar Tadbir Kompaniyaning aybi bilan ro'y bermasa, Kompaniya/Tashkilotchi tomonidan Foydalanuvchidan bunday Tadbirda ishtirok etish uchun to'lov sifatida olingan mablag'lar Foydalanuvchiga Tadbir bekor qilingan kundan boshlab 30 kun ichida qaytariladi. yoki boshqa Voqeani to'lash uchun hisobga olinishi mumkin. Bundan tashqari, cookie fayllari asosiy (ular to'g'ridan-to'g'ri tashrif buyurilgan sayt tomonidan o'rnatiladi) va uchinchi tomon (boshqa saytlar tomonidan o'rnatiladi) bo'linadi.",
+    "personal_data_title": "SHAXSIY MA'LUMOTLAR",
+    "personal_data_text": "Ushbu Shartnomani tuzishda Kompaniya Qonun hujjatlari qoidalariga rioya qilish maqsadida Foydalanuvchining shaxsiy ma’lumotlaridan xabardor bo‘lishini hisobga olib, Foydalanuvchi ushbu Shartnomaga qo‘shilish (taklifni qabul qilish) orqali u Kompaniyaning Maxfiylik va shaxsiy ma'lumotlarni himoya qilish siyosati bilan tanish bo'lib, uning matni Kompaniya veb-saytida https://laba.com/privacy-policy manzilida joylashtirilgan, ushbu Siyosatdan kelib chiqadigan huquq va majburiyatlarini to'liq biladi. Qonun hujjatlari, Kompaniya tomonidan taqdim etilgan kafolatlar va Kompaniya va Foydalanuvchining ushbu Siyosatdan kelib chiqadigan javobgarligi va ushbu Siyosat shartlarini qabul qiladi.",
+    "responsibility_title": "ОTOMONLARNING MAS'uliyati",
+    "responsibility_text": "10.1. Kompaniyaning ushbu Shartnoma bo'yicha javobgarligi miqdori qoplanishi kerak bo'lgan yo'qotishlarning maksimal miqdorini belgilash bilan cheklanadi. Zarar uchun bunday cheklov har qanday holatda ham Veb-sayt yordamida o'tkazilgan Tadbirda ishtirok etish narxidan oshmasligi kerak. Kompaniya bilvosita yoki bilvosita yo'qotishlar, yo'qolgan foyda, Foydalanuvchining ishbilarmonlik obro'sini yo'qotish va hokazolar uchun javobgar emas. <br /> 10.2. Muayyan Tadbir uchun veb-saytda joylashtirilgan ma'lumotlar, shuningdek, Tadbirning mazmuni Kompaniya tomonidan veb-saytga qo'shiladi.O'qituvchi tomonidan e'lon qilingan har qanday ma'lumotlarning to'g'riligi, to'liqligi yoki sifati uchun kompaniya javobgar emas. va/yoki veb-saytdagi uchinchi shaxslar. Kompaniya o'qituvchi va/yoki uchinchi shaxslar tomonidan veb-saytda joylashtirilgan har qanday ma'lumotni tasdiqlamaydi . Foydalanuvchi veb-saytdan foydalangan holda sub'ektiv, baholovchi va bahsli ma'lumotlarni olishi mumkinligini tushunadi va rozi bo'ladi. <br /> 10.3. Tadbirlarni o'tkazish uchun ma'ruzachi to'liq javobgar bo'lgani uchun Kompaniya o'qituvchi tomonidan Tadbirlarni o'tkazish shartlariga rioya qilmasligi uchun javobgar emas. <br /> 10.4. Kompaniya o'qituvchi tomonidan e'lon qilingan ma'lumotlarni tekshirmaydi va undagi noaniqliklar to'liq yo'qligiga kafolat bera olmaydi, shuning uchun Foydalanuvchi oldida Voqea haqida noto'g'ri va/yoki noto'g'ri ma'lumotlar, shuningdek, etkazilgan zarar uchun javobgar emas. Foydalanuvchi va/yoki yo'qotishlar - foydalanuvchi tomonidan olingan ma'lumotlarda xatolik yoki noaniqliklar mavjudligi uchun. <br /> 10.5. Agar Foydalanuvchi Kompaniyaga bog'liq bo'lmagan sabablarga ko'ra Tadbirlarda ishtirok etish huquqidan foydalanmagan bo'lsa, u holda Kompaniyaning majburiyatlari belgilangan miqdorda va o'z vaqtida bajarilgan deb hisoblanadi, shuningdek, kompaniya tomonidan to'langan mablag'lar. Foydalanuvchiga qaytarib berilmaydi.",
+    "force_majeure_title": "FORCE-MAJOR",
+    "force_majeure_text": "11.1. Tomonlar ushbu Shartnoma bo'yicha o'z majburiyatlarini qisman yoki to'liq bajarmaganliklari uchun javobgarlikdan ozod qilinadilar, agar ularning bajarilishiga ushbu shartlarda favqulodda va muqarrar holatlar (fors-major holatlari), shu jumladan, lekin istisnosiz: harbiy harakatlar, tartibsizliklar yoki sabotaj; tabiiy ofatlar; elektr, internet yoki telekommunikatsiyaning uzilishi; yoki hukumat cheklovlari. Shu bilan birga, Shartnoma bo'yicha majburiyatlarni bajarish muddati bunday holatlar mavjud bo'lgan vaqtga mutanosib ravishda kechiktiriladi. <br /> 11.2. Agar 11.1-bandda ko'rsatilgan holatlar bo'lsa. ushbu Shartnomaning amal qilish muddati 30 (o'ttiz) kalendar kundan ortiq davom etadi, keyin Tomonlarning har biri boshqa Tomonni bekor qilish sanasidan 10 kalendar kun oldin yozma ravishda xabardor qilib, ushbu Shartnomani bekor qilish huquqiga ega. ",
+    "dispute_resolution_procedure_title": "NIZOLARNI HAL QILISH",
+    "dispute_resolution_procedure_text": "12.1. Ushbu Shartnoma bo'yicha majburiyatlar bajarilmagan yoki lozim darajada bajarilmagan taqdirda, huquqi buzilgan Tomon boshqa Tomonga yozma da'vo (talab) yuboradi.<br /> 12.2. Barcha da'volar. Foydalanuvchining veb-saytdan foydalanish bo'yicha Kompaniyaga nisbatan (shikoyatlari) foydalanuvchi tomonidan ushbu Shartnomada ko'rsatilgan Kompaniyaning elektron pochta manziliga skanerlangan nusxa ko'rinishida, keyinchalik da'voning asl nusxasi yuborilgan holda yuborilishi kerak ( Shikoyat) ushbu Shartnomada ko'rsatilgan Kompaniyaning pochta manziliga da'vo (shikoyat) Jamiyat manziliga kelib tushgan kundan boshlab o'n besh) kalendar kun o'tgach, Kompaniya quyidagi qarorlardan birini qabul qiladi: (i) kelishmovchilik to'g'risida. da'vo (shikoyat) bilan va uni qanoatlantirishni rad etish to'g'risida (ii) da'voga (shikoyat) to'liq yoki qisman rozilik berish va Foydalanuvchining talablarini to'liq yoki qisman qondirish to'g'risida. <br /> 12.3. Huquqi buzilgan taraf amaldagi qonun hujjatlari talablarida belgilangan yurisdiktsiya va yurisdiktsiyaga muvofiq sudga da'vo bilan murojaat qilishga haqli.»",
+    "order_of_sending_title": "XABARLARNI YUBORISH (Yuborish) TARTIBI",
+    "order_of_sending_text": "13.1. Xabarlar, da'volar, so'rovlar, arizalar va boshqa rasmiy materiallar Tomonlar tomonidan bir-biriga quyidagicha uzatiladi: <br /> 13.1.1. Kompaniyadan Foydalanuvchiga - agar ushbu moddaning tegishli bandida boshqacha qoida nazarda tutilgan bo'lmasa, foydalanuvchi tomonidan veb-saytda ro'yxatdan o'tishda yoki foydalanuvchining veb-saytdagi shaxsiy sahifasida joylashtirishda ko'rsatilgan elektron pochta manziliga yuborish orqali, faqat foydalanuvchi foydalanishi mumkin. Shartnoma. <br /> 13.1.2. Foydalanuvchidan Kompaniyaga - uni ushbu Ofertada ko'rsatilgan elektron pochta manziliga yuborish orqali. Foydalanuvchi tomonidan Kompaniyaga yuborilgan yozma murojaatlar Foydalanuvchi tomonidan imzolanishi kerak. Foydalanuvchi tomonidan imzolanmagan yozma so'rovlar Kompaniya tomonidan ko'rib chiqilishi uchun qabul qilinmaydi.",
+    "other_conditions_and_warnings_text": "14.1. Ushbu Oferta shartlari Kompaniya tomonidan Taklifni qaytarib olish/oʻzgartirish paytigacha amal qiladi.<br />14.2. Ushbu Shartnoma foydalanuvchining Veb-saytda roʻyxatdan oʻtganligida ifodalangan ushbu Oferta qabul qilingan paytdan boshlab tuzilgan hisoblanadi va tomonlardan biri uni bekor qilgunga qadar amal qiladi.<br />14.3. Ushbu Shartnoma istalgan vaqtda Tomonlarning kelishuvi bilan bekor qilinishi mumkin.<br />14.4. Kompaniya oʻz xohishiga koʻra istalgan vaqtda va har qanday sababga koʻra, shuningdek, Foydalanuvchi tomonidan ushbu Shartnomada koʻrsatilgan shartlardan birini buzgan taqdirda, ushbu Shartnomani bekor qilishga va Foydalanuvchining Veb-sayt xizmatlaridan foydalanishini bir tomonlama ravishda toʻxtatishga haqli.<br />14.5. Ushbu Shartnoma yozma ravishda tuzilgan taqdirda (ushbu oferta qabul qilinganda), Tomonlardan biri tomonidan shartnomani bir tomonlama bekor qilish boshqa Tomonning tegishli yozma arizasini yuborish orqali amalga oshiriladi.<br />14.6. Ushbu Oferta shartlarini qabul qilgan holda, Foydalanuvchi ushbu Shartnomaning amal qilish muddatidan qatʼi nazar, boshqa barcha Voqealar toʻgʻrisida maʼlumot olishga roziligini bildiradi, agar bunday rozilik Foydalanuvchi tomonidan istalgan vaqtda bekor qilinishi mumkin boʻlsa, Kompaniya  taqdim etadi. Bu xohlagan vaqtda Kompaniya manziliga tegishli soʻrov yuborish orqali amalga oshiriladi.<br />14.7. Ushbu Shartnoma bilan tartibga solinmagan barcha masalalar amaldagi qonun hujjatlariga muvofiq hal qilinadi.<br />14.8. Kompaniya dunyoning istalgan nuqtasida istalgan odam uchun taʼlim kurslarini yaratish va nashr etish imkonini beradi. Veb-sayt modeli Hodisalarni sinchkovlik bilan tekshirish yoki nazorat qilishni nazarda tutmaydi va Kompaniya Tadbir materiallarining qonuniyligini aniqlash vakolatiga ega emas. Kompaniya Veb-saytda mavjud boʻlgan Voqealar ustidan tahririyat nazoratini amalga oshirmaydi va shuning uchun Voqealar haqiqiyligi, dolzarbligi, aniqligi yoki ishonchliligini hech qanday tarzda kafolatlamaydi. Agar siz Tadbirda roʻyxatdan oʻtsangiz, oʻzingizning xavf-xataringiz boʻyicha Oʻqituvchi tomonidan taqdim etilgan maʼlumotlarga tayanasiz. Xizmatlardan foydalanish orqali siz haqoratomuz, odobsiz yoki nomaqbul deb topilishi mumkin boʻlgan materiallarga duch kelishingiz mumkin. Kompaniya bunday materiallarni sizdan yashirish uchun javobgar emas va amaldagi qonunlar tomonidan ruxsat etilgan darajada har qanday Tadbirga kirish yoki roʻyxatdan oʻtish uchun javobgar emas. Bu sogʻliq, farovonlik va jismoniy mashqlar bilan bogʻliq har qanday faoliyatga ham tegishli. Siz ushbu turdagi Hodisalarning tabiati bilan bogʻliq xavf va xavflarni tan olasiz va bunday Voqealar uchun roʻyxatdan oʻtish orqali siz ixtiyoriy ravishda bunday xavflarni, jumladan, kasallik, jarohatlar, nogironlik yoki oʻlim xavfini oʻz zimmangizga olasiz. Tadbirda ro‘yxatdan o‘tishdan oldin, ro‘yxatdan o‘tish paytida va keyin qabul qilgan qarorlaringiz uchun barcha javobgarlikni o‘z zimmangizga olasiz. Agar siz oʻqituvchi bilan bevosita muloqot qilsangiz, shaxsiy maʼlumotlarni uzatishda ehtiyot boʻlishingiz kerak. Kompaniya oʻqituvchilarning veb-saytdagi boshqa foydalanuvchilardan olgan maʼlumotlarga nisbatan harakatlarini nazorat qila olmaydi. Oʻzingizni himoya qilish uchun elektron pochtangizni yoki siz haqingizdagi boshqa shaxsiy maʼlumotlarni baham koʻrmasligingiz kerak. Kompaniya oʻqituvchilarni yollamaydi yoki ishga olmaydi va Kompaniya Oʻqituvchilar va Foydalanuvchilar oʻrtasidagi oʻzaro munosabatlar uchun javobgar emas. Kompaniya Oʻqituvchilar yoki Foydalanuvchilarning xatti-harakatlari tufayli yoki ular bilan bogʻliq ravishda yuzaga kelishi mumkin boʻlgan nizolar, daʼvolar, yoʻqotishlar, shikastlanishlar yoki zararlar uchun javobgar emas. Veb-sayt rejalashtirilgan texnik xizmat koʻrsatish yoki veb-saytdagi har qanday nosozliklar tufayli ishlamasligi mumkin. Maʼruzachilardan biri oʻzi oʻtkazayotgan Tadbir haqida notoʻgʻri bayonotlar berishi mumkin. Shuningdek, kompaniya xavfsizlik muammolariga duch kelishi mumkin. Bu faqat misollar. Agar biror narsa notoʻgʻri boʻlsa, ushbu holatlarning hech birida Kompaniyaga qarshi murojaat qilmasligingizga rozilik bildirasiz. Yuridikroq, aniqroq til bilan aytganda, Xizmatlar va materiallar mavjud va mavjud boʻlgan asosda taqdim etiladi. Kompaniya/tashkilotchi taqdim etilayotgan xizmatlarning yaroqliligi, ishonchliligi, mavjudligi, oʻz vaqtidaligi, xavfsizligi, xatosizligi yoki toʻgʻriligi boʻyicha hech qanday bayonot yoki kafolat bermaydi yoki ularning materiallari va har qanday kafolatlar yoki shartlarni, shu jumladan, savdoga yaroqlilik, maʼlum bir maqsadga muvofiqlik, nom va huquqbuzarliklarga oid koʻzda tutilgan kafolatlardan qatʼi nazar rad etadi. Kompaniya/Tashkilotchi Tadbirda ishtirok etishingizdan aniq natijalar olishingizga kafolat bermaydi. Tadbirda ishtirok etish (shu jumladan har qanday materiallar) faqat sizning xavf-xataringiz ostida amalga oshiriladi. Kompaniya istalgan vaqtda va har qanday sababga koʻra Veb-saytning ayrim xususiyatlarini taqdim etishni toʻxtatishga qaror qilishi mumkin. Hech qanday holatda Kompaniya / Tashkilotchi bunday tugatish yoki bunday funksiyalardan foydalana olmaslik natijasida yuzaga keladigan har qanday zarar uchun javobgar boʻlmaydi.",
+    "other_conditions_and_warnings_title": "BOSHQA SHARTLAR VA OGOHLANTIRISHLAR",
+    "boshqa_shartlar_va_ogohlantirishlar_matn": "14.1. Ushbu Oferta shartlari Kompaniya tomonidan Taklif bekor qilinmaguncha/o'zgartirilgunga qadar amal qiladi. <br /> 14.2. Ushbu Shartnoma ushbu Oferta qabul qilingan paytdan boshlab tuzilgan hisoblanadi. foydalanuvchini veb-saytda ro'yxatdan o'tkazish va Tomonlardan biri tomonidan bekor qilinmaguncha amal qiladi.<br /> 14.3.Ushbu Shartnoma Tomonlarning kelishuvi bilan istalgan vaqtda bekor qilinishi mumkin.<br /> 14.4.Kompaniya ushbu Shartnomani bekor qilish va istalgan vaqtda va istalgan sababga ko'ra o'z xohishiga ko'ra, shuningdek, Foydalanuvchi tomonidan ushbu Shartnomada belgilangan shartlardan birini buzgan taqdirda, bir tomonlama tartibda Veb-sayt xizmatlaridan foydalanishni to'xtatish huquqiga ega.< br /> 14.5.boshqa Tomon tomonidan tegishli yozma ariza yuborish orqali.<br /> 14.6.Ushbu oferta shartlarini qabul qilgan holda, Foydalanuvchi Ariza beruvchi ushbu Shartnomaning amal qilish muddatidan qat'i nazar, Kompaniya tomonidan taqdim etiladigan boshqa barcha tadbirlar to'g'risidagi ma'lumotlarni olishga roziligini bildiradi, agar bunday rozilik Foydalanuvchi tomonidan istalgan vaqtda tegishli xatni yuborish orqali qaytarib olinishi mumkin. kompaniyaga so'rov yuborish. <br /> 14.7. Ushbu Shartnoma bilan tartibga solinmagan barcha masalalar amaldagi qonun hujjatlariga muvofiq hal qilinadi. <br /> 14.8. Kompaniya dunyoning istalgan nuqtasida istalgan odam uchun ta'lim kurslarini yaratish va nashr etish imkonini beradi. Veb-sayt modeli Hodisalarni qonuniy ko'rib chiqish yoki nazorat qilishni nazarda tutmaydi va Kompaniya Tadbir materiallarining qonuniyligini aniqlash vakolatiga ega emas. Kompaniya Veb-saytda mavjud bo'lgan Voqealar ustidan tahririyat nazoratini amalga oshirmaydi va shuning uchun Voqealar haqiqiyligi, dolzarbligi, aniqligi yoki ishonchliligini hech qanday tarzda kafolatlamaydi. Agar siz Tadbirda ro'yxatdan o'tsangiz, siz o'zingizning xavf-xataringiz bo'yicha O'qituvchi tomonidan taqdim etilgan ma'lumotlarga tayanasiz. Xizmatlardan foydalanish orqali siz haqoratomuz, odobsiz yoki nomaqbul deb topilishi mumkin bo'lgan materiallarga duch kelishingiz mumkin. Kompaniya bunday materiallarni sizdan yashirish uchun javobgar emas va amaldagi qonunlar tomonidan ruxsat etilgan darajada har qanday Tadbirga kirish yoki roʻyxatdan oʻtish uchun javobgar emas. Bu sog'liq, farovonlik va jismoniy mashqlar bilan bog'liq har qanday faoliyatga ham tegishli. Siz ushbu turdagi Hodisalarning tabiati bilan bog'liq xavf va xavflarni tan olasiz va bunday Tadbirlarda ro'yxatdan o'tish orqali siz ixtiyoriy ravishda bunday xavflarni, shu jumladan kasallik, jarohatlar, nogironlik yoki o'lim xavfini o'z zimmangizga olasiz. Tadbirda ro‘yxatdan o‘tishdan oldin, ro‘yxatdan o‘tish paytida va keyin qabul qilgan qarorlaringiz uchun barcha javobgarlikni o‘z zimmangizga olasiz. Agar siz o'qituvchi bilan bevosita muloqot qilsangiz, shaxsiy ma'lumotlarni uzatishda ehtiyot bo'lishingiz kerak. Kompaniya o'qituvchilarning veb-saytdagi boshqa foydalanuvchilardan olgan ma'lumotlarga nisbatan harakatlarini nazorat qila olmaydi. O'zingizni himoya qilish uchun siz haqingizda elektron pochta yoki boshqa shaxsiy ma'lumotlarni baham ko'rmasligingiz kerak. Kompaniya o'qituvchilarni yollamaydi yoki ishga olmaydi va Kompaniya O'qituvchilar va foydalanuvchilar o'rtasidagi o'zaro munosabatlar uchun javobgar emas. Kompaniya O'qituvchilar yoki Foydalanuvchilarning xatti-harakatlari tufayli yoki ular bilan bog'liq ravishda yuzaga kelishi mumkin bo'lgan nizolar, da'volar, yo'qotishlar, shikastlanishlar yoki zararlar uchun javobgar emas. Veb-sayt rejalashtirilgan texnik xizmat ko'rsatish yoki veb-saytdagi har qanday nosozliklar tufayli ishlamasligi mumkin. Ma'ruzachilardan biri o'zi o'tkazayotgan Tadbir haqida noto'g'ri bayonotlar berishi mumkin. Shuningdek, kompaniya xavfsizlik muammolariga duch kelishi mumkin. Bu faqat misollar. Agar biror narsa noto'g'ri bo'lsa, ushbu holatlarning hech birida Kompaniyaga qarshi murojaat qilmasligingizga rozilik bildirasiz. Qonuniy jihatdan qaraganda, ko'proq",
+    "company_information_title": "KOMPANIYA HAQIDAGI MAʼLUMOT",
+    "company_information_text": "ООО «INNOVATION ILM PLATFORM» <br />  Manzil: Toshkent sh., Mirobod tumani, koʻch. R. Pirmuhamedov, 86A uy <br /> TIN: 309151676 <br /> e-mail: support@ilmonline.uz"
+  },
+  "courses": {
+    "mode_title": {
+      "school": "Maktab o'quvchilari uchun darslar",
+      "pro": "Professional kurslar <br/> <span style=\"font-size: 12px; font-weight: bold\">(talabalar va oliy o'quv yurti bitiruvchilari uchun)</span>"
+    },
+    "switcher_title": {
+      "school": "Maktab o'quvchilari uchun darslar",
+      "pro": "Professional kurslar"
+    },
+    "pro_task_teacher_viewing": "Tekshirishda",
+    "pro_task_start": "",
+    "pro_task_success": "B.",
+    "missing_data": "Ushbu kurs tugallanish bosqichida. Qo'shimcha ma'lumot olish uchun administratorga murojaat qiling",
+    "composition_eng": "Ingliz tilida insho",
+    "progress": "O'tdi",
+    "online": "100% onlayn",
+    "title_students": "Talabalar",
+    "questions": "Savollar",
+    "rate_thanks": "Fikringiz uchun tashakkur!",
+    "title_referal": "Referal tizimi",
+    "darslar": "Darslar",
+    "title_payment": "To'lov tafsilotlari",
+    "title_chat_with_students": "Talabalar bilan suhbat",
+    "started_at": "Siz bu darsni boshladingiz",
+    "title_chat_with_theacher": "O'qituvchi bilan suhbat",
+    "teacher": "O'qituvchi",
+    "start_now": "Hozir boshlang va o'zingiz tanlagan reja asosida o'qing",
+    "about_lesson": {
+      "school": "Dars haqida",
+      "pro": "Kurs haqida"
+    },
+    "program_lesson": {
+      "school": "Dars dasturi",
+      "pro": "Dars dasturi"
+    },
+    "study_objectives": {
+      "school": "Darsni o'rganish maqsadlari",
+      "pro": "Darsni o'rganish maqsadlari"
+    },
+    "course_get_infinite_success": {
+      "school": "Bizning barcha darslar yoki tanlangan kurslardan cheksiz foydalanish imkoniyati",
+      "pro": "Bizning barcha darslar yoki tanlangan kurslardan cheksiz foydalanish imkoniyati"
+    },
+    "you_get": "Siz deyarli kollej darajasigacha yozish ko'nikmasiga ega bo'lasiz. Talabalar diqqat bilan o'qishni, samarali insholar yozishni, yozish jarayonini tushunishni, boshqalarning fikrlari bilan muloqot qilishni, to'g'ri iqtibos keltirishni va kuchli matn yaratishni o'rganadilar.",
+    "title_lessons": "Mening darslarim",
+    "direction": "Yo'nalish",
+    "feedback_students": "Talabalarning fikr-mulohazalari",
+    "time": "Vaqt",
+    "price": "Narx",
+    "similar_lessons": "O'xshash darslar",
+    "language": "Til",
+    "course_free": "Bepul",
+    "course_purchased": "Sotib olindi",
+    "title_chat_with_teacher": "Kurator bilan suhbat",
+    "test": "Test",
+    "course_rate": "Kurs reytingi",
+    "lessons": "Mashg‘ulotlar",
+    "successBought": "Kurs muvaffaqiyatli sotib olindi"
+  },
+  "tests": {
+    "quiz_results": " <br /> <span style=\"color: #ec5239\"> Sizning natijalaringiz: </span>",
+    "test_results": "Test natijalari",
+    "quiz_empty_subtitle": "Ushbu mavzu bo'yicha testlar qo'shilsa, ular shu yerda ko'rsatiladi",
+    "timer_info": "Taymer yordamida siz testdan o'tish uchun sarflangan vaqtni kuzatib borishingiz mumkin",
+    "quiz_empty_title": "Kechirasiz, hali hech qanday test mavjud emas",
+    "work_with_mistakes": "Xatolar ustida ishlash",
+    "test_count_result_info": "Har bir to'g'ri javob uchun 2,1 ball beriladi. Hammasi bo'lib, tugallangan test uchun N ballning maksimal mumkin bo'lgan umumiy yig'indisi 31,5 ballni tashkil qiladi. Sizga maksimal natijalar tilaymiz!",
+    "test_wrong": "Testdan o'tmagan!",
+    "test_max_results": "Sizga maksimal natijalar tilaymiz!",
+    "test_solving_info_1": "Talaba {count} ta savoldan iborat test topshiradi. Agar test natijasi 70 balldan katta yoki unga teng boʻlsa, keyingi darsga kirish imkoniyati ochiladi. Agar natija 70 balldan kam boʻlsa, u holda testni qayta topshirish uchun cheksiz miqdordagi imkoniyatlar mavjud.",
+    "leave_test": "Haqiqatan ham testni yakunlamoqchimisiz?",
+    "delete_changes": "Barcha javoblaringiz saqlanmaydi",
+    "test_solving_info_2": "Yakuniy test natijalarini hisoblashda to'g'ri javoblar soni inobatga olinadi.",
+    "trial_test_solving_info": "Birinchi bosqichda abituriyent {questions_count} ta savoldan iborat imtihon topshiradi.",
+    "trial_test_solving_info_2": "Imtihondagi yakuniy test natijalarini hisoblashda to'g'ri javoblar soni \"4\" (to'rt) koeffitsientiga, bitta noto'g'ri javob \"-1\" (minus bir) koeffitsientiga ko'paytiriladi. Oxirida umumiy jami (4*to'g'ri javob) ko'rsatiladi + (-1)*noto'g'ri javob = umumiy yakuniy ball).",
+    "are_you_sure": "Haqiqatan ham testni yakunlamoqchimisiz?",
+    "quiz_questions_count": "{count_questions} savollar",
+    "quiz_avg_time": "{quiz_avg_time} daqiqa",
+    "student_count": "{student_count} kishi",
+    "variants": "Variant",
+    "test_header": "Test.",
+    "test_count_info": "Bu testda {count} ta savol bor.",
+    "right_answers_info": "{total_answers} ta to'g'ri javobdan {correct_answers} tasi",
+    "special": "Majburiy",
+    "non_special": "Maxsus",
+    "trial_test_header_results": "Tabriklaymiz! Sizning test natijangiz <br /> <span style=\"color: #ec5239\">{direction} <span style=\"color: #ec5239b8; font-size: 1.2rem\">({var})</span></span>",
+    "right_answers": "To'g'ri javoblar:",
+    "quiz_direction_test_header": "Onlayn testlar <br /> <span style=\"color: #ec5239\">{direction}</span>",
+    "trial_direction_test_header": "DTM 2022 <br /> <span style=\"color: #ec5239\">{direction}</span>",
+    "quiz_test_header": "Onlayn testlar <br /> <span style=\"color: #ec5239\">bepul sinovdan o'tish</span>",
+    "have_no_lessons": " Hozirda ushbu kursdan hech qanday dars boshlanmadi",
+    "uncorrect_test": "O‘tish ballari yig‘ilmagan",
+    "test_name": "Test",
+    "test_success": "Test topshirildi!",
+    "misstakes_work": "Xatolar ustida ishlash",
+    "test_header_info_1": "Talaba bir necha savoldan iborat testni topshiradi. Sinov natijasi 70 b. katta yoki teng bo'lsa, keyingi darsga kirish ochiladi. Agar natija 70 b. kam bo'lsa, unda sinovdan o'tish uchun cheksiz imkoniyatlar mavjud.",
+    "test_header_info_2": "Testning yakuniy natijalarini hisoblashda to'g'ri javoblar soni to'g'ri javoblar soniga teng.",
+    "trial_direction_test_header_test": "DTM 2022 <br /> <span style=\"color: #ec5239\">{direction} <span style=\"color: #ec5239b8; font-size: 1.2rem\">({var})</span></span>",
+    "trial_test_header": "DTM 2022 <br /> <span style=\"color: #ec5239\">amaliy testlardan o'ting.</span>"
+  },
+  "table": {
+    "transaction_title": "Tranzaksiya",
+    "dates": "Sanalar",
+    "my_test_result": "Test",
+    "paynet_deposit": "Terminaldan to'ldirish",
+    "school_item_title": "Test nomi",
+    "created_at": "Boshlanish sanasi",
+    "mening_test_natijam": "Test",
+    "my_progress": "Taraqqiyot",
+    "end_date": "Tugash sanasi",
+    "sanalar": "Sanalar",
+    "direction": "Yo'nalish",
+    "lessons": "Darslar",
+    "payment_card_payment_date": "To'lov sanasi",
+    "payment_card_period": "Davr",
+    "payment_card_categories": "Mo'ljal",
+    "payment_card_time": "Vaqt",
+    "to'lov_kartasi_summasi": "Jami narx",
+    "grade": "Mening o'rtacha natijalarim",
+    "to'lov_kartasi_raqami": "#",
+    "payment_card_student_name": "Talabaning to'liq ismi",
+    "student_name": "Talaba ismi",
+    "to'lov_karta_nomi_kurs": "Kurs nomi",
+    "avg_result": "Boshqa talabalarning o'rtacha ko'rsatkichi",
+    "pedagogika": "Pedagogika",
+    "pricing_free": "Bepul",
+    "pricing_premium": "To'lov evaziga",
+    "type": "Pullik",
+    "payment_date": "To'lov sanasi",
+    "payment_time": "Vaqt",
+    "amount": "Jami narx",
+    "material_type": {
+      "video": "Videomaterial",
+      "test": "Test",
+      "task": "Individual"
+    }
+  },
+  "tooltips": {
+    "description_registration": "Kamida 6 ta belgidan iborat kuchli parol yarating. «password», «qwerty» yoki «12345» kabi oddiy iboralardan foydalanmang. ",
+    "password_include": "Parol o‘z ichiga olishi kerak:",
+    "only_latin": "faqat lotin harflar;",
+    "min_one_num": "kamida 1 raqam;",
+    "different_letters": "katta va kichik harflarning kombinatsiyasi."
+  },
+  "rate_card": {
+    "star": "yulduz",
+    "stars": "yulduzlar",
+    "stars_b": "yulduzlar",
+    "lessons": "mashg‘ulotlar",
+    "chapters": "bo'limlar"
+  },
+  "times": {
+    "sec": "soniya",
+    "minutes": "daqiqa",
+    "hours": "soat"
+  },
+  "breadCrumbs": {
+    "courses": {
+      "school": "Darslar",
+      "pro": "Darslar"
+    },
+    "main": "Uyga",
+    "condition": "Shartnoma taklifi",
+    "individual_task": "Individual topshiriq",
+    "test_name": "Sinov",
+    "results": "Test natijalari",
+    "misstakes_work": "Xatolarni ko'rish",
+    "policy": "Maxfiylik siyosati",
+    "about": "Biz haqimizda",
+    "education": "Bilimlar bazasi",
+    "watching": "Tomosha qilish",
+    "news": "Yangiliklar",
+    "trial_tests": "Testlar",
+    "vacancy": "Bo'sh ish o'rinlari"
+  },
+  "parent_block": {
+    "for_what": "Nima uchun kerak?",
+    "copy_conection_link": "Tezroq havolani nusxasini oling va botga yuboring!",
+    "bot_notification": "Telegram botni ulash orqalisiz bildirishnomalar olasiz:",
+    "what_is_parent_controll": "Ota ona nazorati nima?",
+    "success_dtm_test": "o'tilgan DTM testlari;",
+    "success_pay_for_course": "Kurs darslarini sotib olish;",
+    "info_about_subscribtions": "Ro'yxatga olish, yangilash, smart obunani bekor qilish;",
+    "success_lesson_test": "Dars davomida o'tkazilgan test;",
+    "success_course": "Tugallangan kurs darslarida;",
+    "have_not_activity": "Farzandingiz 3 kundan ortiq faol emas.",
+    "control_by_parent": "Biz har bir ota-onaga farzandlarining ta'lim jarayonini shaxsan nazorat qilish imkoniyatini beramiz. Statistikaga ko'ra, nazorat qilinadigan o'quvchilar yaxshi natijalarga erishishlari ma'lum!",
+    "control_process": "Bu har bir ota-ona farzandining ta'lim jarayonini nazorat qilishiga imkon beruvchi variant. Telegram bot yordamida ota-ona o'quvchining har bir topshirilgan testidan xabardor qilinadi. Agar talaba 3 kundan ortiq shaxsiy kabinetiga kirmasa, ota-ona xabardor qilinadi.",
+    "created_desc": "Chop etilgan sana bo'yicha <span style=\"font-size: 14px\">(старые)</span>"
+  },
+  "sorting": {
+    "order_by": "Saralash turi",
+    "rating_desc": "Reyting",
+    "quiz_sub_categories": "Pastki toifalar",
+    "popular_desc": "Mashhurlar",
+    "created_desc": "Nashr qilingan sana bo'yicha <span style=\"font-size: 14px\">(yangi)</span>",
+    "created_asc": "Nashr qilingan sana bo‘yicha <span style=\"font-size: 14px\">(eski)</span>"
+  },
+  "chat": {
+    "not_found_dialogs": "Dialog topilmadi",
+    "send_mess": "Suhbatni boshlash uchun xabar yuboring"
+  },
+  "individual_task": {
+    "title": "Individual topshiriq",
+    "course_presentation": "Kursni taqdim etish",
+    "individual_task": "Individual topshiriq",
+    "your_answer": "Sizning javobingiz",
+    "answer": "Javob",
+    "answer_placeholder": "Javobingizni kiriting",
+    "select_drag_files": "Faylni tanlang yoki uni bu yerga olib o'ting",
+    "exceed_files_count": "Rasmlar sonining chegarasi belgilangan me'yordan ortib ketdi",
+    "valid_files_formats": "Ruxsat etilgan fayl formatlari: <br />",
+    "file_size_limit": "Fayl hajmi me'yordan oshdi <br />{maxFileSize} Mbayt",
+    "file_exist": "Ushbu nom bilan fayl yuklangan",
+    "download": "Hamma narsani yuklab olish",
+    "your_grade": "Sizning bahoyingiz",
+    "enter_grade": "Baho kiriting",
+    "points": "ballar",
+    "under_review": "Individual topshiriq tekshirilmoqda.",
+    "passed": "Individual topshiriq hisobga olindi!",
+    "not_passed": "Individual topshiriq hisobga olinmadi!",
+    "checked": "Tekshirildi"
+  },
+  "footer": {
+    "developed": "Sayt yaratuvchilari:"
+  }
+}
