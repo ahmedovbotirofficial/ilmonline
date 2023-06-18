@@ -280,8 +280,8 @@ export default {
       this.$store.commit('RESET_ERRORS');
       // this.resetServerError('email');
     },
-    chooseProfile(who) {
-      this.isSelectedRole.value = who;
+    chooseProfile(e) {
+      this.isSelectedRole.value = e;
     },
 
     goToPolicy() {
@@ -329,13 +329,12 @@ export default {
         .catch((error) => console.log('error', error));
     },
 
-    async singUp(e) {
-      e.preventDefault();
+    async singUp() {
       // console.log('sign up 2');
-      // this.user.role = this.isSelectedRole.value;
-      // this.user.token = this.token;
+      this.user.role = this.isSelectedRole.value;
+      this.user.token = this.token;
       // this.user.phone = this.phone;
-      // this.user.password = this.password;
+      this.user.password = this.password;
       localStorage.setItem('fullName', this.fullName);
       localStorage.setItem('phone', this.phone);
       localStorage.setItem('password', this.password);
