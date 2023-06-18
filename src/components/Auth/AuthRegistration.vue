@@ -1,20 +1,30 @@
 <template>
   <div :class="modalOpen ? 'overflow-hidden' : ''">
-    <form class="auth_form" :class="{ modal: $route.name === 'quiz-results' }" @submit.prevent>
+    <form
+      class="auth_form"
+      :class="{ modal: $route.name === 'quiz-results' }"
+      @submit.prevent
+    >
       <Heading level="3" class="auth_form__title">
         {{ $t('titles.registration') }}
       </Heading>
 
       <div class="auth_form__handler" :class="isValidRole ? 'invalid' : ''">
-        <div class="auth_handler" :class="{ active: isSelectedRole.value === 'student' }"
-          @click="chooseProfile('student')">
+        <div
+          class="auth_handler"
+          :class="{ active: isSelectedRole.value === 'student' }"
+          @click="chooseProfile('student')"
+        >
           <svg-icon name="icon_student" />
           <span>
             {{ $t('form.student') }}
           </span>
         </div>
-        <div class="auth_handler" :class="{ active: isSelectedRole.value === 'teacher' }"
-          @click="chooseProfile('teacher')">
+        <div
+          class="auth_handler"
+          :class="{ active: isSelectedRole.value === 'teacher' }"
+          @click="chooseProfile('teacher')"
+        >
           <svg-icon name="icon_teacher" />
           <span> {{ $t('form.teacher') }}</span>
         </div>
@@ -24,13 +34,29 @@
       </div>
 
       <div class="auth_form__btns btns">
-        <ButtonBase v-for="{ id, text, color, size, border, iconName } in registerBtns" :key="id" :color="color" :class="{
-          facebook_btn: id === 'facebook',
-        }" :size="size" :border="border" auth-btn :icon-name="iconName" @click.native="goToRegisterSocial(id)">{{
-  text }}</ButtonBase>
+        <ButtonBase
+          v-for="{ id, text, color, size, border, iconName } in registerBtns"
+          :key="id"
+          :color="color"
+          :class="{
+            facebook_btn: id === 'facebook',
+          }"
+          :size="size"
+          :border="border"
+          auth-btn
+          :icon-name="iconName"
+          @click.native="goToRegisterSocial(id)"
+          >{{ text }}</ButtonBase
+        >
         <div class="telegram_btn">
-          <vue-telegram-login mode="redirect" :telegram-login="getTelegramBotUsername" radius="0" :userpic="false"
-            :size="getTelegramBtnSize" :redirect-url="getTelegramRedirectUrl" />
+          <vue-telegram-login
+            mode="redirect"
+            :telegram-login="getTelegramBotUsername"
+            radius="0"
+            :userpic="false"
+            :size="getTelegramBtnSize"
+            :redirect-url="getTelegramRedirectUrl"
+          />
         </div>
       </div>
 
@@ -40,8 +66,11 @@
 
       <div class="forms w-100">
         <div class="auth_form__inputs">
-          <div class="registration_password_tooltip" @mouseover="isTooltipHover = true"
-            @mouseleave="isTooltipHover = false">
+          <div
+            class="registration_password_tooltip"
+            @mouseover="isTooltipHover = true"
+            @mouseleave="isTooltipHover = false"
+          >
             <svg-icon v-if="isTooltipHover" name="tooltip_icon_hover" />
             <svg-icon v-else name="tooltip_icon" />
           </div>
@@ -55,8 +84,14 @@
         type="text"
         name="full_name"
       /> -->
-          <v-text-field class="input" v-model.trim="user.name" filled name="full_name" :label="$t('form.short_full_name')"
-            :rules="[rules.required, rules.minLength(4)]"></v-text-field>
+          <v-text-field
+            class="input"
+            v-model.trim="user.name"
+            filled
+            name="full_name"
+            :label="$t('form.short_full_name')"
+            :rules="[rules.required, rules.minLength(4)]"
+          ></v-text-field>
           <div>
             <!-- <TextField
           id="phone"
@@ -65,8 +100,18 @@
           :placeholder="$t('form.phone_number')"
         /> -->
 
-            <v-text-field class="input" filled prefix="+998" v-model.trim="user.phone" name="phone" type="number" maxlength="9"
-              mask="## ### ## ##" :label="$t('form.phone_number')" :rules="[rules.required, rules.minLength(9)]" ></v-text-field>
+            <v-text-field
+              class="input"
+              filled
+              prefix="+998"
+              v-model.trim="user.phone"
+              name="phone"
+              type="number"
+              maxlength="9"
+              mask="## ### ## ##"
+              :label="$t('form.phone_number')"
+              :rules="[rules.required, rules.minLength(9)]"
+            ></v-text-field>
           </div>
 
           <!-- <TextField
@@ -81,9 +126,19 @@
         name="password"
         autocomplete="off"
       /> -->
-          <v-text-field class="input" id="password" v-model.trim="user.password" :rules="passwordRULES"
-            tooltip-pass filled :label="$t('form.password_placeholder')" is-password :type="'password'" name="password"
-            autocomplete="off"></v-text-field>
+          <v-text-field
+            class="input"
+            id="password"
+            v-model.trim="user.password"
+            :rules="passwordRULES"
+            tooltip-pass
+            filled
+            :label="$t('form.password_placeholder')"
+            is-password
+            :type="'password'"
+            name="password"
+            autocomplete="off"
+          ></v-text-field>
 
           <!-- <TextField
         id="confirm_password"
@@ -96,11 +151,27 @@
         name="confirm_password"
         autocomplete="off"
       /> -->
-          <v-text-field class="input" filled :label="$t('form.reapet_password_placeholder')" v-model.trim="user.confirm_pass"
-            :error="isConfirmPasswordError" :error-txt="confirmPasswordErrorText" :rules="[...passwordRULES, rules.matchPasswordRule]" is-password :type="'password'"
-            name="confirm_password" autocomplete="off"></v-text-field>
-          <ButtonBase color="orange" size="max" type="submit" class="auth_form__sign_in_btn" :class="isDisabled"
-            @click.native="singUp">
+          <v-text-field
+            class="input"
+            filled
+            :label="$t('form.reapet_password_placeholder')"
+            v-model.trim="user.confirm_pass"
+            :error="isConfirmPasswordError"
+            :error-txt="confirmPasswordErrorText"
+            :rules="[...passwordRULES, rules.matchPasswordRule]"
+            is-password
+            :type="'password'"
+            name="confirm_password"
+            autocomplete="off"
+          ></v-text-field>
+          <ButtonBase
+            color="orange"
+            size="max"
+            type="submit"
+            class="auth_form__sign_in_btn"
+            :class="isDisabled"
+            @click.native="singUp"
+          >
             <span v-if="!isLoader">{{ $t('form.register') }}</span>
             <span v-else>
               <Loader color="white" size="small" />
@@ -142,8 +213,13 @@
       ></ButtonBase>
     </div> -->
     </form>
-    <ConfimModal @close="modalOpen = !modalOpen" @confirm="confirmPhone" @resend="resendVerify" :user="this.user"
-      v-if="modalOpen" />
+    <ConfimModal
+      @close="modalOpen = !modalOpen"
+      @confirm="confirmPhone"
+      @resend="resendVerify"
+      :user="this.user"
+      v-if="modalOpen"
+    />
   </div>
 </template>
 
@@ -161,7 +237,10 @@ import signUpValidation from '@/mixins/validation/forms/signup.js';
 import { mapGetters } from 'vuex';
 import { COURSES_MODES } from '@/types/constants';
 import ModalAuth from './ModalAuth.vue';
-import { generateToken, extractNumbersFromString } from '../../helpers/reusable'
+import {
+  generateToken,
+  extractNumbersFromString,
+} from '../../helpers/reusable';
 import axios from 'axios';
 
 export default {
@@ -235,19 +314,26 @@ export default {
       // Rules
 
       rules: {
-        required: value => !!value || `Maydon bo'sh bo'lishi mumkin emas`,
-        minLength: length => value => (value && value.length >= length) || `Maydonda kamida ${length} belgi boʻlishi kerak`,
-        matchPasswordRule: value => value === this.user.password   || 'Parollar bir xil emas'
+        required: (value) => !!value || this.$t('mix.maydon_bosh'),
+        minLength: (length) => (value) =>
+          (value && value.length >= length) ||
+          `${length} ` + this.$t('mix.maydon_hajm'),
+        // `Maydonda kamida ${length} belgi boʻlishi kerak`,
+        // this.$t(mix.maydon_bosh) + `${length}` + `belgi boʻlishi kerak`,
+        matchPasswordRule: (value) =>
+          value === this.user.password || this.$t('mix.maydon_check'),
       },
 
       passwordRULES: [
-        value => !!value || `Maydon bo'sh bo'lishi mumkin emas`,
-        value => (value && value.length >= 8) || `Parol kamida 8 ta belgidan iborat bo'lishi kerak`,
-        value => /[A-Z]/.test(value) || `Parol kamida bitta bosh harfdan iborat bo'lishi kerak`,
-        value => /[a-z]/.test(value) || `Parol kamida bitta kichik harfdan iborat bo'lishi kerak`,
-        value => /\d/.test(value) || `Parolda kamida bitta raqam bo'lishi kerak`,
-        value => /[^A-Za-z0-9]/.test(value) || `Parolda kamida bitta maxsus belgi bo'lishi kerak`
-    ]
+        (value) => !!value || this.$t('mix.maydon_bosh'),
+        (value) =>
+          (value && value.length >= 8) ||
+          `${length} ` + this.$t('mix.maydon_hajm'),
+        (value) => /[A-Z]/.test(value) || this.$t('mix.maydon_bir'),
+        (value) => /[a-z]/.test(value) || this.$t('mix.maydon_kichik'),
+        (value) => /\d/.test(value) || this.$t('mix.maydon_num'),
+        (value) => /[^A-Za-z0-9]/.test(value) || this.$t('mix.maydon_sim'),
+      ],
     };
   },
   computed: {
@@ -268,7 +354,7 @@ export default {
   mounted() {
     this.dropError();
 
-    this.token = generateToken()
+    this.token = generateToken();
 
     if (this.$route.query.referer) {
       this.referer.value = this.$route.query.referer;
@@ -305,9 +391,9 @@ export default {
     // },
 
     resendVerify() {
-      this.modalOpen = true
-      this.user.role = this.isSelectedRole.value
-      this.user.token = this.token
+      this.modalOpen = true;
+      this.user.role = this.isSelectedRole.value;
+      this.user.token = this.token;
 
       // let data = {
       //   full_name: this.fullName,
@@ -349,7 +435,7 @@ export default {
       };
 
       var myHeaders = new Headers();
-      myHeaders.append("Cookie", "PHPSESSID=d3a78d574e700c84d199d3707d1e0478");
+      myHeaders.append('Cookie', 'PHPSESSID=d3a78d574e700c84d199d3707d1e0478');
 
       var formdata = new FormData();
 
@@ -357,20 +443,23 @@ export default {
         method: 'POST',
         headers: myHeaders,
         body: formdata,
-        redirect: 'follow'
+        redirect: 'follow',
       };
 
-      fetch(`https://my.ilmonline.uz/api/sms.php?tell=${data.phone}&role=${data.role}&text=${data.text}`, requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+      fetch(
+        `https://my.ilmonline.uz/api/sms.php?tell=${data.phone}&role=${data.role}&text=${data.text}`,
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log('error', error));
 
       // axios({
       //   method: 'post',
       //   url: `https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`,
       //   redirect: 'follow',
       //   data: data,
-      // })      
+      // })
       // .then((res) => {
       //   console.log(res);
       // })
@@ -387,11 +476,11 @@ export default {
       //   return;
       // }
 
-      console.log('sign up 2')
-      this.user.role = this.isSelectedRole.value
-      this.user.token = this.token
-      this.user.phone = this.phone
-      this.user.password = this.password
+      console.log('sign up 2');
+      this.user.role = this.isSelectedRole.value;
+      this.user.token = this.token;
+      this.user.phone = this.phone;
+      this.user.password = this.password;
 
       const data = {
         phone: this.user.phone,
@@ -400,7 +489,7 @@ export default {
       };
 
       var myHeaders = new Headers();
-      myHeaders.append("Cookie", "PHPSESSID=d3a78d574e700c84d199d3707d1e0478");
+      myHeaders.append('Cookie', 'PHPSESSID=d3a78d574e700c84d199d3707d1e0478');
 
       var formdata = new FormData();
 
@@ -408,32 +497,32 @@ export default {
         method: 'POST',
         headers: myHeaders,
         body: formdata,
-        redirect: 'follow'
+        redirect: 'follow',
       };
 
       if (this.referer.value.length > 0) {
         data['referer'] = this.referer.value;
       }
 
-      await fetch(`https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`, requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+      await fetch(
+        `https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`,
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log('error', error));
 
-      if (
-        Object.keys(this.getErrors).length === 0
-      ) {
-        this.modalOpen = true
+      if (Object.keys(this.getErrors).length === 0) {
+        this.modalOpen = true;
       }
       this.isLoader = false;
-
 
       // axios({
       //   method: 'post',
       //   url: `https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`,
       //   redirect: 'follow',
       //   data: data,
-      // })      
+      // })
       // .then((res) => {
       //   console.log(res);
       // })
@@ -488,7 +577,6 @@ export default {
     //     document.querySelector('.forms').style.display = 'block';
     //   }
     // },
-
   },
 
   watch: {
@@ -501,8 +589,7 @@ export default {
 
   computed: {
     isDisabled() {
-      if
-        (this.user.name.length > 2 && this.user.phone.length == 9) {
+      if (this.user.name.length > 2 && this.user.phone.length == 9) {
         if (
           this.user.password.length > 5 &&
           this.user.confirm_pass.length > 5 &&
@@ -804,4 +891,3 @@ export default {
   pointer-events: none;
 }
 </style>
-

@@ -386,7 +386,7 @@
     "bank_details": "Qiwi hamyon / Bank hisobi tafsilotlari",
     "amount": "So'm",
     "login_error": "To'g'ri e-mailni kiriting",
-    "write_password": "Shaxsiy kabinetingiz bilan bogʻlangan telefon raqamizni kiriting. Biz sizga parolingizni tiklash boʻyicha koʻrsatmalarni elektron pochtangizga yuboramiz",
+    "write_password": "Shaxsiy kabinetingiz bilan bogʻlangan telefon raqamizni kiriting. Biz sizga parolingizni ushbu telefon nomerga yuboramiz va siz uni o'zingizdan boshqa odamga oshkor qilmang.",
     "empty_error": "Maydon bo'sh bo'lishi mumkin emas",
     "exist_login_error": "Ushbu e-pochta manzili ro'yxatdan o'tkazilgan",
     "not_found_email": "E-mail topilmadi",
@@ -564,7 +564,8 @@
     "chat_with_students": "Talabalar bizning kurslarimizni o'tishni boshlaganda suhbat paydo bo'ladi",
     "choose_direction": "Bilimlaringizni tekshirish uchun yo'nalishni tanlang",
     "choose_course": "O‘qishni boshlash uchun fanni tanlang",
-    "confirm_phone_number__text": "Plastik karta egasi ekanligingizni tasdiqlash uchun SMS-xabarnomadagi kodni kiriting"
+    "confirm_phone_number__text": "Plastik karta egasi ekanligingizni tasdiqlash uchun SMS-xabarnomadagi kodni kiriting",
+    "confirm_phone_number__texts": "Telefon raqam egasi ekanligingizni tasdiqlash uchun SMS-xabarnomadagi kodni kiriting."
   },
   "aboutUs": {
     "head_title": {
@@ -900,5 +901,15 @@
   },
   "footer": {
     "developed": "Sayt yaratuvchilari:"
+  },
+  "mix": {
+    "resend_code": "Kodni qayta jo'natish",
+    "maydon_bosh": "Maydon bo'sh bo'lishi mumkin emas",
+    "maydon_hajm": "ta belgidan iborat boʻlishi kerak",
+    "maydon_check": "Parollar bir xil emas",
+    "maydon_bir": "Parolda kamida bitta bosh harfdan iborat bo'lishi kerak",
+    "maydon_kichik": "Parolda kamida bitta kichik harfdan iborat bo'lishi kerak",
+    "maydon_num": "Parolda kamida bitta raqam bo'lishi kerak",
+    "maydon_sim": "Parolda kamida bitta maxsus belgi bo'lishi kerak"
   }
 }

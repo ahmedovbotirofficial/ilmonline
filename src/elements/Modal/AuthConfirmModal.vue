@@ -6,8 +6,7 @@
         $t('profilePage.confirm_phone_number')
       }}</Heading>
       <h4 class="confirm_text__mess">
-        <!-- {{ $t('profilePage.confirm_phone_number__text') }} -->
-        Telefon raqam egasi ekanligingizni tasdiqlash uchun SMS-xabarnomadagi kodni kiriting
+        {{ $t('profilePage.confirm_phone_number__texts') }}
       </h4>
       <TextField
         id="confirmation-number"
@@ -22,8 +21,11 @@
         @focus="resetServerError('otp_number')"
       />
       <span
-      :style="is_error ? 'margin-top: -20px' : 'margin-top: -30px'"  
-      class="time" v-if="time > 0">{{ calcTime(time) }}</span>
+        :style="is_error ? 'margin-top: -20px' : 'margin-top: -30px'"
+        class="time"
+        v-if="time > 0"
+        >{{ calcTime(time) }}</span
+      >
       <ButtonBase
         v-if="time > 0"
         class="modal__btn"
@@ -33,8 +35,12 @@
         @click.native="confirmPhone(confirmationNumber)"
         >{{ $t('buttons.confirm') }}
       </ButtonBase>
-      <p @click="$emit('resend', 'tell'), (time = 60)" class="againsendCode" v-else>
-        Kodni qayta jo'natish
+      <p
+        @click="$emit('resend', 'tell'), (time = 60)"
+        class="againsendCode"
+        v-else
+      >
+        {{ $t('mix.resend_code') }}
       </p>
     </div>
   </div>
@@ -82,8 +88,8 @@ export default {
     return {
       confirmationNumber: '',
       time: 60,
-      is_error: false, 
-      error_text: ''
+      is_error: false,
+      error_text: '',
     };
   },
 
@@ -97,7 +103,6 @@ export default {
 
   methods: {
     confirmPhone(confimCode) {
-     
       // axios({
       //   method: 'get',
       //   url: `https://my.ilmonline.uz/api/sms.php?code=${confimCode}&token=${this.user.token}&userfam=${this.user.name}&role=${this.user.role}&pacc=${this.user.password}`,
@@ -120,7 +125,9 @@ export default {
       myHeaders.append('Cookie', 'PHPSESSID=d3a78d574e700c84d199d3707d1e0478');
 
       var formdata = new FormData();
-      const lang = `${localStorage.getItem('multi_lang')}`.replace('"', '').substring(0, 2)
+      const lang = `${localStorage.getItem('multi_lang')}`
+        .replace('"', '')
+        .substring(0, 2);
 
       var requestOptions = {
         method: 'POST',
@@ -130,19 +137,24 @@ export default {
       };
 
       fetch(
-        `https://my.ilmonline.uz/api/sms.php?sms=${confimCode}&lang=${lang.substring(0, 2)}&phone=${this.user.phone}&token=${this.user.token}&userfam=${this.user.name}&role=${this.user.role}&pacc=${this.user.password}`,
+        `https://my.ilmonline.uz/api/sms.php?sms=${confimCode}&lang=${lang.substring(
+          0,
+          2
+        )}&phone=${this.user.phone}&token=${this.user.token}&userfam=${
+          this.user.name
+        }&role=${this.user.role}&pacc=${this.user.password}`,
         requestOptions
       )
         .then((response) => response.text())
         .then((result) => {
           const res = JSON.parse(result);
 
-          if (res.result.javob == "SMS noto`g`ri") {
-            this.is_error = true
-            this.error_text = res.result.javob       
+          if (res.result.javob == 'SMS noto`g`ri') {
+            this.is_error = true;
+            this.error_text = res.result.javob;
           } else {
-            console.log('ok', res)
-            this.logIn()
+            console.log('ok', res);
+            this.logIn();
           }
         })
         .catch((error) => console.log('error', error));
@@ -164,20 +176,20 @@ export default {
       }, 1000);
     },
 
-    async logIn(){
-    console.log('sign in')
+    async logIn() {
+      console.log('sign in');
 
-    const data = new FormData()
+      const data = new FormData();
 
-    data.append('email', this.user.phone)
-    data.append('password', this.user.password)
+      data.append('email', this.user.phone);
+      data.append('password', this.user.password);
 
       let res = await this.$store.dispatch('authorization', data);
 
       if (res.status === 200) {
-        console.log('everything ok')
+        console.log('everything ok');
       }
-   },
+    },
   },
 };
 </script>
