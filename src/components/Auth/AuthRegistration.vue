@@ -334,7 +334,7 @@ export default {
       this.user.role = this.isSelectedRole.value;
       this.user.token = this.token;
       // this.user.phone = this.phone;
-      this.user.password = this.password;
+      // this.user.password = this.password;
       localStorage.setItem('fullName', this.fullName);
       localStorage.setItem('phone', this.phone);
       localStorage.setItem('password', this.password);
