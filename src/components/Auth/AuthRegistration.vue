@@ -75,31 +75,15 @@
             <svg-icon v-else name="tooltip_icon" />
           </div>
           <RegistrationTooltip v-if="isTooltipHover" />
-          <!-- <TextField
-        id="fullName"
-        v-model.trim="fullName"
-        :error="isFullNameError"
-        :error-txt="fullNameErrorText"
-        :placeholder="$t('form.short_full_name')"
-        type="text"
-        name="full_name"
-      /> -->
+
           <v-text-field
             class="input"
             v-model.trim="user.name"
             filled
             name="full_name"
             :label="$t('form.short_full_name')"
-            :rules="[rules.required, rules.minLength(4)]"
           ></v-text-field>
           <div>
-            <!-- <TextField
-          id="phone"
-          filled
-          v-model.trim="phone"
-          :placeholder="$t('form.phone_number')"
-        /> -->
-
             <v-text-field
               class="input"
               filled
@@ -108,24 +92,10 @@
               name="phone"
               type="number"
               maxlength="9"
-              mask="## ### ## ##"
               :label="$t('form.phone_number')"
-              :rules="[rules.required, rules.minLength(9)]"
             ></v-text-field>
           </div>
 
-          <!-- <TextField
-        id="password"
-        v-model.trim="password"
-        :error="isPasswordError"
-        :error-txt="passwordErrorText"
-        tooltip-pass
-        :placeholder="$t('form.password_placeholder')"
-        is-password
-        :type="'password'"
-        name="password"
-        autocomplete="off"
-      /> -->
           <v-text-field
             class="input"
             id="password"
@@ -140,17 +110,6 @@
             autocomplete="off"
           ></v-text-field>
 
-          <!-- <TextField
-        id="confirm_password"
-        v-model.trim="confirmPassword"
-        :placeholder="$t('form.reapet_password_placeholder')"
-        :error="isConfirmPasswordError"
-        :error-txt="confirmPasswordErrorText"
-        is-password
-        :type="'password'"
-        name="confirm_password"
-        autocomplete="off"
-      /> -->
           <v-text-field
             class="input"
             filled
@@ -158,7 +117,6 @@
             v-model.trim="user.confirm_pass"
             :error="isConfirmPasswordError"
             :error-txt="confirmPasswordErrorText"
-            :rules="[...passwordRULES, rules.matchPasswordRule]"
             is-password
             :type="'password'"
             name="confirm_password"
@@ -167,7 +125,6 @@
           <ButtonBase
             color="orange"
             size="max"
-            type="submit"
             class="auth_form__sign_in_btn"
             :class="isDisabled"
             @click.native="singUp"
@@ -187,31 +144,6 @@
           </span>
         </div>
       </div>
-      <!-- 
-    <div class="formsCode">
-      <Heading level="3" class="auth_form__title codeTitle">
-        Telefon raqamga yuborilgan kodni kiriting
-      </Heading>
-      <v-text-field
-        filled
-        :label="code"
-        :error="isConfirmPasswordError"
-        :error-txt="confirmPasswordErrorText"
-        :type="'text'"
-        name="sms_code"
-      ></v-text-field>
-
-      <ButtonBase
-        color="orange"
-        size="max"
-        type="submit"
-        class="auth_form__sign_in_btn"
-        @click.native="codeUp"
-      >
-        <span v-if="!isLoader">{{ $t('form.register') }}</span>
-        <span v-else> <Loader color="white" size="small" /> </span
-      ></ButtonBase>
-    </div> -->
     </form>
     <ConfimModal
       @close="modalOpen = !modalOpen"
@@ -310,30 +242,6 @@ export default {
         },
       ],
       isTooltipHover: false,
-
-      // Rules
-
-      rules: {
-        required: (value) => !!value || this.$t('mix.maydon_bosh'),
-        minLength: (length) => (value) =>
-          (value && value.length >= length) ||
-          `${length} ` + this.$t('mix.maydon_hajm'),
-        // `Maydonda kamida ${length} belgi boʻlishi kerak`,
-        // this.$t(mix.maydon_bosh) + `${length}` + `belgi boʻlishi kerak`,
-        matchPasswordRule: (value) =>
-          value === this.user.password || this.$t('mix.maydon_check'),
-      },
-
-      passwordRULES: [
-        (value) => !!value || this.$t('mix.maydon_bosh'),
-        (value) =>
-          (value && value.length >= 8) ||
-          `${length} ` + this.$t('mix.maydon_hajm'),
-        (value) => /[A-Z]/.test(value) || this.$t('mix.maydon_bir'),
-        (value) => /[a-z]/.test(value) || this.$t('mix.maydon_kichik'),
-        (value) => /\d/.test(value) || this.$t('mix.maydon_num'),
-        (value) => /[^A-Za-z0-9]/.test(value) || this.$t('mix.maydon_sim'),
-      ],
     };
   },
   computed: {
@@ -394,42 +302,8 @@ export default {
       this.modalOpen = true;
       this.user.role = this.isSelectedRole.value;
       this.user.token = this.token;
-
-      // let data = {
-      //   full_name: this.fullName,
-      //   phone: this.phone,
-      //   password: this.password,
-      //   password_confirmation: this.confirmPassword,
-      //   role: this.isSelectedRole.value,
-      // };
-
-      // if (this.referer.value.length > 0) {
-      //   data['referer'] = this.referer.value;
-      // }
-
-      // this.isLoader = true;
-      // let isActiveExistPhone = await this.$store.dispatch('Phone', {
-      //   phone: this.phone,
-      // });
-      // await this.$store.dispatch('registration', data);
-
-      // if (
-      //   Object.keys(this.getErrors).length === 0 ||
-      //   (!isActiveExistPhone.is_active && isActiveExistPhone.exists)
-      // ) {
-      //   this.$store.commit('SET_MODAL', {
-      //     state: true,
-      //     name: `verification`,
-      //     props: {
-      //       phone: this.phone,
-      //       isResentPassword:
-      //         !isActiveExistPhone.is_active && isActiveExistPhone.exists,
-      //     },
-      //   });
-      // }
-      // this.isLoader = false;
       const data = {
-        phone: this.user.phone,
+        phone: this.phone,
         role: this.isSelectedRole.value,
         text: this.token,
       };
@@ -453,34 +327,19 @@ export default {
         .then((response) => response.text())
         .then((result) => console.log(result))
         .catch((error) => console.log('error', error));
-
-      // axios({
-      //   method: 'post',
-      //   url: `https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`,
-      //   redirect: 'follow',
-      //   data: data,
-      // })
-      // .then((res) => {
-      //   console.log(res);
-      // })
-      // .catch((e) => {
-      //   console.log(e);
-      // });
     },
 
-    async singUp() {
-      // console.log('sign up', this.$v.$invalid)
-      // if (this.$v.$invalid) {
-      //   this.$v.$touch();
-      //   console.log('sign up', this.$v.$invalid)
-      //   return;
-      // }
-
-      console.log('sign up 2');
-      this.user.role = this.isSelectedRole.value;
-      this.user.token = this.token;
-      this.user.phone = this.phone;
-      this.user.password = this.password;
+    async singUp(e) {
+      e.preventDefault();
+      // console.log('sign up 2');
+      // this.user.role = this.isSelectedRole.value;
+      // this.user.token = this.token;
+      // this.user.phone = this.phone;
+      // this.user.password = this.password;
+      localStorage.setItem('fullName', this.fullName);
+      localStorage.setItem('phone', this.phone);
+      localStorage.setItem('password', this.password);
+      localStorage.setItem('confirmPassword', this.confirmPasswords);
 
       const data = {
         phone: this.user.phone,
