@@ -59,6 +59,7 @@ import {
   getStudentsCourseProgress,
   getLessonProgressData,
   getImgByLocation,
+  sendVerificationRegister
 } from '@/api/services';
 import { setToLS, getFromLS, isLSHasItem } from '@/library/helpers';
 import { getNewsDigestList } from '../api/services';
@@ -467,6 +468,18 @@ export default new Vuex.Store({
     //     );
     //   } catch (e) { }
     // },
+
+    async sentVerify({commit, dispatch}, data){
+      let res; 
+      try{
+         res = sendVerificationRegister(data)
+
+         console.log(res)
+       }catch(e){
+         console.log(e)
+       }
+    },
+
     async authorization({ commit, dispatch }, data) {
       let res;
       let serverErrors;
@@ -485,6 +498,10 @@ export default new Vuex.Store({
           dispatch('getConnectionToken');
           dispatch('getBroadcastingChannelId');
           dispatch('getPprofileData');
+          
+          router.push('/profile')
+
+          
           return res;
         }
       } catch (error) {

@@ -51,9 +51,9 @@ Sentry.init({
       routingInstrumentation: Sentry.vueRouterInstrumentation(router),
       tracingOrigins: [
         'localhost',
-        'ilm.devbazu.com',
-        'api.ilm.devbazu.com',
-        'pro.ilm.devbazu.com',
+        'ilmonline.uz',
+        'api.ilmonline.uz',
+        'pro.ilmonline.uz',
         'ilmonline.uz',
         'pro.ilmonline.uz',
         /^\//,

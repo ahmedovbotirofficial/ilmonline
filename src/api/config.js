@@ -9,6 +9,7 @@ import { setToLS, getFromLS, isLSHasItem } from '@/library/helpers';
 //   return header;
 // };
 
+
 export const checkUserToken = () => {
   const token = JSON.parse(localStorage.getItem('token'));
   if (token) {
@@ -34,8 +35,9 @@ const authInterceptor = (config) => {
   return config;
 };
 
-const config = {
-  baseURL: process.env.VUE_APP_API_HOST,
+
+const Authconfig = {
+  baseURL: 'https://my.ilmonline.uz/',
   timeout: 60 * 1000, // Timeout
   headers: {
     'Access-Control-Allow-Origin': '*',
@@ -49,7 +51,27 @@ const config = {
     // Accept: '/',
   },
 };
+
+const auth = axios.create(Authconfig)
+
+const config = {
+  baseURL: 'https://api.ilmonline.uz/',
+  timeout: 60 * 1000, // Timeout
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Credentials': true,
+    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+    // 'Locale': getFromLS('multi_lang') || 'ru',
+    // 'Access-Control-Max-Age': '21600',
+    // 'Cache-Control': '21600',
+    // 'Content-type': 'media',
+    // 'Access-Control-Allow-Headers': 'Content-type, Accept',
+    // Accept: '/',
+  },
+};
+
 const Axios = axios.create(config);
+
 
 const errorComposer = (error) => {
   const statusCode = error.response ? error.response.status : null;
@@ -79,4 +101,12 @@ Axios.interceptors.response.use(
   }
 );
 
-export { Axios };
+auth.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    error.handleGlobally = errorComposer(error);
+    return Promise.reject(error);
+  }
+);
+
+export { Axios, auth };

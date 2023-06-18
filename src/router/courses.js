@@ -1,5 +1,5 @@
 import { checkUserToken } from '@/api/config';
-import store from '@/store';
+import store from '@/store/index.js';
 const initial = [
   { label: 'breadCrumbs.main', name: 'first-page' },
   {

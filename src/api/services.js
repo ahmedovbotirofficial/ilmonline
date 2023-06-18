@@ -1,11 +1,18 @@
-import { Axios } from '@/api/config';
+import { Axios, auth } from '@/api/config';
 import { setToLS, getFromLS, isLSHasItem } from '@/library/helpers';
 import { COURSES_MODES } from '@/types/constants';
 
 const api_version = '/api';
 
+export const sendVerificationRegister = (data) => {
+  const url = `https://my.ilmonline.uz/api/sms.php`
+
+  return Axios.get(url, data)
+  // return Axios.post(url, data)
+}
+
 export const login = (data) => {
-  const url = `${api_version}/auth/sign-in`;
+  const url = `https://api.ilmonline.uz/api/auth/sign-in`;
   return Axios.post(url, data);
 };
 
@@ -23,6 +30,8 @@ export const singUpVerify = (data) => {
   const url = `${api_version}/auth/sign-up/verify`;
   return Axios.post(url, data);
 };
+
+
 
 export const resetPassword = (data) => {
   const url = `${api_version}/auth/reset-password`;

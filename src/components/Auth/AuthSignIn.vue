@@ -2,7 +2,7 @@
   <form
     class="auth_form"
     :class="{ modal: $route.name === 'quiz-results' }"
-    @keyup.prevent.enter="signIn"
+    @submit.prevent
   >
     <Heading level="3" class="auth_form__title">{{
       $t('titles.auth')
@@ -28,6 +28,7 @@
           mode="redirect"
           :telegram-login="getTelegramBotUsername"
           radius="0"
+          maxlength="9"
           :size="getTelegramBtnSize"
           :redirect-url="getTelegramRedirectUrl"
         />
@@ -39,28 +40,19 @@
     </div>
 
     <div class="auth_form__inputs">
-      <TextField
-        id="email"
-        v-model.trim="email"
-        :value="email"
-        :error="isEmailError"
-        :error-txt="emailErrorText"
-        :placeholder="$t('form.login')"
-        type="text"
-        name="email"
-        @input="dropError"
-      />
-      <TextField
+      <div></div>
+      <v-text-field filled prefix="+998"  maxlength="9" v-model.trim="phone"></v-text-field>
+      <v-text-field
+        filled
+        :label="$t('form.password_placeholder')"
         id="password"
         v-model.trim="password"
         :error="isPasswordError"
         :error-txt="passwordErrorText"
-        :placeholder="$t('form.password_placeholder')"
         is-password
         :type="'password'"
         name="password"
-      />
-      <!-- :value="password" -->
+      ></v-text-field>
     </div>
     <div class="auth_form__forgot_pass" @click="openDateModal()">
       {{ $t('buttons.forgot_password') }}
@@ -71,7 +63,8 @@
       size="max"
       class="auth_form__sign_in_btn"
       :disabled="isLoader"
-      @click.native.stop="signIn"
+      @click.native="logIn"
+      :class="isDisabled"
     >
       <span v-if="!isLoader">
         {{ $t('buttons.login') }}
@@ -95,6 +88,7 @@ import Heading from '@/elements/Heading/Heading.vue';
 import ButtonBase from '@/elements/Buttons/ButtonBase.vue';
 import Loader from '@/elements/Loader/Loader.vue';
 import TextField from '@/elements/Inputs/TextField.vue';
+// import ModalAuth from './ModalAuth.vue';
 import { vueTelegramLogin } from 'vue-telegram-login';
 import authValidation from '@/mixins/validation/forms/auth.js';
 import { mapGetters } from 'vuex';
@@ -102,6 +96,7 @@ import { COURSES_MODES } from '@/types/constants';
 
 export default {
   components: {
+    // ModalAuth,
     Heading,
     ButtonBase,
     Loader,
@@ -113,7 +108,7 @@ export default {
 
   data() {
     return {
-      email: '',
+      phone: '',
       password: '',
       confirmation_code: null,
 
@@ -152,7 +147,11 @@ export default {
     },
     getTelegramBotUsername() {
       console.log(this.getCoursesMode + ' getTelegramBotUsername');
-      console.log(process.env.VUE_APP_TELEGRAM_BOT_USERNAME_PRO + '  ' + process.env.VUE_APP_TELEGRAM_BOT_USERNAME);
+      console.log(
+        process.env.VUE_APP_TELEGRAM_BOT_USERNAME_PRO +
+          '  ' +
+          process.env.VUE_APP_TELEGRAM_BOT_USERNAME
+      );
       return this.getCoursesMode === COURSES_MODES.PRO
         ? process.env.VUE_APP_TELEGRAM_BOT_USERNAME_PRO
         : process.env.VUE_APP_TELEGRAM_BOT_USERNAME;
@@ -164,12 +163,12 @@ export default {
   watch: {},
   mounted() {
     this.dropError();
-    if (!!this.$route.query.confirmation_code) {
-      this.confirmation_code = this.$route.query.confirmation_code;
-    }
-    if (!!this.$route.query.email) {
-      this.email = this.$route.query.email;
-    }
+    // if (!!this.$route.query.confirmation_code) {
+    //   this.confirmation_code = this.$route.query.confirmation_code;
+    // }
+    // if (!!this.$route.query.email) {
+    //   this.email = this.$route.query.email;
+    // }
   },
   methods: {
     dropError() {
@@ -190,6 +189,25 @@ export default {
         });
       }
     },
+
+   async logIn(){
+    console.log('sign in')
+
+    // this.isLoader = true;
+    const data = new FormData()
+
+    data.append('email', String(this.phone))
+    data.append('password', this.password)
+      
+      
+      let res = await this.$store.dispatch('authorization', data);
+
+
+      if (res.status === 200) {
+        console.log('everything ok')
+      }
+   },
+    
     async signIn() {
       if (this.$v.$invalid) {
         this.$v.$touch();
@@ -207,11 +225,11 @@ export default {
       }
 
       const data = {
-        email: this.email,
+        phone: this.phone,
         password: this.password,
       };
 
-      this.isLoader = true;
+      // this.isLoader = true;
       let res = await this.$store.dispatch('authorization', data);
       let isActiveExistEmail = await this.$store.dispatch('getExistEmail', {
         email: this.email,
@@ -231,7 +249,7 @@ export default {
         }
         this.$store.commit('SET_MODAL', { state: false });
       }
-      this.isLoader = false;
+      // this.isLoader = false;
     },
 
     async fetchCertificate() {
@@ -252,6 +270,17 @@ export default {
         name: `forgot-password`,
         props: !!this.email && this.email,
       });
+    },
+  },
+
+  computed: {
+    isDisabled() {
+      if (
+        this.phone.length == 9 && this.password.length > 4
+      ) 
+        return '';
+       else 
+      return 'disable';
     },
   },
 };
@@ -402,4 +431,11 @@ export default {
 
 .auth_form__sign_in_btn
   margin-bottom: 16px
+</style>
+
+<style>
+.disable {
+  opacity: 0.6 !important;
+  pointer-events: none;
+}
 </style>

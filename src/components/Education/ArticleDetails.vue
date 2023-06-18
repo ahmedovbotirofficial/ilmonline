@@ -103,7 +103,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import InterestedLesson from '@/components/Education/ InterestedLesson';
+import InterestedLesson from '@/components/Education/InterestedLesson';
 import { getFromLS } from '@/library/helpers';
 import Loader from '@/elements/Loader/Loader';
 import { ClientJS } from 'clientjs';

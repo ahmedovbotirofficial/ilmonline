@@ -11,9 +11,13 @@
       id="user-email"
       v-model.trim="email"
       :value="email"
-      :error="isEmailError"
-      :error-txt="emailErrorText"
-      :placeholder="'Email'"
+      filled 
+      prefix="+998"
+      mask="+998#########"
+      maxlength="9"
+      :error="email_error"
+      :error-txt="email_errot_text"
+      :placeholder="'Telefon raqami'"
       class="modal__text-field"
     />
 
@@ -21,6 +25,7 @@
       <ButtonBase
         color="orange"
         size="popular"
+        :class="isDisabled"
         @click.native="sentEmailToResetPassword"
       >
         <span v-if="!isLoader">{{ $t('buttons.send_btn') }}</span>
@@ -51,7 +56,9 @@ export default {
 
   data() {
     return {
-      email: '',
+      email: '+998',
+      email_error: false,
+      email_errot_text: '',
 
       serverErrors: {
         emailError: false,
@@ -71,24 +78,69 @@ export default {
 
   methods: {
     async sentEmailToResetPassword() {
-      if (this.$v.email.$invalid) {
-        this.$v.$touch();
-        return;
-      }
-      let data = new FormData();
-      data.append('email', this.email);
-      this.isLoader = true;
+      // if (this.$v.email.$invalid) {
+      //   this.$v.$touch();
+      //   return;
+      // }
+      const data = {
+        phone: this.email,
+      };
 
-      this.serverErrors = await this.$store.dispatch('resetPassword', data);
-      this.isLoader = false;
-      if (!this.serverErrors) {
-        this.$store.commit('SET_MODAL', {
-          state: true,
-          name: `instructions-sent`,
-          props: this.email,
+      var myHeaders = new Headers();
+      myHeaders.append("Cookie", "PHPSESSID=d3a78d574e700c84d199d3707d1e0478");
+
+      var formdata = new FormData();
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: formdata,
+        redirect: 'follow'
+      };
+
+      fetch(`https://my.ilmonline.uz/api/sms.php?z=${data.phone}`, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+           const res = JSON.parse(result)
+          if(res.result.status == 'ok'){
+            this.email_error = false
+            this.email_errot_text = ''
+            this.$store.commit('SET_MODAL', {
+          state: false,
+          name: `verification`,
+          props: { email: this.email, isResentPassword: true },
         });
-      }
+          }else{
+            this.email_error = true
+            this.email_errot_text = 'Nimadir xato ketdi, tekshiring va qaytadan urining.'
+          }
+        })
+        .catch(error => console.log('error', error));
+
+        
+      // let data = new FormData();
+      // data.append('phone', this.email);
+      // this.isLoader = true;
+
+      // this.serverErrors = await this.$store.dispatch('resetPassword', data);
+      // this.isLoader = false;
+      // if (!this.serverErrors) {
+      //   this.$store.commit('SET_MODAL', {
+      //     state: true,
+      //     name: `instructions-sent`,
+      //     props: this.email,
+      //   });
+      // }
     },
+  },
+
+  computed: {
+    isDisabled(){
+      if(this.email.length == 13)
+       return ''
+      else
+       return 'disable'
+    }
   },
 };
 </script>
@@ -102,4 +154,13 @@ export default {
   width: 100%
   display: flex
   justify-content: center
+
+</style>
+
+
+<style scoped>
+.disable {
+  opacity: 0.6 !important;
+  pointer-events: none;
+}
 </style>

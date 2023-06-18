@@ -386,7 +386,7 @@
     "bank_details": "Qiwi hamyon / Bank hisobi tafsilotlari",
     "amount": "So'm",
     "login_error": "To'g'ri e-mailni kiriting",
-    "write_password": "Shaxsiy kabinetingiz bilan bogʻlangan elektron pochta manzilingizni kiriting. Biz sizga parolingizni tiklash boʻyicha koʻrsatmalarni elektron pochtangizga yuboramiz",
+    "write_password": "Shaxsiy kabinetingiz bilan bogʻlangan telefon raqamizni kiriting. Biz sizga parolingizni tiklash boʻyicha koʻrsatmalarni elektron pochtangizga yuboramiz",
     "empty_error": "Maydon bo'sh bo'lishi mumkin emas",
     "exist_login_error": "Ushbu e-pochta manzili ro'yxatdan o'tkazilgan",
     "not_found_email": "E-mail topilmadi",

@@ -1,5 +1,6 @@
 <template>
-  <div class="modal__content">
+  <div @click="$emit('close')" class="modal">
+    <div @click.stop class="modal__content">
     <svg-icon name="mobile_confirm" />
     <Heading level="4" class="test_finish__title">{{
       $t('profilePage.confirm_phone_number')
@@ -28,6 +29,7 @@
       >{{ $t('buttons.confirm') }}
     </ButtonBase>
   </div>
+  </div>
 </template>
 
 <script>
@@ -36,12 +38,18 @@ import Heading from '@/elements/Heading/Heading.vue';
 import TextField from '@/elements/Inputs/TextField.vue';
 import { mapGetters } from 'vuex';
 import confirmPhoneNumberValidation from '@/mixins/validation/forms/confirmPhoneNumber';
-
 export default {
   components: {
     ButtonBase,
     Heading,
     TextField,
+  },
+
+  props: {
+   scroll: {
+    type: Boolean,
+    default: false
+   }
   },
 
   mixins: [confirmPhoneNumberValidation],
@@ -51,6 +59,7 @@ export default {
       confirmationNumber: '',
     };
   },
+
 
   computed: {
     ...mapGetters(['getPaymentData', 'getTransitionId']),
@@ -74,8 +83,16 @@ export default {
         state: false,
       });
     },
+
+    decreaseTime(){
+     setInterval(() => {
+      this.time = this.time -1
+     }, 1000);
+    }
   },
-};
+
+}
+
 </script>
 
 <style lang="sass" scoped>
@@ -121,4 +138,41 @@ export default {
   margin-bottom: 40px
   @include xs
     margin-bottom: 32px
+</style>
+
+
+<style scoped>
+/* body::-webkit-scrollbar {
+  width: 0px;
+} */
+.modal{
+  z-index: 99999999999;
+  position: fixed !important;
+  top: -0px !important;
+  left: -0%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.526);
+}
+
+.modal__content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 50%;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.time{
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+.againsendCode{
+  color: #1B69C1;
+  cursor: pointer;
+}
 </style>

@@ -360,7 +360,7 @@ export default {
     getImgByRegionData() {
       return this.getImgByRegion
         ? this.getImgByRegion
-        : 'https://api.ilm.devbazu.com/storage/1922/4b328fd6737971f0e0380b823ebcbea5.png';
+        : 'https://api.ilmonline.uz/storage/1111/img.png';
     },
   },
   async mounted() {

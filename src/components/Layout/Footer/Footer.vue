@@ -33,12 +33,6 @@
         </div>
 
         <div class="footer__company">
-          <div class="footer__company_item item_footer">
-            <div class="item_footer__text">{{ $t('footer.developed') }}</div>
-            <div class="item_footer__logo">
-              <svg-icon name="footer_icon" />
-            </div>
-          </div>
           <div class="footer__company_logos">
             <a :href="telegramLink"><svg-icon name="telegram" /></a>
             <a href="https://www.facebook.com/ILM-Online-111096658108195"
@@ -268,8 +262,7 @@ export default {
 .footer__company
   display: flex
   padding: 20px 0 24px
-  align-items: center
-  justify-content: space-between
+  justify-content: flex-end
   @include s
     padding: 20px 0 40px
   @include xxs

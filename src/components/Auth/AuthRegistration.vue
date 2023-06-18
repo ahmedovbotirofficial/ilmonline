@@ -1,106 +1,77 @@
 <template>
-  <form
-    class="auth_form"
-    :class="{ modal: $route.name === 'quiz-results' }"
-    @keyup.prevent.enter="singUp"
-  >
-    <Heading level="3" class="auth_form__title">
-      {{ $t('titles.registration') }}
-    </Heading>
+  <div :class="modalOpen ? 'overflow-hidden' : ''">
+    <form class="auth_form" :class="{ modal: $route.name === 'quiz-results' }" @submit.prevent>
+      <Heading level="3" class="auth_form__title">
+        {{ $t('titles.registration') }}
+      </Heading>
 
-    <div class="auth_form__handler" :class="isValidRole ? 'invalid' : ''">
-      <div
-        class="auth_handler"
-        :class="{ active: isSelectedRole.value === 'student' }"
-        @click="chooseProfile('student')"
-      >
-        <svg-icon name="icon_student" />
-        <span>
-          {{ $t('form.student') }}
-        </span>
+      <div class="auth_form__handler" :class="isValidRole ? 'invalid' : ''">
+        <div class="auth_handler" :class="{ active: isSelectedRole.value === 'student' }"
+          @click="chooseProfile('student')">
+          <svg-icon name="icon_student" />
+          <span>
+            {{ $t('form.student') }}
+          </span>
+        </div>
+        <div class="auth_handler" :class="{ active: isSelectedRole.value === 'teacher' }"
+          @click="chooseProfile('teacher')">
+          <svg-icon name="icon_teacher" />
+          <span> {{ $t('form.teacher') }}</span>
+        </div>
+        <div v-if="isValidRole" class="auth_handler__error_message">
+          {{ $t('form.choose_role') }}
+        </div>
       </div>
-      <div
-        class="auth_handler"
-        :class="{ active: isSelectedRole.value === 'teacher' }"
-        @click="chooseProfile('teacher')"
-      >
-        <svg-icon name="icon_teacher" />
-        <span> {{ $t('form.teacher') }}</span>
-      </div>
-      <div v-if="isValidRole" class="auth_handler__error_message">
-        {{ $t('form.choose_role') }}
-      </div>
-    </div>
 
-    <div class="auth_form__btns btns">
-      <ButtonBase
-        v-for="{ id, text, color, size, border, iconName } in registerBtns"
-        :key="id"
-        :color="color"
-        :class="{
+      <div class="auth_form__btns btns">
+        <ButtonBase v-for="{ id, text, color, size, border, iconName } in registerBtns" :key="id" :color="color" :class="{
           facebook_btn: id === 'facebook',
-        }"
-        :size="size"
-        :border="border"
-        auth-btn
-        :icon-name="iconName"
-        @click.native="goToRegisterSocial(id)"
-        >{{ text }}</ButtonBase
-      >
-      <div class="telegram_btn">
-        <vue-telegram-login
-          mode="redirect"
-          :telegram-login="getTelegramBotUsername"
-          radius="0"
-          :userpic="false"
-          :size="getTelegramBtnSize"
-          :redirect-url="getTelegramRedirectUrl"
-        />
-      </div>
-    </div>
-
-    <div class="auth_form__else">
-      {{ $t('titles.or') }}
-    </div>
-
-    <div class="auth_form__inputs">
-      <div
-        class="registration_password_tooltip"
-        @mouseover="isTooltipHover = true"
-        @mouseleave="isTooltipHover = false"
-      >
-        <svg-icon v-if="isTooltipHover" name="tooltip_icon_hover" />
-        <svg-icon v-else name="tooltip_icon" />
+        }" :size="size" :border="border" auth-btn :icon-name="iconName" @click.native="goToRegisterSocial(id)">{{
+  text }}</ButtonBase>
+        <div class="telegram_btn">
+          <vue-telegram-login mode="redirect" :telegram-login="getTelegramBotUsername" radius="0" :userpic="false"
+            :size="getTelegramBtnSize" :redirect-url="getTelegramRedirectUrl" />
+        </div>
       </div>
 
-      <RegistrationTooltip v-if="isTooltipHover" />
+      <div class="auth_form__else">
+        {{ $t('titles.or') }}
+      </div>
 
-      <TextField
+      <div class="forms w-100">
+        <div class="auth_form__inputs">
+          <div class="registration_password_tooltip" @mouseover="isTooltipHover = true"
+            @mouseleave="isTooltipHover = false">
+            <svg-icon v-if="isTooltipHover" name="tooltip_icon_hover" />
+            <svg-icon v-else name="tooltip_icon" />
+          </div>
+          <RegistrationTooltip v-if="isTooltipHover" />
+          <!-- <TextField
         id="fullName"
         v-model.trim="fullName"
-        :value="fullName"
         :error="isFullNameError"
         :error-txt="fullNameErrorText"
         :placeholder="$t('form.short_full_name')"
         type="text"
         name="full_name"
-      />
-      <TextField
-        id="login"
-        v-model.trim="email"
-        :value="email"
-        :error="isEmailError"
-        :error-txt="emailErrorText"
-        :placeholder="'Email'"
-        type="text"
-        name="email"
-        @input="dropError"
-      />
+      /> -->
+          <v-text-field class="input" v-model.trim="user.name" filled name="full_name" :label="$t('form.short_full_name')"
+            :rules="[rules.required, rules.minLength(4)]"></v-text-field>
+          <div>
+            <!-- <TextField
+          id="phone"
+          filled
+          v-model.trim="phone"
+          :placeholder="$t('form.phone_number')"
+        /> -->
 
-      <TextField
+            <v-text-field class="input" filled prefix="+998" v-model.trim="user.phone" name="phone" type="number" maxlength="9"
+              mask="## ### ## ##" :label="$t('form.phone_number')" :rules="[rules.required, rules.minLength(9)]" ></v-text-field>
+          </div>
+
+          <!-- <TextField
         id="password"
         v-model.trim="password"
-        :value="password"
         :error="isPasswordError"
         :error-txt="passwordErrorText"
         tooltip-pass
@@ -109,8 +80,12 @@
         :type="'password'"
         name="password"
         autocomplete="off"
-      />
-      <TextField
+      /> -->
+          <v-text-field class="input" id="password" v-model.trim="user.password" :rules="passwordRULES"
+            tooltip-pass filled :label="$t('form.password_placeholder')" is-password :type="'password'" name="password"
+            autocomplete="off"></v-text-field>
+
+          <!-- <TextField
         id="confirm_password"
         v-model.trim="confirmPassword"
         :placeholder="$t('form.reapet_password_placeholder')"
@@ -120,30 +95,60 @@
         :type="'password'"
         name="confirm_password"
         autocomplete="off"
-      />
-    </div>
+      /> -->
+          <v-text-field class="input" filled :label="$t('form.reapet_password_placeholder')" v-model.trim="user.confirm_pass"
+            :error="isConfirmPasswordError" :error-txt="confirmPasswordErrorText" :rules="[...passwordRULES, rules.matchPasswordRule]" is-password :type="'password'"
+            name="confirm_password" autocomplete="off"></v-text-field>
+          <ButtonBase color="orange" size="max" type="submit" class="auth_form__sign_in_btn" :class="isDisabled"
+            @click.native="singUp">
+            <span v-if="!isLoader">{{ $t('form.register') }}</span>
+            <span v-else>
+              <Loader color="white" size="small" />
+            </span>
+          </ButtonBase>
+        </div>
 
-    <ButtonBase
-      color="orange"
-      size="max"
-      type="submit"
-      class="auth_form__sign_in_btn"
-      @click.native="singUp"
-    >
-      <span v-if="!isLoader">{{ $t('form.register') }}</span>
-      <span v-else> <Loader color="white" size="small" /> </span
-    ></ButtonBase>
+        <div class="auth__policy">
+          {{ $t('form.policy_info') }}
+          <span @click="goToPolicy">
+            {{ $t('form.policy_info_url') }}
+            {{ this.user.password == this.user.confirmPassword }}
+          </span>
+        </div>
+      </div>
+      <!-- 
+    <div class="formsCode">
+      <Heading level="3" class="auth_form__title codeTitle">
+        Telefon raqamga yuborilgan kodni kiriting
+      </Heading>
+      <v-text-field
+        filled
+        :label="code"
+        :error="isConfirmPasswordError"
+        :error-txt="confirmPasswordErrorText"
+        :type="'text'"
+        name="sms_code"
+      ></v-text-field>
 
-    <div class="auth__policy">
-      {{ $t('form.policy_info') }}
-      <span @click="goToPolicy">
-        {{ $t('form.policy_info_url') }}
-      </span>
-    </div>
-  </form>
+      <ButtonBase
+        color="orange"
+        size="max"
+        type="submit"
+        class="auth_form__sign_in_btn"
+        @click.native="codeUp"
+      >
+        <span v-if="!isLoader">{{ $t('form.register') }}</span>
+        <span v-else> <Loader color="white" size="small" /> </span
+      ></ButtonBase>
+    </div> -->
+    </form>
+    <ConfimModal @close="modalOpen = !modalOpen" @confirm="confirmPhone" @resend="resendVerify" :user="this.user"
+      v-if="modalOpen" />
+  </div>
 </template>
 
 <script>
+import ConfimModal from '@/elements/Modal/AuthConfirmModal.vue';
 import Heading from '@/elements/Heading/Heading.vue';
 import ButtonBase from '@/elements/Buttons/ButtonBase.vue';
 import RegistrationTooltip from '@/components/Auth/RegistrationTooltip.vue';
@@ -155,15 +160,20 @@ import { setToLS, getFromLS } from '../../library/helpers';
 import signUpValidation from '@/mixins/validation/forms/signup.js';
 import { mapGetters } from 'vuex';
 import { COURSES_MODES } from '@/types/constants';
+import ModalAuth from './ModalAuth.vue';
+import { generateToken, extractNumbersFromString } from '../../helpers/reusable'
+import axios from 'axios';
 
 export default {
   components: {
+    ModalAuth,
     Heading,
     ButtonBase,
     TextField,
     RegistrationTooltip,
     Loader,
     vueTelegramLogin,
+    ConfimModal,
   },
 
   mixins: [signUpValidation],
@@ -174,17 +184,27 @@ export default {
         value: 'student',
       },
 
-      fullName: '',
+      user: {
+        name: '',
+        phone: '',
+        password: '',
+        confirm_pass: '',
+      },
 
-      email: '',
+      validateCode: '',
+      token: '',
+
+      fullName: '',
+      phone: '',
       password: '',
       confirmPassword: '',
-
+      sms_code: '',
       referer: {
         value: '',
       },
 
       isLoader: false,
+      modalOpen: false,
 
       registerBtns: [
         {
@@ -211,6 +231,23 @@ export default {
         },
       ],
       isTooltipHover: false,
+
+      // Rules
+
+      rules: {
+        required: value => !!value || `Maydon bo'sh bo'lishi mumkin emas`,
+        minLength: length => value => (value && value.length >= length) || `Maydonda kamida ${length} belgi boʻlishi kerak`,
+        matchPasswordRule: value => value === this.user.password   || 'Parollar bir xil emas'
+      },
+
+      passwordRULES: [
+        value => !!value || `Maydon bo'sh bo'lishi mumkin emas`,
+        value => (value && value.length >= 8) || `Parol kamida 8 ta belgidan iborat bo'lishi kerak`,
+        value => /[A-Z]/.test(value) || `Parol kamida bitta bosh harfdan iborat bo'lishi kerak`,
+        value => /[a-z]/.test(value) || `Parol kamida bitta kichik harfdan iborat bo'lishi kerak`,
+        value => /\d/.test(value) || `Parolda kamida bitta raqam bo'lishi kerak`,
+        value => /[^A-Za-z0-9]/.test(value) || `Parolda kamida bitta maxsus belgi bo'lishi kerak`
+    ]
     };
   },
   computed: {
@@ -228,9 +265,10 @@ export default {
     },
   },
 
-  watch: {},
   mounted() {
     this.dropError();
+
+    this.token = generateToken()
 
     if (this.$route.query.referer) {
       this.referer.value = this.$route.query.referer;
@@ -246,7 +284,7 @@ export default {
   methods: {
     dropError() {
       this.$store.commit('RESET_ERRORS');
-      this.resetServerError('email');
+      // this.resetServerError('email');
     },
     chooseProfile(who) {
       this.isSelectedRole.value = who;
@@ -256,56 +294,225 @@ export default {
       this.$router.push({ name: 'policy' });
     },
 
-    async goToRegisterSocial(id) {
-      if (this.$v.isSelectedRole.value.$invalid) {
-        this.$v.$touch();
-        return;
-      }
+    // async goToRegisterSocial(id) {
+    //   if (this.$v.isSelectedRole.value.$invalid) {
+    //     this.$v.$touch();
+    //     return;
+    //   }
 
-      const url = process.env.VUE_APP_API_HOST + '/auth/social/sign-in';
-      window.open(`${url}/${id}?role=${this.isSelectedRole.value}`, '_self');
+    //   const url = 'api.ilmonline.uz' + '/auth/social/sign-in';
+    //   window.open(`${url}/${id}?role=${this.isSelectedRole.value}`, '_self');
+    // },
+
+    resendVerify() {
+      this.modalOpen = true
+      this.user.role = this.isSelectedRole.value
+      this.user.token = this.token
+
+      // let data = {
+      //   full_name: this.fullName,
+      //   phone: this.phone,
+      //   password: this.password,
+      //   password_confirmation: this.confirmPassword,
+      //   role: this.isSelectedRole.value,
+      // };
+
+      // if (this.referer.value.length > 0) {
+      //   data['referer'] = this.referer.value;
+      // }
+
+      // this.isLoader = true;
+      // let isActiveExistPhone = await this.$store.dispatch('Phone', {
+      //   phone: this.phone,
+      // });
+      // await this.$store.dispatch('registration', data);
+
+      // if (
+      //   Object.keys(this.getErrors).length === 0 ||
+      //   (!isActiveExistPhone.is_active && isActiveExistPhone.exists)
+      // ) {
+      //   this.$store.commit('SET_MODAL', {
+      //     state: true,
+      //     name: `verification`,
+      //     props: {
+      //       phone: this.phone,
+      //       isResentPassword:
+      //         !isActiveExistPhone.is_active && isActiveExistPhone.exists,
+      //     },
+      //   });
+      // }
+      // this.isLoader = false;
+      const data = {
+        phone: this.user.phone,
+        role: this.isSelectedRole.value,
+        text: this.token,
+      };
+
+      var myHeaders = new Headers();
+      myHeaders.append("Cookie", "PHPSESSID=d3a78d574e700c84d199d3707d1e0478");
+
+      var formdata = new FormData();
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: formdata,
+        redirect: 'follow'
+      };
+
+      fetch(`https://my.ilmonline.uz/api/sms.php?tell=${data.phone}&role=${data.role}&text=${data.text}`, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+
+      // axios({
+      //   method: 'post',
+      //   url: `https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`,
+      //   redirect: 'follow',
+      //   data: data,
+      // })      
+      // .then((res) => {
+      //   console.log(res);
+      // })
+      // .catch((e) => {
+      //   console.log(e);
+      // });
     },
 
     async singUp() {
-      // console.log('before invalid', this.$v.$invalid);
-      if (this.$v.$invalid) {
-        this.$v.$touch();
-        return;
-      }
+      // console.log('sign up', this.$v.$invalid)
+      // if (this.$v.$invalid) {
+      //   this.$v.$touch();
+      //   console.log('sign up', this.$v.$invalid)
+      //   return;
+      // }
 
-      let data = {
-        full_name: this.fullName,
-        email: this.email,
-        password: this.password,
-        password_confirmation: this.confirmPassword,
+      console.log('sign up 2')
+      this.user.role = this.isSelectedRole.value
+      this.user.token = this.token
+      this.user.phone = this.phone
+      this.user.password = this.password
+
+      const data = {
+        phone: this.user.phone,
         role: this.isSelectedRole.value,
+        text: this.token,
+      };
+
+      var myHeaders = new Headers();
+      myHeaders.append("Cookie", "PHPSESSID=d3a78d574e700c84d199d3707d1e0478");
+
+      var formdata = new FormData();
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: formdata,
+        redirect: 'follow'
       };
 
       if (this.referer.value.length > 0) {
         data['referer'] = this.referer.value;
       }
 
-      this.isLoader = true;
-      let isActiveExistEmail = await this.$store.dispatch('getExistEmail', {
-        email: this.email,
-      });
-      await this.$store.dispatch('registration', data);
+      await fetch(`https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 
       if (
-        Object.keys(this.getErrors).length === 0 ||
-        (!isActiveExistEmail.is_active && isActiveExistEmail.exists)
+        Object.keys(this.getErrors).length === 0
       ) {
-        this.$store.commit('SET_MODAL', {
-          state: true,
-          name: `verification`,
-          props: {
-            email: this.email,
-            isResentPassword:
-              !isActiveExistEmail.is_active && isActiveExistEmail.exists,
-          },
-        });
+        this.modalOpen = true
       }
       this.isLoader = false;
+
+
+      // axios({
+      //   method: 'post',
+      //   url: `https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`,
+      //   redirect: 'follow',
+      //   data: data,
+      // })      
+      // .then((res) => {
+      //   console.log(res);
+      // })
+      // .catch((e) => {
+      //   console.log(e);
+      // });
+    },
+
+    // var myHeaders = new Headers();
+    // myHeaders.append('Cookie', 'PHPSESSID=d3a78d574e700c84d199d3707d1e0478');
+
+    // var formdata = new FormData();
+
+    // var requestOptions = {
+    //   method: 'POST',
+    //   headers: myHeaders,
+    //   body: formdata,
+    //   redirect: 'follow',
+    // };
+
+    // fetch(
+    //   `https://my.ilmonline.uz/api/sms.php?phone=${data.phone}&role=${data.role}&text=${data.text}`,
+    //   requestOptions
+    // )
+    //   .then((response) => response.text())
+    //   .then((result) => console.log(result))
+    //   .catch((error) => console.log('error', error.response));
+    // .then((res) => {
+    //   console.log(res);
+    //    this.modalOpen = true
+    // })
+    // .catch((e) => {
+    //   console.log(e);
+    // });
+    // },
+    // async codeUp() {
+    //   localStorage.setItem('fullName', this.fullName);
+    //   localStorage.setItem('phone', this.phone);
+    //   localStorage.setItem('password', this.password);
+    //   localStorage.setItem('confirmPassword', this.confirmPasswords);
+
+    //   let data = {
+    //     full_name: this.fullName,
+    //     phone: this.phone,
+    //     password: this.password,
+    //     password_confirmation: this.confirmPassword,
+    //     role: this.isSelectedRole.value,
+    //   };
+    //   console.log(data);
+    //   if (localStorage.getItem('phone') >= 1) {
+    //     document.querySelector('.formsCode').style.display = 'none';
+    //     document.querySelector('.forms').style.display = 'block';
+    //   }
+    // },
+
+  },
+
+  watch: {
+    modalOpen(newValue, oldValue) {
+      // Handle prop change here
+      if (newValue) document.body.style.overflow = 'hidden';
+      else document.body.style.overflow = 'auto';
+    },
+  },
+
+  computed: {
+    isDisabled() {
+      if
+        (this.user.name.length > 2 && this.user.phone.length == 9) {
+        if (
+          this.user.password.length > 5 &&
+          this.user.confirm_pass.length > 5 &&
+          this.user.password == this.user.confirm_pass
+        )
+          return '';
+        else {
+          return 'disable';
+        }
+      } else return 'disable';
     },
   },
 };
@@ -570,4 +777,31 @@ export default {
 .registration_password_tooltip svg
   max-height: 15px
   max-width: 15px
+.formsCode
+  display: none
+  flex-direction: column
+  width: 100%
+  .codeTitle
+      margin-bottom: 1rem
+      font-size: 1.3rem
+      text-align: center
 </style>
+
+<style scoped>
+.input >>> .error--text {
+  color: red !important;
+}
+
+/* .v-messages.error--text {
+  color: red;
+} */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.disable {
+  opacity: 0.6 !important;
+  pointer-events: none;
+}
+</style>
+
